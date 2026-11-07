@@ -3,12 +3,12 @@ import json
 import uuid
 from decimal import Decimal
 from typing import Optional, List, Dict, Any
-from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Form, Response, status
+from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Form, Response, WebSocket, WebSocketDisconnect, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
-from backend.app.core.database import get_db
-from backend.app.core.security import get_current_user
+from backend.app.core.database import get_db, AsyncSessionLocal
+from backend.app.core.security import get_current_user, decode_access_token
 from backend.app.models.business import User
 from backend.app.models.voice import VoiceCommand
 from backend.app.models.inventory import Product
@@ -338,3 +338,123 @@ async def list_voice_history(
     res = await db.execute(query)
     logs = res.scalars().all()
     return logs
+
+@router.websocket("/stream")
+async def websocket_voice_stream(
+    websocket: WebSocket,
+    token: Optional[str] = None
+):
+    """
+    Real-Time WebSocket Audio Streaming Endpoint.
+    Accepts continuous binary PCM/WAV audio frames or JSON command frames.
+    Returns low-latency streaming state, transcriptions, and speech output.
+    """
+    await websocket.accept()
+
+    # Authenticate via query param token or default to demo business
+    business_id = None
+    if token:
+        try:
+            payload = decode_access_token(token)
+            async with AsyncSessionLocal() as session:
+                user_res = await session.execute(
+                    select(User).filter(User.id == payload.get("sub"))
+                )
+                user = user_res.scalar_one_or_none()
+                if user:
+                    business_id = user.business_id
+        except Exception:
+            pass
+
+    audio_chunks = bytearray()
+    language_code = "te-IN"
+
+    try:
+        await websocket.send_json({
+            "type": "ready",
+            "message": "VyapariMitra Real-Time Voice Stream Connected",
+            "supported_languages": ["te-IN", "en-IN", "te-en"]
+        })
+
+        while True:
+            message = await websocket.receive()
+            if "bytes" in message and message["bytes"]:
+                # Binary audio chunk
+                audio_chunks.extend(message["bytes"])
+                await websocket.send_json({
+                    "type": "chunk_received",
+                    "buffered_bytes": len(audio_chunks)
+                })
+            elif "text" in message and message["text"]:
+                data = json.loads(message["text"])
+                msg_type = data.get("type")
+
+                if msg_type == "config":
+                    language_code = data.get("language", language_code)
+                    await websocket.send_json({"type": "config_updated", "language": language_code})
+
+                elif msg_type == "text_command":
+                    # Instant text command evaluation
+                    user_text = data.get("text", "")
+                    async with AsyncSessionLocal() as session:
+                        products_data = []
+                        if business_id:
+                            products_data = await inventory_service.get_products(session, business_id)
+                        nlu_res = voice_nlu_engine.parse_command(user_text, products=products_data)
+                        tts_res = await gnani_tts_service.synthesize_speech(
+                            text=nlu_res.get("spoken_response", "ఆదేశం స్వీకరించబడింది"),
+                            language=language_code
+                        )
+                        await websocket.send_json({
+                            "type": "result",
+                            "transcription": user_text,
+                            "intent": nlu_res,
+                            "spoken_audio_base64": tts_res.get("audio_base64")
+                        })
+
+                elif msg_type == "finalize_audio":
+                    # Transcribe buffered audio
+                    if len(audio_chunks) > 0:
+                        stt_res = await gnani_stt_service.transcribe_audio(
+                            audio_bytes=bytes(audio_chunks),
+                            filename="stream.wav",
+                            language_code=language_code
+                        )
+                        transcript = stt_res.get("transcription", "")
+                        await websocket.send_json({
+                            "type": "transcription",
+                            "text": transcript
+                        })
+
+                        async with AsyncSessionLocal() as session:
+                            products_data = []
+                            if business_id:
+                                products_data = await inventory_service.get_products(session, business_id)
+                            nlu_res = voice_nlu_engine.parse_command(transcript, products=products_data)
+                            tts_res = await gnani_tts_service.synthesize_speech(
+                                text=nlu_res.get("spoken_response", "ఆదేశం స్వీకరించబడింది"),
+                                language=language_code
+                            )
+                            await websocket.send_json({
+                                "type": "result",
+                                "transcription": transcript,
+                                "intent": nlu_res,
+                                "spoken_audio_base64": tts_res.get("audio_base64")
+                            })
+                        audio_chunks.clear()
+                    else:
+                        await websocket.send_json({"type": "error", "message": "No audio buffered"})
+
+                elif msg_type == "reset":
+                    audio_chunks.clear()
+                    await websocket.send_json({"type": "reset_ack"})
+
+    except WebSocketDisconnect:
+        pass
+    except Exception as exc:
+        try:
+            await websocket.send_json({"type": "error", "message": str(exc)})
+            await websocket.close()
+        except Exception:
+            pass
+

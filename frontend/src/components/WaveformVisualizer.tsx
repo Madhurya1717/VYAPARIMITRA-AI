@@ -60,3 +60,4 @@ export const WaveformVisualizer: React.FC<WaveformProps> = ({
     </div>
   );
 };
+

@@ -38,3 +38,4 @@ async def mark_read(
     notif.is_read = True
     await db.commit()
     return {"success": True}
+

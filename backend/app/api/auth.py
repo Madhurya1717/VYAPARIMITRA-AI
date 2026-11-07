@@ -137,3 +137,4 @@ async def update_business(
     await db.commit()
     await db.refresh(current_business)
     return current_business
+

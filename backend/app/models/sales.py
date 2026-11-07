@@ -53,3 +53,4 @@ class Invoice(Base):
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
 
     sale = relationship("Sale", back_populates="invoice")
+

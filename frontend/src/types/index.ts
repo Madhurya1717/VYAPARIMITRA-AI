@@ -222,8 +222,15 @@ export interface CategoryBreakdownItem {
 export interface DashboardSummary {
   today_sales: number;
   today_orders: number;
+  monthly_revenue?: number;
+  monthly_orders?: number;
   total_revenue: number;
   total_orders_count: number;
+  today_gross_profit?: number;
+  total_gross_profit?: number;
+  today_cogs?: number;
+  total_cogs?: number;
+  profit_margin_pct?: number;
   inventory_total_value: number;
   active_products_count: number;
   low_stock_count: number;
@@ -242,3 +249,4 @@ export interface NotificationItem {
   is_read: boolean;
   created_at: string;
 }
+

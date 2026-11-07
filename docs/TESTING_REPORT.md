@@ -82,3 +82,4 @@ In strict accordance with the project guidelines:
 1. When `GNANI_API_KEY` is present in `.env`, all STT requests connect live to `https://api.vachana.ai/stt/v3` and TTS requests to `https://api.vachana.ai/api/v1/tts/inference`.
 2. When running offline automated test suites without internet access or when `GNANI_API_KEY` is unset, the service utilizes a documented, transparent local simulation resolver that generates standard PCM RIFF WAV headers and fixture transcripts.
 3. Live credentials are never fabricated or falsely claimed.
+

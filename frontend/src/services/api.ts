@@ -126,6 +126,19 @@ class ApiClient {
     return this.request<Product>(`/products/${id}`);
   }
 
+  async updateProduct(id: string, product: Partial<Product>) {
+    return this.request<Product>(`/products/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(product),
+    });
+  }
+
+  async deleteProduct(id: string) {
+    return this.request<{ success: boolean; message: string }>(`/products/${id}`, {
+      method: 'DELETE',
+    });
+  }
+
   async adjustStock(productId: string, quantity: number, type: 'IN' | 'OUT' | 'ADJUSTMENT', notes?: string) {
     return this.request<{ success: boolean; new_stock: number }>(`/products/${productId}/adjust-stock`, {
       method: 'POST',
@@ -259,3 +272,4 @@ class ApiClient {
 }
 
 export const api = new ApiClient();
+

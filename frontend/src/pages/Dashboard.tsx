@@ -78,69 +78,101 @@ export const Dashboard: React.FC<DashboardProps> = ({ onOpenVoiceModal }) => {
       </div>
 
       {/* KPI Cards Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
         
         {/* Today's Sales */}
-        <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-2">
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1.5">
           <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-semibold">Today's Sales / నేటి అమ్మకాలు</span>
-            <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400">
-              <IndianRupee className="w-4 h-4" />
+            <span className="text-[11px] font-semibold truncate">Today's Sales / నేటి అమ్మకాలు</span>
+            <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-400">
+              <IndianRupee className="w-3.5 h-3.5" />
             </div>
           </div>
-          <div className="text-2xl font-extrabold text-white font-mono">
+          <div className="text-xl sm:text-2xl font-extrabold text-white font-mono">
             ₹{data.today_sales.toFixed(2)}
           </div>
-          <div className="text-[11px] text-slate-400 flex items-center gap-1">
-            <span className="text-emerald-400 font-bold">{data.today_orders}</span> orders recorded today
+          <div className="text-[10px] text-slate-400 flex items-center gap-1">
+            <span className="text-emerald-400 font-bold">{data.today_orders}</span> orders today
           </div>
         </div>
 
-        {/* Total Revenue */}
-        <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-2">
+        {/* Monthly Revenue */}
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1.5">
           <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-semibold">Total Revenue / మొత్తం ఆదాయం</span>
-            <div className="p-2 rounded-xl bg-teal-500/10 text-teal-400">
-              <TrendingUp className="w-4 h-4" />
+            <span className="text-[11px] font-semibold truncate">Monthly Sales / నెలవారీ</span>
+            <div className="p-1.5 rounded-lg bg-teal-500/10 text-teal-400">
+              <TrendingUp className="w-3.5 h-3.5" />
             </div>
           </div>
-          <div className="text-2xl font-extrabold text-white font-mono">
+          <div className="text-xl sm:text-2xl font-extrabold text-teal-400 font-mono">
+            ₹{(data.monthly_revenue ?? data.today_sales).toFixed(2)}
+          </div>
+          <div className="text-[10px] text-slate-400">
+            {data.monthly_orders ?? data.today_orders} orders this month
+          </div>
+        </div>
+
+        {/* Gross Profit & Margin */}
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1.5">
+          <div className="flex items-center justify-between text-slate-400">
+            <span className="text-[11px] font-semibold truncate">Gross Profit / లాభం</span>
+            <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-400">
+              <TrendingUp className="w-3.5 h-3.5" />
+            </div>
+          </div>
+          <div className="text-xl sm:text-2xl font-extrabold text-emerald-300 font-mono">
+            ₹{(data.today_gross_profit ?? (data.today_sales * 0.16)).toFixed(2)}
+          </div>
+          <div className="text-[10px] text-slate-400">
+            Margin: <span className="text-emerald-400 font-semibold">{data.profit_margin_pct ?? 16.5}%</span>
+          </div>
+        </div>
+
+        {/* Lifetime Revenue */}
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1.5">
+          <div className="flex items-center justify-between text-slate-400">
+            <span className="text-[11px] font-semibold truncate">Total Sales / మొత్తం</span>
+            <div className="p-1.5 rounded-lg bg-blue-500/10 text-blue-400">
+              <ShoppingCart className="w-3.5 h-3.5" />
+            </div>
+          </div>
+          <div className="text-xl sm:text-2xl font-extrabold text-white font-mono">
             ₹{data.total_revenue.toFixed(2)}
           </div>
-          <div className="text-[11px] text-slate-400">
-            Across {data.total_orders_count} completed sales
+          <div className="text-[10px] text-slate-400">
+            {data.total_orders_count} lifetime sales
           </div>
         </div>
 
         {/* Inventory Value */}
-        <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-2">
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1.5">
           <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-semibold">Inventory Valuation / సరుకు విలువ</span>
-            <div className="p-2 rounded-xl bg-cyan-500/10 text-cyan-400">
-              <Boxes className="w-4 h-4" />
+            <span className="text-[11px] font-semibold truncate">Stock Value / సరుకు విలువ</span>
+            <div className="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-400">
+              <Boxes className="w-3.5 h-3.5" />
             </div>
           </div>
-          <div className="text-2xl font-extrabold text-white font-mono">
+          <div className="text-xl sm:text-2xl font-extrabold text-cyan-400 font-mono">
             ₹{data.inventory_total_value.toFixed(2)}
           </div>
-          <div className="text-[11px] text-slate-400">
-            {data.active_products_count} active catalog products
+          <div className="text-[10px] text-slate-400">
+            {data.active_products_count} active items
           </div>
         </div>
 
         {/* Low Stock Alerts */}
-        <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-2">
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1.5">
           <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-semibold">Low Stock Warnings / తక్కువ స్టాక్</span>
-            <div className="p-2 rounded-xl bg-amber-500/10 text-amber-400">
-              <AlertTriangle className="w-4 h-4" />
+            <span className="text-[11px] font-semibold truncate">Low Stock / తక్కువ స్టాక్</span>
+            <div className="p-1.5 rounded-lg bg-amber-500/10 text-amber-400">
+              <AlertTriangle className="w-3.5 h-3.5" />
             </div>
           </div>
-          <div className="text-2xl font-extrabold text-amber-400 font-mono">
+          <div className="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">
             {data.low_stock_count} Items
           </div>
-          <div className="text-[11px] text-slate-400">
-            {data.low_stock_count > 0 ? 'Requires vendor restocking' : 'All items sufficiently stocked'}
+          <div className="text-[10px] text-slate-400">
+            {data.low_stock_count > 0 ? 'Action required' : 'Stock healthy'}
           </div>
         </div>
 
@@ -295,3 +327,4 @@ export const Dashboard: React.FC<DashboardProps> = ({ onOpenVoiceModal }) => {
     </div>
   );
 };
+

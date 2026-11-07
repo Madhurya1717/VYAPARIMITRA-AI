@@ -119,6 +119,48 @@ class InventoryService:
         await db.refresh(product)
         return product
 
+    async def update_product(
+        self,
+        db: AsyncSession,
+        business_id: str,
+        product_id: str,
+        data: ProductUpdate
+    ) -> Optional[Product]:
+        """
+        Updates product attributes, maintaining business tenant isolation.
+        """
+        product = await self.get_product_by_id(db, business_id, product_id)
+        if not product:
+            return None
+
+        update_dict = data.model_dump(exclude_unset=True)
+        if "aliases" in update_dict and update_dict["aliases"] is not None:
+            update_dict["aliases"] = json.dumps(update_dict["aliases"])
+
+        for key, value in update_dict.items():
+            setattr(product, key, value)
+
+        await db.commit()
+        await db.refresh(product)
+        return product
+
+    async def delete_product(
+        self,
+        db: AsyncSession,
+        business_id: str,
+        product_id: str
+    ) -> bool:
+        """
+        Soft-deletes product by setting is_active=False to preserve sales history and audit transactions.
+        """
+        product = await self.get_product_by_id(db, business_id, product_id)
+        if not product:
+            return False
+
+        product.is_active = False
+        await db.commit()
+        return True
+
     async def adjust_stock(
         self,
         db: AsyncSession,

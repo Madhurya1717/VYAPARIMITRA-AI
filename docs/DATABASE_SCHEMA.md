@@ -146,3 +146,4 @@ Tracks every voice interaction, audio length, model used, latency, detected inte
 
 ### 2.9. `notifications` & `audit_logs`
 System alerts (e.g. low stock) and security audit trails.
+

@@ -68,3 +68,4 @@ async def test_inventory_and_sales_flow(client: AsyncClient):
     fail_resp = await client.post("/api/v1/sales", json=fail_payload, headers=headers)
     assert fail_resp.status_code == 400
     assert "Insufficient stock" in fail_resp.json()["detail"]
+

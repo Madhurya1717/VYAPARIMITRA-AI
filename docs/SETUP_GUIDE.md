@@ -84,3 +84,4 @@ The frontend is now running at:
      > *"ఈరోజు 10 కిలోల బియ్యం అమ్మాను"*
    - Or click any of the quick test chips (Telugu, English, Tenglish).
    - Review the extracted intent card, observe the stock deduction from 50 kg to 40 kg, and listen to the spoken audio synthesized via Gnani Timbre!
+

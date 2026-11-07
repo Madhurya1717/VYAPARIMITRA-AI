@@ -265,3 +265,4 @@ export const GlobalVoiceModal: React.FC<GlobalVoiceModalProps> = ({
     </div>
   );
 };
+

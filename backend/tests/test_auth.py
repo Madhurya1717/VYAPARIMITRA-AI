@@ -39,3 +39,4 @@ async def test_user_registration_and_login(client: AsyncClient):
     me_resp = await client.get("/api/v1/auth/me", headers={"Authorization": f"Bearer {token}"})
     assert me_resp.status_code == 200
     assert me_resp.json()["user"]["phone_or_email"] == "raviteja@kiranastore.com"
+

@@ -17,6 +17,7 @@ class AnalyticsService:
     async def get_dashboard_summary(self, db: AsyncSession, business_id: str) -> DashboardSummaryResponse:
         now = datetime.now(timezone.utc)
         start_of_today = datetime(now.year, now.month, now.day, tzinfo=timezone.utc)
+        start_of_month = datetime(now.year, now.month, 1, tzinfo=timezone.utc)
 
         # 1. Today's sales & revenue
         today_sales_q = select(
@@ -30,7 +31,19 @@ class AnalyticsService:
         today_res = await db.execute(today_sales_q)
         today_revenue, today_orders = today_res.one()
 
-        # 2. Lifetime Revenue & Total Completed Sales
+        # 2. Monthly sales & revenue
+        monthly_sales_q = select(
+            func.coalesce(func.sum(Sale.total_amount), Decimal("0.0")),
+            func.count(Sale.id)
+        ).filter(
+            Sale.business_id == business_id,
+            Sale.created_at >= start_of_month,
+            Sale.status == "completed"
+        )
+        monthly_res = await db.execute(monthly_sales_q)
+        monthly_revenue, monthly_orders = monthly_res.one()
+
+        # 3. Lifetime Revenue & Total Completed Sales
         lifetime_q = select(
             func.coalesce(func.sum(Sale.total_amount), Decimal("0.0")),
             func.count(Sale.id)
@@ -41,7 +54,39 @@ class AnalyticsService:
         lifetime_res = await db.execute(lifetime_q)
         total_revenue, total_orders = lifetime_res.one()
 
-        # 3. Inventory valuation & counts
+        # 4. COGS & Profit calculations
+        total_cogs_q = select(
+            func.coalesce(func.sum(SaleItem.quantity * Product.cost_price), Decimal("0.0"))
+        ).join(
+            Product, SaleItem.product_id == Product.id
+        ).join(
+            Sale, SaleItem.sale_id == Sale.id
+        ).filter(
+            Sale.business_id == business_id,
+            Sale.status == "completed"
+        )
+        total_cogs_res = await db.execute(total_cogs_q)
+        total_cogs = total_cogs_res.scalar() or Decimal("0.0")
+
+        today_cogs_q = select(
+            func.coalesce(func.sum(SaleItem.quantity * Product.cost_price), Decimal("0.0"))
+        ).join(
+            Product, SaleItem.product_id == Product.id
+        ).join(
+            Sale, SaleItem.sale_id == Sale.id
+        ).filter(
+            Sale.business_id == business_id,
+            Sale.created_at >= start_of_today,
+            Sale.status == "completed"
+        )
+        today_cogs_res = await db.execute(today_cogs_q)
+        today_cogs = today_cogs_res.scalar() or Decimal("0.0")
+
+        today_profit = max(Decimal("0.0"), today_revenue - today_cogs)
+        total_profit = max(Decimal("0.0"), total_revenue - total_cogs)
+        profit_margin = float((total_profit / total_revenue) * 100) if total_revenue > 0 else 0.0
+
+        # 5. Inventory valuation & counts
         prod_q = select(Product).filter(Product.business_id == business_id, Product.is_active == True)
         prod_res = await db.execute(prod_q)
         products = prod_res.scalars().all()
@@ -153,8 +198,15 @@ class AnalyticsService:
         return DashboardSummaryResponse(
             today_sales=float(today_revenue),
             today_orders=today_orders,
+            monthly_revenue=float(monthly_revenue),
+            monthly_orders=monthly_orders,
             total_revenue=float(total_revenue),
             total_orders_count=total_orders,
+            today_gross_profit=float(today_profit),
+            total_gross_profit=float(total_profit),
+            today_cogs=float(today_cogs),
+            total_cogs=float(total_cogs),
+            profit_margin_pct=round(profit_margin, 2),
             inventory_total_value=float(inventory_val),
             active_products_count=len(products),
             low_stock_count=len(low_stock_items),
@@ -166,3 +218,4 @@ class AnalyticsService:
         )
 
 analytics_service = AnalyticsService()
+

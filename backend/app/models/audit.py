@@ -34,3 +34,4 @@ class AuditLog(Base):
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
 
     business = relationship("Business", back_populates="audit_logs")
+

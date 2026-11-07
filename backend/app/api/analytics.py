@@ -16,3 +16,4 @@ async def get_dashboard(
 ):
     summary = await analytics_service.get_dashboard_summary(db, current_user.business_id)
     return summary
+

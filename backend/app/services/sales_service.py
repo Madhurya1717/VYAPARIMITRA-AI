@@ -181,3 +181,4 @@ class SalesService:
         return result.scalars().all()
 
 sales_service = SalesService()
+

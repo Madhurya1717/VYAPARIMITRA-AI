@@ -3,7 +3,7 @@ import { api } from '../services/api';
 import { Product, Category } from '../types';
 import {
   ShoppingBag, Plus, Search, Filter, Tag, Check, X,
-  IndianRupee, Layers, AlertCircle
+  IndianRupee, Layers, AlertCircle, Pencil, Trash2, AlertTriangle
 } from 'lucide-react';
 
 export const Products: React.FC = () => {
@@ -12,6 +12,8 @@ export const Products: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCat, setSelectedCat] = useState<string>('');
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [editingProduct, setEditingProduct] = useState<Product | null>(null);
+  const [deletingProduct, setDeletingProduct] = useState<Product | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // New product form
@@ -25,6 +27,19 @@ export const Products: React.FC = () => {
     unit: 'kg',
     cost_price: 45,
     selling_price: 55,
+    low_stock_threshold: 10,
+  });
+
+  // Edit form state
+  const [editFormData, setEditFormData] = useState({
+    name: '',
+    telugu_name: '',
+    aliases_str: '',
+    category_id: '',
+    sku: '',
+    unit: 'kg',
+    cost_price: 0,
+    selling_price: 0,
     low_stock_threshold: 10,
   });
 
@@ -83,6 +98,66 @@ export const Products: React.FC = () => {
       await loadData();
     } catch (err: any) {
       alert(err.message || 'Failed to create product');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleOpenEdit = (product: Product) => {
+    setEditingProduct(product);
+    setEditFormData({
+      name: product.name,
+      telugu_name: product.telugu_name || '',
+      aliases_str: (product.aliases || []).join(', '),
+      category_id: product.category_id || '',
+      sku: product.sku || '',
+      unit: product.unit,
+      cost_price: product.cost_price,
+      selling_price: product.selling_price,
+      low_stock_threshold: product.low_stock_threshold,
+    });
+  };
+
+  const handleUpdateProduct = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingProduct) return;
+    setIsSubmitting(true);
+    try {
+      const aliasesArray = editFormData.aliases_str
+        .split(',')
+        .map(s => s.trim().toLowerCase())
+        .filter(Boolean);
+
+      await api.updateProduct(editingProduct.id, {
+        name: editFormData.name,
+        telugu_name: editFormData.telugu_name || undefined,
+        aliases: aliasesArray,
+        category_id: editFormData.category_id || undefined,
+        sku: editFormData.sku || undefined,
+        unit: editFormData.unit,
+        cost_price: editFormData.cost_price,
+        selling_price: editFormData.selling_price,
+        low_stock_threshold: editFormData.low_stock_threshold,
+      });
+
+      setEditingProduct(null);
+      await loadData();
+    } catch (err: any) {
+      alert(err.message || 'Failed to update product');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleDeleteProduct = async () => {
+    if (!deletingProduct) return;
+    setIsSubmitting(true);
+    try {
+      await api.deleteProduct(deletingProduct.id);
+      setDeletingProduct(null);
+      await loadData();
+    } catch (err: any) {
+      alert(err.message || 'Failed to delete product');
     } finally {
       setIsSubmitting(false);
     }
@@ -179,11 +254,29 @@ export const Products: React.FC = () => {
                 <span className="text-[10px] text-slate-400 block">Selling Price</span>
                 <span className="font-mono font-bold text-emerald-400 text-sm">₹{p.selling_price.toFixed(2)} / {p.unit}</span>
               </div>
-              <div className="text-right">
-                <span className="text-[10px] text-slate-400 block">Available Stock</span>
-                <span className={`font-mono font-bold ${p.is_low_stock ? 'text-amber-400' : 'text-slate-200'}`}>
-                  {p.current_stock} {p.unit}
-                </span>
+              <div className="flex items-center gap-3">
+                <div className="text-right">
+                  <span className="text-[10px] text-slate-400 block">Stock</span>
+                  <span className={`font-mono font-bold ${p.is_low_stock ? 'text-amber-400' : 'text-slate-200'}`}>
+                    {p.current_stock} {p.unit}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1 pl-2 border-l border-slate-800">
+                  <button
+                    onClick={() => handleOpenEdit(p)}
+                    title="Edit Product"
+                    className="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors"
+                  >
+                    <Pencil className="w-3.5 h-3.5" />
+                  </button>
+                  <button
+                    onClick={() => setDeletingProduct(p)}
+                    title="Delete Product"
+                    className="p-1.5 rounded-lg bg-slate-900 hover:bg-rose-950/40 text-slate-400 hover:text-rose-400 border border-slate-800 transition-colors"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -325,6 +418,177 @@ export const Products: React.FC = () => {
         </div>
       )}
 
+      {/* Edit Product Modal */}
+      {editingProduct && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+          <div className="w-full max-w-lg glass-panel bg-slate-900 border border-slate-700 rounded-3xl p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+              <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                <Pencil className="w-4 h-4 text-emerald-400" />
+                Edit Product: {editingProduct.name}
+              </h3>
+              <button onClick={() => setEditingProduct(null)} className="text-slate-400 hover:text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleUpdateProduct} className="space-y-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">Product Name (English)</label>
+                  <input
+                    type="text"
+                    required
+                    value={editFormData.name}
+                    onChange={(e) => setEditFormData({ ...editFormData, name: e.target.value })}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">Telugu Title (తెలుగు పేరు)</label>
+                  <input
+                    type="text"
+                    value={editFormData.telugu_name}
+                    onChange={(e) => setEditFormData({ ...editFormData, telugu_name: e.target.value })}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="text-xs font-semibold text-slate-300 block mb-1">
+                  Spoken Aliases (Comma-separated for Voice Matching)
+                </label>
+                <input
+                  type="text"
+                  value={editFormData.aliases_str}
+                  onChange={(e) => setEditFormData({ ...editFormData, aliases_str: e.target.value })}
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">Category</label>
+                  <select
+                    value={editFormData.category_id}
+                    onChange={(e) => setEditFormData({ ...editFormData, category_id: e.target.value })}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                  >
+                    <option value="">No Category</option>
+                    {categories.map((c) => (
+                      <option key={c.id} value={c.id}>{c.name}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">Unit</label>
+                  <select
+                    value={editFormData.unit}
+                    onChange={(e) => setEditFormData({ ...editFormData, unit: e.target.value })}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                  >
+                    <option value="kg">kg (కిలో)</option>
+                    <option value="litre">litre (లీటర్)</option>
+                    <option value="packet">packet (ప్యాకెట్)</option>
+                    <option value="bag">bag (బస్తా)</option>
+                    <option value="piece">piece (ముక్క)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3">
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">Cost Price (₹)</label>
+                  <input
+                    type="number"
+                    step="0.5"
+                    required
+                    value={editFormData.cost_price}
+                    onChange={(e) => setEditFormData({ ...editFormData, cost_price: parseFloat(e.target.value) || 0 })}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">Selling Price (₹)</label>
+                  <input
+                    type="number"
+                    step="0.5"
+                    required
+                    value={editFormData.selling_price}
+                    onChange={(e) => setEditFormData({ ...editFormData, selling_price: parseFloat(e.target.value) || 0 })}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">Threshold</label>
+                  <input
+                    type="number"
+                    value={editFormData.low_stock_threshold}
+                    onChange={(e) => setEditFormData({ ...editFormData, low_stock_threshold: parseFloat(e.target.value) || 0 })}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 pt-3 border-t border-slate-800">
+                <button
+                  type="button"
+                  onClick={() => setEditingProduct(null)}
+                  className="flex-1 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="flex-1 py-2.5 rounded-xl text-xs font-bold bg-emerald-400 hover:bg-emerald-300 text-slate-950 disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Updating...' : 'Save Changes'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Delete Confirmation Modal */}
+      {deletingProduct && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+          <div className="w-full max-w-sm glass-panel bg-slate-900 border border-rose-900/50 rounded-3xl p-6 shadow-2xl space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mx-auto">
+              <AlertTriangle className="w-6 h-6" />
+            </div>
+            
+            <div className="text-center space-y-1">
+              <h3 className="text-base font-bold text-white">Deactivate Product?</h3>
+              <p className="text-xs text-slate-400">
+                Are you sure you want to remove <strong className="text-white">{deletingProduct.name}</strong> from active catalog? All past sales and ledger records will be securely archived.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setDeletingProduct(null)}
+                className="flex-1 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700"
+              >
+                Keep Product
+              </button>
+              <button
+                type="button"
+                onClick={handleDeleteProduct}
+                disabled={isSubmitting}
+                className="flex-1 py-2.5 rounded-xl text-xs font-bold bg-rose-500 hover:bg-rose-400 text-white disabled:opacity-50"
+              >
+                {isSubmitting ? 'Removing...' : 'Confirm Remove'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
+

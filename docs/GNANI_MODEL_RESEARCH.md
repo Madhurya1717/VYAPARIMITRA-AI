@@ -209,3 +209,4 @@ Gnani AI operates its primary developer and enterprise voice API infrastructure 
 2. **Key Storage:** `GNANI_API_KEY` stored strictly in server-side `.env` configuration.
 3. **Graceful Fallbacks & Offline Test Suite:** If `GNANI_API_KEY` is empty or offline during automated test suites, the system activates an explicit `MockGnaniService` with documented fixtures, guaranteeing 100% test pass rates without fabricated live claims.
 4. **Idempotency Protection:** Every voice command creates a unique UUID idempotency key to prevent double sales from network retries or repeated speech submissions.
+

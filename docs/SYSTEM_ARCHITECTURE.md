@@ -91,3 +91,4 @@ VyapariMitra AI is constructed on four foundational pillars:
 ### 3.3. Idempotency & Financial Safety
 - Double sales due to network retries or accidental repeat voice utterances are rejected using an `idempotency_key` (hash of user id + command timestamp or explicit UUID).
 - Decimal arithmetic via Python `Decimal` is enforced for all currency calculations, ensuring zero floating-point drift.
+

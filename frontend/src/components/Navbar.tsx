@@ -187,3 +187,4 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVoiceModal }) => {
     </header>
   );
 };
+

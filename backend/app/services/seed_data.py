@@ -102,7 +102,7 @@ async def seed_demo_data_if_empty(db: AsyncSession):
         {
             "name": "Refined Sugar",
             "telugu_name": "పంచదార",
-            "aliases": ["sugar", "panchadara", "చక్కెర", "sweetener"],
+            "aliases": ["sugar", "panchadara", "పంచదార", "చక్కెర", "sweetener"],
             "category_id": created_cats["Packaged Goods"],
             "sku": "PK-SUG-004",
             "current_stock": Decimal("45.000"),
@@ -114,7 +114,7 @@ async def seed_demo_data_if_empty(db: AsyncSession):
         {
             "name": "Aashirvaad Shudh Chakki Atta",
             "telugu_name": "ఆశీర్వాద్ గోధుమపిండి",
-            "aliases": ["atta", "wheat flour", "godhumapindi", "flour"],
+            "aliases": ["atta", "wheat flour", "godhumapindi", "గోధుమపిండి", "flour"],
             "category_id": created_cats["Packaged Goods"],
             "sku": "PK-ATTA-005",
             "current_stock": Decimal("18.000"),
@@ -260,3 +260,4 @@ async def seed_demo_data_if_empty(db: AsyncSession):
     db.add(notif)
 
     await db.commit()
+

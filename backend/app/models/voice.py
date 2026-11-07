@@ -43,3 +43,4 @@ class VoiceCommand(Base):
 
     session = relationship("VoiceSession", back_populates="commands")
     business = relationship("Business", back_populates="voice_commands")
+

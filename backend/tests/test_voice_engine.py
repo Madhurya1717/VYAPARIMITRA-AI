@@ -148,3 +148,4 @@ async def test_voice_stock_inquiry(client: AsyncClient):
     assert data["intent"]["intent"] == "check_stock"
     assert data["action_status"] == "EXECUTED"
     assert "స్టాక్‌లో" in data["natural_response"]
+

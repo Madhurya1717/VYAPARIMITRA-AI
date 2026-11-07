@@ -124,3 +124,4 @@ async def create_order(
 
     # Return refreshed order
     return await list_orders(status=None, current_user=current_user, db=db)
+

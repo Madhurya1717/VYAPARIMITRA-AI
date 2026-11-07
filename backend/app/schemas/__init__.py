@@ -39,3 +39,4 @@ __all__ = [
     "DashboardSummaryResponse", "DailySalesMetric",
     "TopProductItem", "RestockAlertItem", "CategoryBreakdownItem"
 ]
+

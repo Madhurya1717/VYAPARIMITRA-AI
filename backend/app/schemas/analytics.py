@@ -33,8 +33,15 @@ class CategoryBreakdownItem(BaseModel):
 class DashboardSummaryResponse(BaseModel):
     today_sales: float
     today_orders: int
+    monthly_revenue: float = 0.0
+    monthly_orders: int = 0
     total_revenue: float
     total_orders_count: int
+    today_gross_profit: float = 0.0
+    total_gross_profit: float = 0.0
+    today_cogs: float = 0.0
+    total_cogs: float = 0.0
+    profit_margin_pct: float = 0.0
     inventory_total_value: float
     active_products_count: int
     low_stock_count: int
@@ -43,3 +50,4 @@ class DashboardSummaryResponse(BaseModel):
     recent_sales_trend: List[DailySalesMetric]
     category_distribution: List[CategoryBreakdownItem]
     voice_assistant_status: str = "ONLINE"
+

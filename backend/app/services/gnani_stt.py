@@ -116,3 +116,4 @@ class GnaniPrismaSTTService:
             return "ఈరోజు 10 కిలోల బియ్యం అమ్మాను"
 
 gnani_stt_service = GnaniPrismaSTTService()
+

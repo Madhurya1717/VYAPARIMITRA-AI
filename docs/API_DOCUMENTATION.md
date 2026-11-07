@@ -212,3 +212,4 @@
   - `top_selling_products`
   - `recent_sales_trend` (last 7 days actual revenue per day)
   - `category_distribution`
+

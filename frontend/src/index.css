@@ -68,3 +68,27 @@ body {
 .wave-bar {
   animation: waveAnimation 1.2s ease-in-out infinite;
 }
+
+/* Print Styles for Invoices & Receipts */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-invoice, .printable-invoice * {
+    visibility: visible !important;
+  }
+  .printable-invoice {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    background: white !important;
+    color: #0f172a !important;
+    padding: 1.5rem !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

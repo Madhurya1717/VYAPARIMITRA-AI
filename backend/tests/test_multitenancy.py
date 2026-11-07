@@ -47,3 +47,4 @@ async def test_business_data_isolation(client: AsyncClient):
     # Business Beta attempts to fetch Alpha's product by ID: MUST RETURN 404
     cross_tenant_resp = await client.get(f"/api/v1/products/{prod_a_id}", headers=headers_b)
     assert cross_tenant_resp.status_code == 404
+

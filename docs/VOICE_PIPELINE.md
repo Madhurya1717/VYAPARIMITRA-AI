@@ -96,3 +96,4 @@
 1. **Idempotency Key Verification:** Every command carries an `idempotency_key` (UUID). If network retransmission occurs or a user repeatedly clicks without reloading, duplicate billing is strictly prevented.
 2. **Deficit Safeguard:** If an utterance specifies `100 kg` when only `40 kg` is physically in stock, the engine rejects the transaction, generates an error audio feedback, and commits zero database mutations.
 3. **High Quantity Confirmation Gate:** Any sale exceeding 25 units or ₹2,000 automatically triggers `requires_confirmation = true`, displaying a mandatory confirmation button before writing to the database.
+

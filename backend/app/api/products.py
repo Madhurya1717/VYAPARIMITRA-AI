@@ -161,3 +161,57 @@ async def get_product(
         "created_at": prod.created_at,
         "updated_at": prod.updated_at
     }
+
+@router.put("/{product_id}", response_model=ProductResponse)
+async def update_product(
+    product_id: str,
+    data: ProductUpdate,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    prod = await inventory_service.update_product(
+        db=db,
+        business_id=current_user.business_id,
+        product_id=product_id,
+        data=data
+    )
+    if not prod:
+        raise HTTPException(status_code=404, detail="Product not found")
+
+    aliases_list = json.loads(prod.aliases) if prod.aliases else []
+    return {
+        "id": prod.id,
+        "business_id": prod.business_id,
+        "name": prod.name,
+        "telugu_name": prod.telugu_name,
+        "aliases": aliases_list,
+        "category_id": prod.category_id,
+        "category_name": prod.category.name if prod.category else None,
+        "sku": prod.sku,
+        "current_stock": float(prod.current_stock),
+        "unit": prod.unit,
+        "cost_price": float(prod.cost_price),
+        "selling_price": float(prod.selling_price),
+        "low_stock_threshold": float(prod.low_stock_threshold),
+        "is_active": prod.is_active,
+        "is_low_stock": float(prod.current_stock) <= float(prod.low_stock_threshold),
+        "created_at": prod.created_at,
+        "updated_at": prod.updated_at
+    }
+
+@router.delete("/{product_id}")
+async def delete_product(
+    product_id: str,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    success = await inventory_service.delete_product(
+        db=db,
+        business_id=current_user.business_id,
+        product_id=product_id
+    )
+    if not success:
+        raise HTTPException(status_code=404, detail="Product not found")
+    return {"success": True, "message": "Product deactivated successfully"}
+
+

@@ -80,3 +80,4 @@ async def get_current_business(
             detail="Active business profile not found for this user",
         )
     return business
+

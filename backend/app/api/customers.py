@@ -43,3 +43,4 @@ async def create_customer(
     await db.commit()
     await db.refresh(customer)
     return customer
+

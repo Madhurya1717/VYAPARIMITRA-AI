@@ -33,26 +33,23 @@ UNIT_PATTERNS = {
 
 class MultilingualVoiceNLU:
     """
-    Multilingual NLU Engine for VyapariMitra AI.
+    Production-Grade Multilingual NLU Engine for VyapariMitra AI.
     Accurately classifies intents and extracts business entities across:
-    - Pure Telugu
+    - Pure Telugu (తెలుగు)
     - Indian English
     - Tenglish (Telugu-English code-mixed speech)
     """
 
     def parse_command(self, text: str, catalog_products: List[Dict[str, Any]] = None) -> Dict[str, Any]:
-        """
-        Parses spoken/transcribed text into structured business intent and slots.
-        """
         raw_text = text.strip()
         lower_text = raw_text.lower()
         detected_lang = self._detect_language(raw_text)
 
-        intent = self._classify_intent(lower_text, detected_lang)
+        intent = self._classify_intent(raw_text, lower_text, detected_lang)
         quantity, unit = self._extract_quantity_and_unit(lower_text)
         matched_product = self._match_product(raw_text, lower_text, catalog_products or [])
 
-        # Confidence calculation based on entity completeness
+        # Confidence calculation
         confidence = 0.96
         if intent == "unknown":
             confidence = 0.35
@@ -70,8 +67,18 @@ class MultilingualVoiceNLU:
                 requires_confirmation = True
         elif intent == "inventory_add":
             requires_confirmation = True  # Destructive inventory modification
-        elif intent == "unknown":
-            requires_confirmation = False
+
+        clarification_prompt = None
+        if intent == "unknown":
+            if "te" in detected_lang:
+                clarification_prompt = "క్షమించండి, మీ ఆదేశం అర్థం కాలేదు. దయచేసి '10 కిలోల బియ్యం అమ్మాను' లేదా 'స్టాక్ ఎంత ఉంది' అని స్పష్టంగా చెప్పండి."
+            else:
+                clarification_prompt = "I didn't quite catch that. Please specify an action like 'Sold 10 kg rice' or 'Check stock'."
+        elif intent == "inventory_sale" and not matched_product:
+            if "te" in detected_lang:
+                clarification_prompt = "ఏ వస్తువు అమ్మారో దయచేసి స్పష్టంగా చెప్పండి (ఉదాహరణకు: బియ్యం, కందిపప్పు, పంచదార)."
+            else:
+                clarification_prompt = "Please specify which product was sold (e.g., rice, toor dal, sugar)."
 
         return {
             "intent": intent,
@@ -83,95 +90,114 @@ class MultilingualVoiceNLU:
             "language": detected_lang,
             "confidence": round(confidence, 2),
             "requires_confirmation": requires_confirmation,
+            "clarification_prompt": clarification_prompt,
             "raw_text": raw_text
         }
 
     def _detect_language(self, text: str) -> str:
-        """
-        Detects if text is primarily Telugu Unicode, English, or Code-mixed Tenglish.
-        """
         telugu_char_count = sum(1 for c in text if 0x0C00 <= ord(c) <= 0x0C7F)
         latin_char_count = sum(1 for c in text if c.isalpha() and ord(c) < 128)
 
         if telugu_char_count > 0 and latin_char_count > 0:
-            return "te-en"  # Tenglish
+            return "te-en"
         elif telugu_char_count > latin_char_count:
             return "te"
         else:
-            # Check for common Tenglish romanized markers
-            tenglish_markers = ["chesanu", "ammamu", "chesaru", "entha", "undhi", "undi", "cheppu", "ivvali", "ammali", "kavali"]
+            tenglish_markers = [
+                "chesanu", "ammamu", "chesaru", "entha", "undhi", "undi",
+                "cheppu", "ivvali", "ammali", "kavali", "cheyi", "aindi", "vachindi", "chesam"
+            ]
             words = text.lower().split()
             if any(w in words for w in tenglish_markers):
                 return "te-en"
             return "en"
 
-    def _classify_intent(self, text: str, lang: str) -> str:
-        # Sales intents
-        sale_keywords = [
+    def _classify_intent(self, raw_text: str, lower_text: str, lang: str) -> str:
+        """
+        Classifies business intents with strict precedence:
+        1. Summaries & Reports
+        2. Price Inquiries
+        3. Stock Inquiries
+        4. Stock Inward (Add)
+        5. Stock Sales
+        """
+        # 1. Daily Summary & Revenue Inquiries (Must be checked BEFORE sale!)
+        summary_patterns = [
             # Telugu
-            "అమ్మాను", "అమ్మాము", "అమ్మకం", "సేల్", "విక్రయించాము", "ఇచ్చాను", "కొన్నారు",
+            r"ఈరోజు.*అమ్మకాలు", r"మొత్తం.*అమ్మకాలు", r"ఈరోజు.*బిజినెస్", r"లాభం.*ఎంత", r"రోజువారీ సారాంశం",
             # English
-            "sold", "sell", "sale", "billed", "dispatch",
+            r"\b(?:today(?:'s)?\s+(?:sales|revenue|summary|business))\b",
+            r"\b(?:sales\s+and\s+revenue\s+summary)\b",
+            r"\b(?:total\s+sales\s+today)\b",
+            r"\b(?:how\s+much\s+(?:profit|sales|revenue))\b",
             # Tenglish
-            "sell chesanu", "sale aindi", "sale chesam", "ammesanu", "ammina", "bill cheyi"
+            r"\b(?:today\s+sales\s+entha)\b", r"\b(?:today\s+business\s+entha)\b",
+            r"\b(?:sales\s+summary\s+cheppu)\b", r"\b(?:today\s+sales\s+entha\s+chesamu)\b"
         ]
-        if any(kw in text for kw in sale_keywords):
-            return "inventory_sale"
+        for p in summary_patterns:
+            if re.search(p, raw_text, re.IGNORECASE):
+                return "daily_summary"
 
-        # Restock / Add Stock intents
-        add_keywords = [
+        # 2. Price Inquiries (Must be checked BEFORE sale!)
+        price_patterns = [
             # Telugu
-            "చేర్చండి", "కలపండి", "స్టాక్ వచ్చింది", "కొన్నాము", "లోడ్ అయింది",
+            r"ధర\s*ఎంత", r"ధర\s*చెప్పు", r"రేటు\s*ఎంత", r"ఖరీదు\s*ఎంత",
             # English
-            "add", "restock", "received", "purchased", "stocked", "added",
+            r"\b(?:(?:what\s+is\s+the\s+)?(?:selling\s+)?(?:price|cost|rate)\s+of)\b",
+            r"\b(?:how\s+much\s+(?:is|for))\b",
             # Tenglish
-            "stock add chey", "stock vachindi", "add chey", "restock chey", "konnamu"
+            r"\b(?:price\s+entha)\b", r"\b(?:rate\s+entha)\b", r"\b(?:cost\s+entha)\b"
         ]
-        if any(kw in text for kw in add_keywords):
-            return "inventory_add"
+        for p in price_patterns:
+            if re.search(p, raw_text, re.IGNORECASE):
+                return "price_inquiry"
 
-        # Check stock inquiry
-        stock_query_keywords = [
+        # 3. Stock Level Inquiries (Must be checked BEFORE sale!)
+        stock_patterns = [
             # Telugu
-            "స్టాక్ ఎంత", "ఎంత ఉంది", "స్టాక్ చెక్", "నిల్వ ఎంత",
+            r"స్టాక్\s*ఎంత", r"నిల్వ\s*ఎంత", r"ఎంత\s*ఉంది", r"స్టాక్\s*చెక్",
             # English
-            "how much stock", "check stock", "stock left", "quantity available", "stock available",
+            r"\b(?:how\s+much\s+.*(?:stock|left|available))\b",
+            r"\b(?:check\s+stock)\b",
+            r"\b(?:remaining\s+stock)\b",
+            r"\b(?:quantity\s+available)\b",
             # Tenglish
-            "stock entha undi", "entha stock undi", "stock check chey"
+            r"\b(?:stock\s+entha\s+undi)\b", r"\b(?:entha\s+stock\s+undi)\b",
+            r"\b(?:stock\s+check\s+chey)\b"
         ]
-        if any(kw in text for kw in stock_query_keywords):
-            return "check_stock"
+        for p in stock_patterns:
+            if re.search(p, raw_text, re.IGNORECASE):
+                return "check_stock"
 
-        # Price inquiry
-        price_keywords = [
+        # 4. Inventory Inward / Restock Commands
+        add_patterns = [
             # Telugu
-            "ధర ఎంత", "ధర చెప్పు", "రేటు ఎంత",
+            r"చేర్చండి", r"కలపండి", r"స్టాక్\s*వచ్చింది", r"లోడ్\s*అయింది", r"చేర్చు",
             # English
-            "price of", "cost of", "how much is", "rate of",
+            r"\b(?:add|restock|received|purchased|stocked|shipment|added)\b",
             # Tenglish
-            "price entha", "rate entha", "cost entha"
+            r"\b(?:stock\s+add)\b", r"\b(?:add\s+chey)\b", r"\b(?:restock\s+chey)\b", r"\b(?:vachindi)\b"
         ]
-        if any(kw in text for kw in price_keywords):
-            return "price_inquiry"
+        for p in add_patterns:
+            if re.search(p, raw_text, re.IGNORECASE):
+                return "inventory_add"
 
-        # Daily sales summary
-        summary_keywords = [
+        # 5. Sales & Billing Commands
+        sale_patterns = [
             # Telugu
-            "ఈరోజు అమ్మకాలు", "ఈరోజు బిజినెస్", "మొత్తం సేల్స్", "రోజువారీ సారాంశం",
-            # English
-            "today sales", "today's revenue", "daily summary", "business summary", "total sales today",
+            r"అమ్మాను", r"అమ్మాము", r"అమ్మకం", r"సేల్", r"విక్రయించాము", r"ఇచ్చాను", r"కొన్నారు",
+            # English (Word boundaries mandatory to avoid matching 'price')
+            r"\b(?:sold|sell|sale|billed|billing|dispatch|bill)\b",
             # Tenglish
-            "today sales entha", "today business entha", "today sales summary"
+            r"\b(?:sell\s+chesanu|sale\s+aindi|sale\s+chesam|ammesanu|ammina|bill\s+cheyi)\b"
         ]
-        if any(kw in text for kw in summary_keywords):
-            return "daily_summary"
+        for p in sale_patterns:
+            if re.search(p, raw_text, re.IGNORECASE):
+                return "inventory_sale"
 
         return "unknown"
 
     def _extract_quantity_and_unit(self, text: str) -> Tuple[Optional[float], Optional[str]]:
-        """
-        Extracts numeric quantity and measurement unit with Telugu & English word support.
-        """
         detected_qty = None
         detected_unit = None
 
@@ -209,31 +235,36 @@ class MultilingualVoiceNLU:
     def _match_product(self, raw_text: str, lower_text: str, products: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
         """
         Matches product against catalog using canonical names, Telugu names, and aliases.
+        Uses word boundaries for English tokens to prevent 'rice' matching inside 'price'!
+        Sorts candidates by alias length descending so specific compounds match first.
         """
         if not products:
-            # Fallback default heuristics if catalog not yet loaded
-            common_items = [
-                {"name": "Sona Masoori Rice", "telugu_name": "సోనా మసూరి బియ్యం", "aliases": ["rice", "biyyam", "బియ్యం", "వరి అన్నం"]},
-                {"name": "Toor Dal", "telugu_name": "కందిపప్పు", "aliases": ["dal", "kandi pappu", "toordal", "పప్పు"]},
-                {"name": "Sunflower Oil", "telugu_name": "సన్‌ఫ్లవర్ నూనె", "aliases": ["oil", "sunflower oil", "నూనె"]},
-                {"name": "Sugar", "telugu_name": "చక్కెర", "aliases": ["sugar", "panchadara", "పంచదార"]},
-                {"name": "Aashirvaad Atta", "telugu_name": "ఆశీర్వాద్ గోధుమపిండి", "aliases": ["atta", "wheat flour", "గోధుమపిండి"]}
+            products = [
+                {"name": "Sona Masoori Rice", "telugu_name": "సోనా మసూరి బియ్యం", "aliases": ["rice", "biyyam", "వరి అన్నం"]},
+                {"name": "Toor Dal", "telugu_name": "కందిపప్పు", "aliases": ["toor dal", "kandi pappu", "dal"]},
+                {"name": "Freedom Sunflower Oil", "telugu_name": "సన్‌ఫ్లవర్ నూనె", "aliases": ["sunflower oil", "oil", "noon"]},
+                {"name": "Refined Sugar", "telugu_name": "పంచదార", "aliases": ["sugar", "panchadara", "చక్కెర"]},
+                {"name": "Aashirvaad Shudh Chakki Atta", "telugu_name": "ఆశీర్వాద్ గోధుమపిండి", "aliases": ["atta", "wheat flour", "గోధుమపిండి"]},
+                {"name": "Tata Salt Vacuum Evaporated", "telugu_name": "టాటా ఉప్పు", "aliases": ["salt", "uppu", "ఉప్పు"]}
             ]
-            products = common_items
 
-        # Exact Telugu and English substring matching
+        # 1. Check exact Telugu names first (longest first)
+        sorted_by_telugu = sorted(products, key=lambda p: len(p.get("telugu_name") or ""), reverse=True)
+        for prod in sorted_by_telugu:
+            t_name = prod.get("telugu_name") or ""
+            if t_name and t_name in raw_text:
+                return prod
+
+        # 2. Check full canonical English names (longest first)
+        sorted_by_name = sorted(products, key=lambda p: len(p.get("name") or ""), reverse=True)
+        for prod in sorted_by_name:
+            c_name = prod.get("name", "").lower()
+            if c_name and re.search(r'\b' + re.escape(c_name) + r'\b', lower_text):
+                return prod
+
+        # 3. Check all aliases with word boundaries (longest alias first)
+        alias_candidates = []
         for prod in products:
-            # Check Telugu name
-            telugu_name = prod.get("telugu_name") or ""
-            if telugu_name and telugu_name in raw_text:
-                return prod
-
-            # Check English name
-            canonical_name = prod.get("name", "").lower()
-            if canonical_name and canonical_name in lower_text:
-                return prod
-
-            # Check aliases
             aliases = prod.get("aliases") or []
             if isinstance(aliases, str):
                 import json
@@ -241,9 +272,32 @@ class MultilingualVoiceNLU:
                     aliases = json.loads(aliases)
                 except Exception:
                     aliases = [aliases]
-            for alias in aliases:
-                alias_clean = alias.strip().lower()
-                if alias_clean and alias_clean in lower_text:
+
+            candidate_list = list(aliases)
+            # Also include significant words from telugu_name (e.g., 'గోధుమపిండి' from 'ఆశీర్వాద్ గోధుమపిండి')
+            t_name = prod.get("telugu_name") or ""
+            if t_name:
+                for tw in t_name.split():
+                    if len(tw) >= 3 and tw not in candidate_list:
+                        candidate_list.append(tw)
+
+            for a in candidate_list:
+                a_clean = a.strip().lower()
+                if a_clean:
+                    alias_candidates.append((len(a_clean), a_clean, prod))
+
+        alias_candidates.sort(key=lambda x: x[0], reverse=True)
+
+        for _, alias_clean, prod in alias_candidates:
+            # Check if alias is Telugu Unicode
+            is_telugu = any(0x0C00 <= ord(c) <= 0x0C7F for c in alias_clean)
+            if is_telugu:
+                if alias_clean in raw_text:
+                    return prod
+            else:
+                # English / Latin: enforce strict word boundary so 'rice' does NOT match 'price'!
+                pattern = r'\b' + re.escape(alias_clean) + r'\b'
+                if re.search(pattern, lower_text):
                     return prod
 
         return None
@@ -253,9 +307,6 @@ class MultilingualVoiceNLU:
         intent_data: Dict[str, Any],
         business_context: Dict[str, Any]
     ) -> str:
-        """
-        Generates natural spoken feedback in the merchant's chosen language.
-        """
         intent = intent_data.get("intent")
         lang = intent_data.get("language", "te")
         product = intent_data.get("product_name") or "వస్తువు"
@@ -263,6 +314,9 @@ class MultilingualVoiceNLU:
         unit = intent_data.get("unit", "kg")
         remaining_stock = business_context.get("remaining_stock")
         total_price = business_context.get("total_price")
+
+        if intent_data.get("clarification_prompt"):
+            return intent_data["clarification_prompt"]
 
         # Telugu Responses
         if "te" in lang:

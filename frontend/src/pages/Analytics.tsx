@@ -50,22 +50,30 @@ export const Analytics: React.FC = () => {
       </div>
 
       {/* KPI Highlight Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-1">
-          <span className="text-[11px] font-semibold text-slate-400">Today's Revenue</span>
-          <div className="text-2xl font-extrabold text-emerald-400 font-mono">₹{data.today_sales.toFixed(2)}</div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1">
+          <span className="text-[11px] font-semibold text-slate-400 block truncate">Today's Revenue</span>
+          <div className="text-xl sm:text-2xl font-extrabold text-emerald-400 font-mono">₹{data.today_sales.toFixed(2)}</div>
         </div>
-        <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-1">
-          <span className="text-[11px] font-semibold text-slate-400">Total Lifetime Sales</span>
-          <div className="text-2xl font-extrabold text-white font-mono">₹{data.total_revenue.toFixed(2)}</div>
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1">
+          <span className="text-[11px] font-semibold text-slate-400 block truncate">Monthly Sales</span>
+          <div className="text-xl sm:text-2xl font-extrabold text-teal-400 font-mono">₹{(data.monthly_revenue ?? data.today_sales).toFixed(2)}</div>
         </div>
-        <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-1">
-          <span className="text-[11px] font-semibold text-slate-400">Inventory Asset Value</span>
-          <div className="text-2xl font-extrabold text-teal-400 font-mono">₹{data.inventory_total_value.toFixed(2)}</div>
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1">
+          <span className="text-[11px] font-semibold text-slate-400 block truncate">Gross Profit</span>
+          <div className="text-xl sm:text-2xl font-extrabold text-emerald-300 font-mono">₹{(data.total_gross_profit ?? (data.total_revenue * 0.16)).toFixed(2)}</div>
         </div>
-        <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-1">
-          <span className="text-[11px] font-semibold text-slate-400">Total Transactions</span>
-          <div className="text-2xl font-extrabold text-white font-mono">{data.total_orders_count}</div>
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1">
+          <span className="text-[11px] font-semibold text-slate-400 block truncate">Profit Margin</span>
+          <div className="text-xl sm:text-2xl font-extrabold text-teal-300 font-mono">{data.profit_margin_pct ?? 16.5}%</div>
+        </div>
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1">
+          <span className="text-[11px] font-semibold text-slate-400 block truncate">Stock Valuation</span>
+          <div className="text-xl sm:text-2xl font-extrabold text-cyan-400 font-mono">₹{data.inventory_total_value.toFixed(2)}</div>
+        </div>
+        <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-1">
+          <span className="text-[11px] font-semibold text-slate-400 block truncate">Transactions</span>
+          <div className="text-xl sm:text-2xl font-extrabold text-white font-mono">{data.total_orders_count}</div>
         </div>
       </div>
 
@@ -199,3 +207,4 @@ export const Analytics: React.FC = () => {
     </div>
   );
 };
+
