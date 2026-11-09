@@ -1,6 +1,6 @@
 import uuid
 from datetime import datetime, timezone
-from sqlalchemy import Column, String, DateTime, Boolean, Text, ForeignKey
+from sqlalchemy import Column, String, DateTime, Boolean, Text, ForeignKey, Integer, Numeric
 from sqlalchemy.orm import relationship
 from backend.app.core.database import Base
 
@@ -19,9 +19,18 @@ class Business(Base):
     gstin = Column(String(20), nullable=True)
     preferred_language = Column(String(10), default="te-IN", nullable=False)
     currency = Column(String(5), default="INR", nullable=False)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
-    updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+    )
 
+    updated_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    onupdate=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+    )
     users = relationship("User", back_populates="business", cascade="all, delete-orphan")
     products = relationship("Product", back_populates="business", cascade="all, delete-orphan")
     categories = relationship("Category", back_populates="business", cascade="all, delete-orphan")
@@ -33,6 +42,7 @@ class Business(Base):
     voice_commands = relationship("VoiceCommand", back_populates="business", cascade="all, delete-orphan")
     notifications = relationship("Notification", back_populates="business", cascade="all, delete-orphan")
     audit_logs = relationship("AuditLog", back_populates="business", cascade="all, delete-orphan")
+    expenses = relationship("Expense", back_populates="business", cascade="all, delete-orphan")
 
 class User(Base):
     __tablename__ = "users"
@@ -44,7 +54,53 @@ class User(Base):
     password_hash = Column(String(255), nullable=False)
     role = Column(String(32), default="owner", nullable=False)  # owner, manager, cashier
     is_active = Column(Boolean, default=True, nullable=False)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
-
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+    )
     business = relationship("Business", back_populates="users")
+    otp_verifications = relationship("OTPVerification", back_populates="user", cascade="all, delete-orphan")
+
+class OTPVerification(Base):
+    __tablename__ = "otp_verifications"
+
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    user_id = Column(String(36), ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    session_token = Column(String(128), unique=True, nullable=False, index=True)
+    otp_hash = Column(String(255), nullable=False)
+    attempts = Column(Integer, default=0, nullable=False)
+    expires_at = Column(DateTime, nullable=False)
+    last_resend_at = Column(DateTime, nullable=False)
+    is_used = Column(Boolean, default=False, nullable=False)
+    created_at = Column(
+        DateTime,
+        default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+        nullable=False
+    )
+
+    user = relationship("User", back_populates="otp_verifications")
+
+class Expense(Base):
+    __tablename__ = "expenses"
+
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    business_id = Column(String(36), ForeignKey("businesses.id", ondelete="CASCADE"), nullable=False, index=True)
+    category = Column(String(64), nullable=False)  # rent, electricity, transport, salary, packaging, maintenance, misc
+    amount = Column(Numeric(12, 2), nullable=False)
+    description = Column(Text, nullable=True)
+    expense_date = Column(
+        DateTime,
+        default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+        nullable=False
+    )
+    created_at = Column(
+        DateTime,
+        default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+        nullable=False
+    )
+
+    business = relationship("Business", back_populates="expenses")
+
+
 

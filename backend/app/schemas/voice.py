@@ -8,13 +8,15 @@ class VoiceTranscribeRequest(BaseModel):
     format: Optional[str] = "transcribe"
 
 class VoiceCommandIntent(BaseModel):
-    intent: str  # inventory_sale, inventory_add, check_stock, create_order, daily_summary, price_inquiry, unknown
+    intent: str  # inventory_sale, inventory_add, check_stock, create_order, daily_summary, price_inquiry, unknown, get_profit_loss, get_revenue, get_sales_analytics, get_customer_analytics, get_inventory_health, compare_periods, get_business_insights
     product_name: Optional[str] = None
     matched_product_id: Optional[str] = None
     quantity: Optional[float] = None
     unit: Optional[str] = "kg"
     unit_price: Optional[float] = None
     total_amount: Optional[float] = None
+    timeframe: Optional[str] = None
+    period_label: Optional[str] = None
     language: str = "te"
     confidence: float = 1.0
     requires_confirmation: bool = False

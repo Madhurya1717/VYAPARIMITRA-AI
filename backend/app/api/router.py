@@ -7,6 +7,8 @@ from backend.app.api.customers import router as customers_router
 from backend.app.api.analytics import router as analytics_router
 from backend.app.api.notifications import router as notifications_router
 from backend.app.api.voice import router as voice_router
+from backend.app.api.simulation import router as simulation_router
+from backend.app.api.realtime import router as realtime_router
 
 api_router = APIRouter()
 api_router.include_router(auth_router)
@@ -17,4 +19,5 @@ api_router.include_router(customers_router)
 api_router.include_router(analytics_router)
 api_router.include_router(notifications_router)
 api_router.include_router(voice_router)
-
+api_router.include_router(simulation_router)
+api_router.include_router(realtime_router)

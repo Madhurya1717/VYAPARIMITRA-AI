@@ -22,3 +22,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary testing files
+scratch/
+scratch_test_*.py
+
+# Build and cache
+dist/
+build/

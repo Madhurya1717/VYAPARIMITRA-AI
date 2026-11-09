@@ -14,7 +14,11 @@ class Category(Base):
     business_id = Column(String(36), ForeignKey("businesses.id", ondelete="CASCADE"), nullable=False, index=True)
     name = Column(String(120), nullable=False)
     description = Column(Text, nullable=True)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+    )
 
     business = relationship("Business", back_populates="categories")
     products = relationship("Product", back_populates="category")
@@ -29,14 +33,26 @@ class Product(Base):
     telugu_name = Column(String(255), nullable=True, index=True)
     aliases = Column(Text, default="[]", nullable=False)  # JSON array of alternative names/spellings
     sku = Column(String(64), nullable=True)
+    external_product_id = Column(String(64), nullable=True, index=True)
+    department = Column(String(120), nullable=True)
     current_stock = Column(Numeric(12, 3), default=0.0, nullable=False)
     unit = Column(String(20), default="kg", nullable=False)  # kg, litre, packet, piece, bag
     cost_price = Column(Numeric(10, 2), default=0.0, nullable=False)
     selling_price = Column(Numeric(10, 2), default=0.0, nullable=False)
     low_stock_threshold = Column(Numeric(12, 3), default=10.0, nullable=False)
     is_active = Column(Boolean, default=True, nullable=False)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
-    updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+    )
+
+    updated_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    onupdate=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+    )
 
     business = relationship("Business", back_populates="products")
     category = relationship("Category", back_populates="products")
@@ -57,7 +73,11 @@ class InventoryTransaction(Base):
     reference_type = Column(String(32), nullable=True)  # sale, manual, voice_command, purchase_order
     reference_id = Column(String(36), nullable=True)
     notes = Column(Text, nullable=True)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+)
 
     business = relationship("Business", back_populates="inventory_transactions")
     product = relationship("Product", back_populates="inventory_transactions")

@@ -49,4 +49,6 @@ yarn-error.log*
 Thumbs.db
 .vscode/
 .idea/
+scratch/
+scratch_test_*.py
 

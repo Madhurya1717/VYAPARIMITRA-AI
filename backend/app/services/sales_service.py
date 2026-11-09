@@ -20,7 +20,8 @@ class SalesService:
         business_id: str,
         sale_data: SaleCreate,
         reference_type: str = "pos_sale",
-        reference_id: Optional[str] = None
+        reference_id: Optional[str] = None,
+        is_simulation: bool = False
     ) -> Sale:
         """
         Processes a multi-item sale atomically with exact Decimal arithmetic.
@@ -93,6 +94,7 @@ class SalesService:
             total_amount=total_amount,
             payment_method=sale_data.payment_method,
             status="completed",
+            is_simulation=is_simulation,
             notes=notes_str
         )
         db.add(sale)

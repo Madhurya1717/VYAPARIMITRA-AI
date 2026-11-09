@@ -1,12 +1,19 @@
+from datetime import datetime, timedelta, timezone
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
 from backend.app.core.database import get_db
+from backend.app.core.config import settings
 from backend.app.core.security import verify_password, get_password_hash, create_access_token, get_current_user, get_current_business
-from backend.app.models.business import Business, User
-from backend.app.schemas.auth import UserRegister, UserLogin, TokenResponse, UserResponse, BusinessResponse, BusinessUpdate
+from backend.app.models.business import Business, User, OTPVerification
+from backend.app.schemas.auth import (
+    UserRegister, UserLogin, TokenResponse, UserResponse,
+    BusinessResponse, BusinessUpdate, LoginStep1Response,
+    OTPVerifyRequest, OTPResendRequest, OTPResendResponse
+)
+from backend.app.services.email_service import email_service
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
@@ -77,7 +84,7 @@ async def login(
         "business": business
     }
 
-@router.post("/login-json", response_model=TokenResponse)
+@router.post("/login-json", response_model=LoginStep1Response)
 async def login_json(
     data: UserLogin,
     db: AsyncSession = Depends(get_db)
@@ -92,8 +99,87 @@ async def login_json(
             detail="Incorrect username/email or password"
         )
 
+    # Invalidate any prior unused OTP requests for this user
+    existing_otps = await db.execute(
+        select(OTPVerification).filter(OTPVerification.user_id == user.id, OTPVerification.is_used == False)
+    )
+    for old_otp in existing_otps.scalars().all():
+        old_otp.is_used = True
+
+    # Generate cryptographically secure 6-digit OTP & session token
+    otp = email_service.generate_otp()
+    session_token = email_service.generate_session_token()
+    otp_hash = email_service.hash_otp(session_token, otp)
+
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
+    expires_at = now + timedelta(minutes=5)
+
+    otp_record = OTPVerification(
+        user_id=user.id,
+        session_token=session_token,
+        otp_hash=otp_hash,
+        attempts=0,
+        expires_at=expires_at,
+        last_resend_at=now,
+        is_used=False
+    )
+    db.add(otp_record)
+    await db.commit()
+
+    # Dispatch OTP via configured SMTP or Development Console
+    await email_service.send_login_otp(user.phone_or_email, user.full_name, otp)
+
+    is_dev = (settings.ENVIRONMENT != "production") or not (settings.SMTP_HOST and settings.SMTP_USER)
+
+    return {
+        "otp_required": True,
+        "session_token": session_token,
+        "email_masked": email_service.mask_email(user.phone_or_email),
+        "expires_in_seconds": 300,
+        "message": "A 6-digit verification code has been dispatched to your email.",
+        "dev_otp": otp if is_dev else None
+    }
+
+@router.post("/verify-otp", response_model=TokenResponse)
+async def verify_otp(
+    data: OTPVerifyRequest,
+    db: AsyncSession = Depends(get_db)
+):
+    result = await db.execute(
+        select(OTPVerification).filter(OTPVerification.session_token == data.session_token)
+    )
+    otp_record = result.scalar_one_or_none()
+
+    if not otp_record:
+        raise HTTPException(status_code=400, detail="Invalid verification session. Please log in again.")
+
+    if otp_record.is_used:
+        raise HTTPException(status_code=400, detail="This verification code has already been used. Please log in again.")
+
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
+    if now > otp_record.expires_at:
+        raise HTTPException(status_code=400, detail="Verification code has expired. Please request a new code.")
+
+    if otp_record.attempts >= 5:
+        raise HTTPException(status_code=400, detail="Maximum verification attempts exceeded. Please initiate a new login.")
+
+    # Constant-time comparison
+    is_valid = email_service.verify_otp(data.session_token, data.otp.strip(), otp_record.otp_hash)
+    if not is_valid:
+        otp_record.attempts += 1
+        await db.commit()
+        remaining = max(0, 5 - otp_record.attempts)
+        raise HTTPException(status_code=400, detail=f"Invalid verification code. {remaining} attempt(s) remaining.")
+
+    # Successful verification
+    otp_record.is_used = True
+    await db.commit()
+
+    user_res = await db.execute(select(User).filter(User.id == otp_record.user_id))
+    user = user_res.scalar_one()
+
     b_res = await db.execute(select(Business).filter(Business.id == user.business_id))
-    business = b_res.scalar_one_or_none()
+    business = b_res.scalar_one()
 
     token = create_access_token({"sub": user.id, "business_id": user.business_id})
     return {
@@ -101,6 +187,50 @@ async def login_json(
         "token_type": "bearer",
         "user": user,
         "business": business
+    }
+
+@router.post("/resend-otp", response_model=OTPResendResponse)
+async def resend_otp(
+    data: OTPResendRequest,
+    db: AsyncSession = Depends(get_db)
+):
+    result = await db.execute(
+        select(OTPVerification).filter(OTPVerification.session_token == data.session_token)
+    )
+    otp_record = result.scalar_one_or_none()
+
+    if not otp_record or otp_record.is_used:
+        raise HTTPException(status_code=400, detail="Session expired or invalid. Please log in again.")
+
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
+    elapsed_seconds = (now - otp_record.last_resend_at).total_seconds()
+    if elapsed_seconds < 60:
+        cooldown_left = int(60 - elapsed_seconds)
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail=f"Please wait {cooldown_left} seconds before requesting a new code."
+        )
+
+    # Generate new OTP
+    new_otp = email_service.generate_otp()
+    otp_record.otp_hash = email_service.hash_otp(otp_record.session_token, new_otp)
+    otp_record.expires_at = now + timedelta(minutes=5)
+    otp_record.last_resend_at = now
+    otp_record.attempts = 0
+    await db.commit()
+
+    user_res = await db.execute(select(User).filter(User.id == otp_record.user_id))
+    user = user_res.scalar_one()
+
+    await email_service.send_login_otp(user.phone_or_email, user.full_name, new_otp)
+
+    is_dev = (settings.ENVIRONMENT != "production") or not (settings.SMTP_HOST and settings.SMTP_USER)
+
+    return {
+        "success": True,
+        "message": "A new 6-digit verification code has been dispatched.",
+        "expires_in_seconds": 300,
+        "dev_otp": new_otp if is_dev else None
     }
 
 @router.get("/me")

@@ -48,3 +48,15 @@ async def client(db_session: AsyncSession) -> AsyncGenerator[AsyncClient, None]:
         yield c
 
     app.dependency_overrides.clear()
+
+async def get_demo_auth_token(client: AsyncClient, email: str = "demo@vyaparimitra.ai", password: str = "Vyapari@123") -> str:
+    res = await client.post("/api/v1/auth/login-json", json={
+        "phone_or_email": email,
+        "password": password
+    })
+    data = res.json()
+    verify = await client.post("/api/v1/auth/verify-otp", json={
+        "session_token": data["session_token"],
+        "otp": data["dev_otp"]
+    })
+    return verify.json()["access_token"]

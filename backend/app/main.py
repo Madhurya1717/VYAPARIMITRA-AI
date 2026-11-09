@@ -1,11 +1,15 @@
+import os
+os.environ["DISABLE_SQLALCHEMY_CEXT"] = "1"
+
 import logging
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.app.core.config import settings
 from backend.app.core.database import engine, Base, AsyncSessionLocal
+from backend.app.core.realtime import realtime_manager
 from backend.app.api.router import api_router
 from backend.app.services.seed_data import seed_demo_data_if_empty
 
@@ -18,9 +22,18 @@ logger = logging.getLogger("vyaparimitra")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("Initializing VyapariMitra AI database schema...")
+    from sqlalchemy import text
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
-    logger.info("Database tables verified.")
+        try:
+            await conn.execute(text("ALTER TABLE products ADD COLUMN IF NOT EXISTS external_product_id VARCHAR(64);"))
+            await conn.execute(text("ALTER TABLE products ADD COLUMN IF NOT EXISTS department VARCHAR(120);"))
+            await conn.execute(text("ALTER TABLE sales ADD COLUMN IF NOT EXISTS is_simulation BOOLEAN NOT NULL DEFAULT FALSE;"))
+            await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_products_external_product_id ON products (external_product_id);"))
+            await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_sales_is_simulation ON sales (is_simulation);"))
+        except Exception as mig_err:
+            logger.warning(f"Schema column check: {mig_err}")
+    logger.info("Database tables and columns verified.")
 
     # Seed initial demo data
     async with AsyncSessionLocal() as session:
@@ -80,4 +93,18 @@ async def root():
         "health": "/health",
         "api_v1": settings.API_V1_STR
     }
+
+@app.websocket("/ws/realtime")
+async def websocket_realtime_endpoint(websocket: WebSocket):
+    await realtime_manager.connect(websocket)
+    try:
+        while True:
+            data = await websocket.receive_text()
+            if data == "ping":
+                await websocket.send_text("pong")
+    except WebSocketDisconnect:
+        realtime_manager.disconnect(websocket)
+    except Exception:
+        realtime_manager.disconnect(websocket)
+
 

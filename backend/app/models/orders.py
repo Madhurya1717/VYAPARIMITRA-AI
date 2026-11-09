@@ -18,7 +18,11 @@ class Customer(Base):
     address = Column(Text, nullable=True)
     total_purchases = Column(Numeric(12, 2), default=0.0, nullable=False)
     credit_balance = Column(Numeric(12, 2), default=0.0, nullable=False)  # Udhar balance
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+)
 
     business = relationship("Business", back_populates="customers")
     sales = relationship("Sale", back_populates="customer")
@@ -35,8 +39,18 @@ class Order(Base):
     payment_status = Column(String(32), default="unpaid", nullable=False)  # unpaid, paid, partially_paid
     total_amount = Column(Numeric(12, 2), default=0.0, nullable=False)
     notes = Column(Text, nullable=True)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
-    updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+)
+
+    updated_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    onupdate=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+    )
 
     business = relationship("Business", back_populates="orders")
     customer = relationship("Customer", back_populates="orders")

@@ -4,6 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.app.core.database import get_db
 from backend.app.core.security import get_current_user
+from backend.app.core.realtime import realtime_manager
 from backend.app.models.business import User
 from backend.app.schemas.sale import SaleCreate, SaleResponse
 from backend.app.services.sales_service import sales_service
@@ -90,6 +91,16 @@ async def create_sale(
                 "qr_payload": s.invoice.qr_payload,
                 "created_at": s.invoice.created_at
             } if s.invoice else None
+
+            # Broadcast real-time sale event to all connected dashboards
+            await realtime_manager.broadcast("SALE_CREATED", {
+                "sale_id": s.id,
+                "invoice_number": s.invoice_number,
+                "total_amount": float(s.total_amount),
+                "payment_method": s.payment_method,
+                "customer_name": s.customer.name if s.customer else "Walk-in Customer",
+                "items_count": len(items)
+            })
 
             return {
                 "id": s.id,

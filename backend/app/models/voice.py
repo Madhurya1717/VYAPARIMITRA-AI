@@ -39,7 +39,11 @@ class VoiceCommand(Base):
     timbre_audio_generated = Column(Boolean, default=False, nullable=False)
     response_text = Column(Text, nullable=True)
     latency_ms = Column(Float, default=0.0, nullable=False)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+)
 
     session = relationship("VoiceSession", back_populates="commands")
     business = relationship("Business", back_populates="voice_commands")

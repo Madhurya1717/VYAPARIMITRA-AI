@@ -1,4 +1,4 @@
-export type SupportedLanguage = 'te-IN' | 'en-IN' | 'hi-IN' | 'te-en';
+export type SupportedLanguage = 'te-IN' | 'en-IN' | 'indic-auto' | 'hi-IN' | 'te-en';
 
 export interface User {
   id: string;
@@ -146,6 +146,8 @@ export interface VoiceCommandIntent {
   unit?: string;
   unit_price?: number;
   total_amount?: number;
+  timeframe?: string;
+  period_label?: string;
   language: string;
   confidence: number;
   requires_confirmation: boolean;
@@ -226,6 +228,8 @@ export interface DashboardSummary {
   monthly_orders?: number;
   total_revenue: number;
   total_orders_count: number;
+  pending_orders_count?: number;
+  average_order_value?: number;
   today_gross_profit?: number;
   total_gross_profit?: number;
   today_cogs?: number;

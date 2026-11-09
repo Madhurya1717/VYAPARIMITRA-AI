@@ -41,6 +41,27 @@ class UserLogin(BaseModel):
     phone_or_email: str
     password: str
 
+class LoginStep1Response(BaseModel):
+    otp_required: bool = True
+    session_token: str
+    email_masked: str
+    expires_in_seconds: int = 300
+    message: str = "A 6-digit verification code has been dispatched to your email."
+    dev_otp: Optional[str] = None
+
+class OTPVerifyRequest(BaseModel):
+    session_token: str
+    otp: str
+
+class OTPResendRequest(BaseModel):
+    session_token: str
+
+class OTPResendResponse(BaseModel):
+    success: bool
+    message: str
+    expires_in_seconds: int = 300
+    dev_otp: Optional[str] = None
+
 class UserResponse(BaseModel):
     id: str
     business_id: str

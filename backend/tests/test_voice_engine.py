@@ -1,5 +1,6 @@
 import pytest
 from httpx import AsyncClient
+from backend.tests.conftest import get_demo_auth_token
 
 @pytest.mark.asyncio
 async def test_complete_voice_journey_telugu(client: AsyncClient):
@@ -14,12 +15,8 @@ async def test_complete_voice_journey_telugu(client: AsyncClient):
     7. Verify Timbre spoken response audio generation
     8. Verify voice command audit history
     """
-    # 1. Login
-    login_resp = await client.post("/api/v1/auth/login-json", json={
-        "phone_or_email": "demo@vyaparimitra.ai",
-        "password": "Vyapari@123"
-    })
-    token = login_resp.json()["access_token"]
+    # 1. Login via 2FA
+    token = await get_demo_auth_token(client)
     headers = {"Authorization": f"Bearer {token}"}
 
     # 2. Verify Rice is 50 kg
@@ -78,11 +75,7 @@ async def test_complete_voice_journey_telugu(client: AsyncClient):
 
 @pytest.mark.asyncio
 async def test_voice_command_english(client: AsyncClient):
-    login_resp = await client.post("/api/v1/auth/login-json", json={
-        "phone_or_email": "demo@vyaparimitra.ai",
-        "password": "Vyapari@123"
-    })
-    token = login_resp.json()["access_token"]
+    token = await get_demo_auth_token(client)
     headers = {"Authorization": f"Bearer {token}"}
 
     resp = await client.post(
@@ -103,11 +96,7 @@ async def test_voice_command_english(client: AsyncClient):
 
 @pytest.mark.asyncio
 async def test_voice_command_tenglish(client: AsyncClient):
-    login_resp = await client.post("/api/v1/auth/login-json", json={
-        "phone_or_email": "demo@vyaparimitra.ai",
-        "password": "Vyapari@123"
-    })
-    token = login_resp.json()["access_token"]
+    token = await get_demo_auth_token(client)
     headers = {"Authorization": f"Bearer {token}"}
 
     resp = await client.post(
@@ -127,11 +116,7 @@ async def test_voice_command_tenglish(client: AsyncClient):
 
 @pytest.mark.asyncio
 async def test_voice_stock_inquiry(client: AsyncClient):
-    login_resp = await client.post("/api/v1/auth/login-json", json={
-        "phone_or_email": "demo@vyaparimitra.ai",
-        "password": "Vyapari@123"
-    })
-    token = login_resp.json()["access_token"]
+    token = await get_demo_auth_token(client)
     headers = {"Authorization": f"Bearer {token}"}
 
     resp = await client.post(

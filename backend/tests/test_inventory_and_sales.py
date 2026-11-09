@@ -1,15 +1,11 @@
 import pytest
 from httpx import AsyncClient
+from backend.tests.conftest import get_demo_auth_token
 
 @pytest.mark.asyncio
 async def test_inventory_and_sales_flow(client: AsyncClient):
-    # 1. Login with demo user
-    login_resp = await client.post("/api/v1/auth/login-json", json={
-        "phone_or_email": "demo@vyaparimitra.ai",
-        "password": "Vyapari@123"
-    })
-    assert login_resp.status_code == 200
-    token = login_resp.json()["access_token"]
+    # 1. Login with demo user via 2FA
+    token = await get_demo_auth_token(client)
     headers = {"Authorization": f"Bearer {token}"}
 
     # 2. Verify Rice has 50 kg initial stock

@@ -202,7 +202,7 @@ async def seed_demo_data_if_empty(db: AsyncSession):
         created_custs.append(cust)
 
     # 6. Create Historical Sales for Realistic Analytics
-    now = datetime.now(timezone.utc)
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
     for days_ago in range(5, 0, -1):
         sale_dt = now - timedelta(days=days_ago, hours=3)
         sale_invoice_num = f"INV-2026110{7-days_ago}-00{days_ago}A"

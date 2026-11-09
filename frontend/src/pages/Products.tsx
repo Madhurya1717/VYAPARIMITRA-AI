@@ -3,7 +3,7 @@ import { api } from '../services/api';
 import { Product, Category } from '../types';
 import {
   ShoppingBag, Plus, Search, Filter, Tag, Check, X,
-  IndianRupee, Layers, AlertCircle, Pencil, Trash2, AlertTriangle
+  IndianRupee, Layers, AlertCircle, Pencil, Trash2, AlertTriangle, Sparkles
 } from 'lucide-react';
 
 export const Products: React.FC = () => {
@@ -170,37 +170,40 @@ export const Products: React.FC = () => {
   );
 
   return (
-    <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto w-full">
+    <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto w-full bg-[#F8F5ED]">
       
       {/* Title & Action */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <h1 className="text-xl sm:text-2xl font-black text-[#28332C] tracking-tight flex items-center gap-2">
             Product Catalog & Vocabulary
+            <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-[#E4EFE6] text-[#3C9970] border border-[#789B82]/30">
+              {products.length} Items
+            </span>
           </h1>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-[#7D887F] font-medium mt-0.5">
             Define canonical product titles, regional Telugu names, and spoken aliases for Voice AI matching.
           </p>
         </div>
 
         <button
           onClick={() => setIsAddModalOpen(true)}
-          className="px-4 py-2.5 rounded-2xl bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold text-xs shadow-md shadow-emerald-500/20 transition-all flex items-center gap-2 self-start sm:self-auto"
+          className="px-4 py-2.5 rounded-xl bg-[#52745F] hover:bg-[#3D5747] text-white font-extrabold text-xs shadow-xs transition-all flex items-center gap-2 self-start sm:self-auto cursor-pointer"
         >
           <Plus className="w-4 h-4" /> Add New Product
         </button>
       </div>
 
       {/* Filter Bar */}
-      <div className="glass-panel p-4 rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div className="flex items-center gap-2.5 w-full sm:w-80 bg-slate-950 px-3 py-2 rounded-xl border border-slate-800">
-          <Search className="w-4 h-4 text-slate-400" />
+      <div className="bg-white p-3.5 rounded-2xl border border-[#E5E9E3] flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
+        <div className="flex items-center gap-2.5 w-full sm:w-80 bg-[#F8F5ED] px-3.5 py-2 rounded-xl border border-[#E5E9E3]">
+          <Search className="w-4 h-4 text-[#52745F]" />
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search by name, Telugu script, or alias..."
-            className="w-full bg-transparent text-xs text-white placeholder-slate-500 focus:outline-none"
+            className="w-full bg-transparent text-xs text-[#28332C] placeholder-[#7D887F] focus:outline-none font-medium"
           />
         </div>
 
@@ -208,7 +211,7 @@ export const Products: React.FC = () => {
           <select
             value={selectedCat}
             onChange={(e) => setSelectedCat(e.target.value)}
-            className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+            className="bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-bold focus:outline-none focus:border-[#789B82]"
           >
             <option value="">All Categories ({categories.length})</option>
             {categories.map((c) => (
@@ -221,26 +224,26 @@ export const Products: React.FC = () => {
       {/* Products Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map((p) => (
-          <div key={p.id} className="glass-panel p-5 rounded-3xl border border-slate-800 space-y-3 flex flex-col justify-between">
-            <div className="space-y-1.5">
+          <div key={p.id} className="bg-white p-5 rounded-2xl border border-[#E5E9E3] hover:border-[#789B82] transition-all shadow-xs space-y-3 flex flex-col justify-between group">
+            <div className="space-y-2">
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <h3 className="text-sm font-bold text-white">{p.name}</h3>
-                  <span className="text-xs text-emerald-400 font-medium block">{p.telugu_name}</span>
+                  <h3 className="text-sm font-black text-[#28332C] group-hover:text-[#52745F] transition-colors">{p.name}</h3>
+                  <span className="text-xs text-[#52745F] font-bold block">{p.telugu_name}</span>
                 </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-[#EDF5EF] text-[#52745F] border border-[#E5E9E3] font-bold">
                   {p.category_name || 'General'}
                 </span>
               </div>
 
               {/* Spoken Aliases Tags */}
               <div className="pt-2">
-                <span className="text-[10px] uppercase font-semibold text-slate-500 block mb-1">
+                <span className="text-[10px] uppercase font-bold text-[#7D887F] block mb-1">
                   Recognized Voice Aliases:
                 </span>
                 <div className="flex flex-wrap gap-1">
                   {p.aliases.map((alias, i) => (
-                    <span key={i} className="px-2 py-0.5 rounded-full text-[10px] bg-slate-900 text-slate-300 border border-slate-800">
+                    <span key={i} className="px-2 py-0.5 rounded-lg text-[10px] font-semibold bg-[#EDF5EF] text-[#52745F] border border-[#E5E9E3]/70">
                       {alias}
                     </span>
                   ))}
@@ -249,30 +252,30 @@ export const Products: React.FC = () => {
             </div>
 
             {/* Price & Stock Footer */}
-            <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <div className="pt-3 border-t border-[#E5E9E3] flex items-center justify-between text-xs">
               <div>
-                <span className="text-[10px] text-slate-400 block">Selling Price</span>
-                <span className="font-mono font-bold text-emerald-400 text-sm">₹{p.selling_price.toFixed(2)} / {p.unit}</span>
+                <span className="text-[10px] text-[#7D887F] font-medium block">Selling Price</span>
+                <span className="font-mono font-black text-[#28332C] text-sm">₹{p.selling_price.toFixed(2)} / {p.unit}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="text-right">
-                  <span className="text-[10px] text-slate-400 block">Stock</span>
-                  <span className={`font-mono font-bold ${p.is_low_stock ? 'text-amber-400' : 'text-slate-200'}`}>
+                  <span className="text-[10px] text-[#7D887F] font-medium block">Stock</span>
+                  <span className={`font-mono font-bold ${p.is_low_stock ? 'text-[#D97706]' : 'text-[#3C9970]'}`}>
                     {p.current_stock} {p.unit}
                   </span>
                 </div>
-                <div className="flex items-center gap-1 pl-2 border-l border-slate-800">
+                <div className="flex items-center gap-1 pl-2 border-l border-[#E5E9E3]">
                   <button
                     onClick={() => handleOpenEdit(p)}
                     title="Edit Product"
-                    className="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors"
+                    className="p-1.5 rounded-lg bg-[#EDF5EF] hover:bg-[#E4EFE6] text-[#52745F] transition-colors cursor-pointer"
                   >
                     <Pencil className="w-3.5 h-3.5" />
                   </button>
                   <button
                     onClick={() => setDeletingProduct(p)}
                     title="Delete Product"
-                    className="p-1.5 rounded-lg bg-slate-900 hover:bg-rose-950/40 text-slate-400 hover:text-rose-400 border border-slate-800 transition-colors"
+                    className="p-1.5 rounded-lg bg-[#FEE2E2] hover:bg-[#FCA5A5] text-[#DC2626] transition-colors cursor-pointer"
                   >
                     <Trash2 className="w-3.5 h-3.5" />
                   </button>
@@ -285,14 +288,14 @@ export const Products: React.FC = () => {
 
       {/* Add Product Modal */}
       {isAddModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-          <div className="w-full max-w-lg glass-panel bg-slate-900 border border-slate-700 rounded-3xl p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-              <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                <Plus className="w-4 h-4 text-emerald-400" />
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
+          <div className="w-full max-w-lg bg-white border border-[#E5E9E3] rounded-3xl p-6 sm:p-7 shadow-xl space-y-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-[#E5E9E3] pb-3">
+              <h3 className="text-sm font-black text-[#28332C] flex items-center gap-2">
+                <Plus className="w-4 h-4 text-[#52745F]" />
                 Add New Product to Catalog
               </h3>
-              <button onClick={() => setIsAddModalOpen(false)} className="text-slate-400 hover:text-white">
+              <button onClick={() => setIsAddModalOpen(false)} className="p-1 rounded-xl text-[#7D887F] hover:text-[#28332C] hover:bg-[#EDF5EF]">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -300,30 +303,30 @@ export const Products: React.FC = () => {
             <form onSubmit={handleCreateProduct} className="space-y-3.5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Product Name (English)</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Product Name (English)</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Moong Dal"
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-bold focus:outline-none focus:border-[#789B82]"
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Telugu Title (తెలుగు పేరు)</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Telugu Title (తెలుగు పేరు)</label>
                   <input
                     type="text"
                     value={formData.telugu_name}
                     onChange={(e) => setFormData({ ...formData, telugu_name: e.target.value })}
                     placeholder="e.g. పెసరపప్పు"
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-bold focus:outline-none focus:border-[#789B82]"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-300 block mb-1">
+                <label className="text-xs font-bold text-[#7D887F] block mb-1">
                   Spoken Aliases (Comma-separated for Voice Matching)
                 </label>
                 <input
@@ -331,86 +334,90 @@ export const Products: React.FC = () => {
                   value={formData.aliases_str}
                   onChange={(e) => setFormData({ ...formData, aliases_str: e.target.value })}
                   placeholder="e.g. moong, pesara pappu, green gram, పప్పు"
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-medium focus:outline-none focus:border-[#789B82]"
                 />
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Initial Stock</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Initial Stock</label>
                   <input
                     type="number"
                     step="0.5"
                     required
                     value={formData.current_stock}
                     onChange={(e) => setFormData({ ...formData, current_stock: parseFloat(e.target.value) || 0 })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-mono font-bold focus:outline-none focus:border-[#789B82]"
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Unit</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Unit</label>
                   <select
                     value={formData.unit}
                     onChange={(e) => setFormData({ ...formData, unit: e.target.value })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-bold focus:outline-none focus:border-[#789B82]"
                   >
                     <option value="kg">kg (కిలో)</option>
-                    <option value="litre">litre (లీటర్)</option>
-                    <option value="packet">packet (ప్యాకెట్)</option>
-                    <option value="bag">bag (బస్తా)</option>
-                    <option value="piece">piece (ముక్క)</option>
+                    <option value="packets">packets (ప్యాకెట్)</option>
+                    <option value="pieces">pieces (ముక్కలు)</option>
+                    <option value="litres">litres (లీటర్)</option>
+                    <option value="bags">bags (బస్తా)</option>
                   </select>
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Threshold</label>
-                  <input
-                    type="number"
-                    value={formData.low_stock_threshold}
-                    onChange={(e) => setFormData({ ...formData, low_stock_threshold: parseFloat(e.target.value) || 0 })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
-                  />
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Category</label>
+                  <select
+                    value={formData.category_id}
+                    onChange={(e) => setFormData({ ...formData, category_id: e.target.value })}
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-bold focus:outline-none focus:border-[#789B82]"
+                  >
+                    <option value="">Select...</option>
+                    {categories.map((c) => (
+                      <option key={c.id} value={c.id}>{c.name}</option>
+                    ))}
+                  </select>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Cost Price (₹)</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Cost Price (₹)</label>
                   <input
                     type="number"
                     step="0.5"
                     required
                     value={formData.cost_price}
                     onChange={(e) => setFormData({ ...formData, cost_price: parseFloat(e.target.value) || 0 })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-mono font-bold focus:outline-none focus:border-[#789B82]"
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Selling Price (₹)</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Selling Price (₹)</label>
                   <input
                     type="number"
                     step="0.5"
                     required
                     value={formData.selling_price}
                     onChange={(e) => setFormData({ ...formData, selling_price: parseFloat(e.target.value) || 0 })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-mono font-bold focus:outline-none focus:border-[#789B82]"
                   />
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 pt-3 border-t border-slate-800">
+              <div className="pt-2 flex items-center gap-2">
                 <button
                   type="button"
                   onClick={() => setIsAddModalOpen(false)}
-                  className="flex-1 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700"
+                  className="flex-1 py-2.5 rounded-xl border border-[#E5E9E3] text-xs font-bold text-[#7D887F] hover:bg-[#EDF5EF]"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 py-2.5 rounded-xl text-xs font-bold bg-emerald-400 hover:bg-emerald-300 text-slate-950 disabled:opacity-50"
+                  className="flex-1 py-2.5 rounded-xl bg-[#52745F] hover:bg-[#3D5747] text-white text-xs font-bold shadow-xs cursor-pointer"
                 >
-                  {isSubmitting ? 'Saving...' : 'Add to Catalog'}
+                  {isSubmitting ? 'Creating...' : 'Save Product'}
                 </button>
               </div>
             </form>
@@ -420,14 +427,11 @@ export const Products: React.FC = () => {
 
       {/* Edit Product Modal */}
       {editingProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-          <div className="w-full max-w-lg glass-panel bg-slate-900 border border-slate-700 rounded-3xl p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-              <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                <Pencil className="w-4 h-4 text-emerald-400" />
-                Edit Product: {editingProduct.name}
-              </h3>
-              <button onClick={() => setEditingProduct(null)} className="text-slate-400 hover:text-white">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
+          <div className="w-full max-w-lg bg-white border border-[#E5E9E3] rounded-3xl p-6 sm:p-7 shadow-xl space-y-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-[#E5E9E3] pb-3">
+              <h3 className="text-sm font-black text-[#28332C]">Edit Product: {editingProduct.name}</h3>
+              <button onClick={() => setEditingProduct(null)} className="p-1 rounded-xl text-[#7D887F] hover:text-[#28332C] hover:bg-[#EDF5EF]">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -435,116 +439,75 @@ export const Products: React.FC = () => {
             <form onSubmit={handleUpdateProduct} className="space-y-3.5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Product Name (English)</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Product Name</label>
                   <input
                     type="text"
                     required
                     value={editFormData.name}
                     onChange={(e) => setEditFormData({ ...editFormData, name: e.target.value })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-bold focus:outline-none focus:border-[#789B82]"
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Telugu Title (తెలుగు పేరు)</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Telugu Title</label>
                   <input
                     type="text"
                     value={editFormData.telugu_name}
                     onChange={(e) => setEditFormData({ ...editFormData, telugu_name: e.target.value })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-bold focus:outline-none focus:border-[#789B82]"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-300 block mb-1">
-                  Spoken Aliases (Comma-separated for Voice Matching)
-                </label>
+                <label className="text-xs font-bold text-[#7D887F] block mb-1">Spoken Aliases</label>
                 <input
                   type="text"
                   value={editFormData.aliases_str}
                   onChange={(e) => setEditFormData({ ...editFormData, aliases_str: e.target.value })}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-medium focus:outline-none focus:border-[#789B82]"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Category</label>
-                  <select
-                    value={editFormData.category_id}
-                    onChange={(e) => setEditFormData({ ...editFormData, category_id: e.target.value })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
-                  >
-                    <option value="">No Category</option>
-                    {categories.map((c) => (
-                      <option key={c.id} value={c.id}>{c.name}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Unit</label>
-                  <select
-                    value={editFormData.unit}
-                    onChange={(e) => setEditFormData({ ...editFormData, unit: e.target.value })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
-                  >
-                    <option value="kg">kg (కిలో)</option>
-                    <option value="litre">litre (లీటర్)</option>
-                    <option value="packet">packet (ప్యాకెట్)</option>
-                    <option value="bag">bag (బస్తా)</option>
-                    <option value="piece">piece (ముక్క)</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-3">
-                <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Cost Price (₹)</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Cost Price (₹)</label>
                   <input
                     type="number"
                     step="0.5"
                     required
                     value={editFormData.cost_price}
                     onChange={(e) => setEditFormData({ ...editFormData, cost_price: parseFloat(e.target.value) || 0 })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-mono font-bold focus:outline-none focus:border-[#789B82]"
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Selling Price (₹)</label>
+                  <label className="text-xs font-bold text-[#7D887F] block mb-1">Selling Price (₹)</label>
                   <input
                     type="number"
                     step="0.5"
                     required
                     value={editFormData.selling_price}
                     onChange={(e) => setEditFormData({ ...editFormData, selling_price: parseFloat(e.target.value) || 0 })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
-                  />
-                </div>
-                <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Threshold</label>
-                  <input
-                    type="number"
-                    value={editFormData.low_stock_threshold}
-                    onChange={(e) => setEditFormData({ ...editFormData, low_stock_threshold: parseFloat(e.target.value) || 0 })}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                    className="w-full bg-[#F8F5ED] border border-[#E5E9E3] rounded-xl px-3.5 py-2 text-xs text-[#28332C] font-mono font-bold focus:outline-none focus:border-[#789B82]"
                   />
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 pt-3 border-t border-slate-800">
+              <div className="pt-2 flex items-center gap-2">
                 <button
                   type="button"
                   onClick={() => setEditingProduct(null)}
-                  className="flex-1 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700"
+                  className="flex-1 py-2.5 rounded-xl border border-[#E5E9E3] text-xs font-bold text-[#7D887F] hover:bg-[#EDF5EF]"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 py-2.5 rounded-xl text-xs font-bold bg-emerald-400 hover:bg-emerald-300 text-slate-950 disabled:opacity-50"
+                  className="flex-1 py-2.5 rounded-xl bg-[#52745F] hover:bg-[#3D5747] text-white text-xs font-bold shadow-xs cursor-pointer"
                 >
-                  {isSubmitting ? 'Updating...' : 'Save Changes'}
+                  {isSubmitting ? 'Updating...' : 'Update Product'}
                 </button>
               </div>
             </form>
@@ -554,34 +517,25 @@ export const Products: React.FC = () => {
 
       {/* Delete Confirmation Modal */}
       {deletingProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-          <div className="w-full max-w-sm glass-panel bg-slate-900 border border-rose-900/50 rounded-3xl p-6 shadow-2xl space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mx-auto">
-              <AlertTriangle className="w-6 h-6" />
-            </div>
-            
-            <div className="text-center space-y-1">
-              <h3 className="text-base font-bold text-white">Deactivate Product?</h3>
-              <p className="text-xs text-slate-400">
-                Are you sure you want to remove <strong className="text-white">{deletingProduct.name}</strong> from active catalog? All past sales and ledger records will be securely archived.
-              </p>
-            </div>
-
-            <div className="flex items-center gap-3 pt-2">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
+          <div className="w-full max-w-sm bg-white border border-[#E5E9E3] rounded-3xl p-6 shadow-xl space-y-4">
+            <h3 className="text-sm font-bold text-[#28332C]">Delete Product</h3>
+            <p className="text-xs text-[#7D887F]">
+              Are you sure you want to remove <strong className="text-[#28332C]">{deletingProduct.name}</strong> from catalog?
+            </p>
+            <div className="flex items-center gap-2 pt-2">
               <button
-                type="button"
                 onClick={() => setDeletingProduct(null)}
-                className="flex-1 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700"
+                className="flex-1 py-2 rounded-xl border border-[#E5E9E3] text-xs font-bold text-[#7D887F] hover:bg-[#EDF5EF]"
               >
-                Keep Product
+                Cancel
               </button>
               <button
-                type="button"
                 onClick={handleDeleteProduct}
                 disabled={isSubmitting}
-                className="flex-1 py-2.5 rounded-xl text-xs font-bold bg-rose-500 hover:bg-rose-400 text-white disabled:opacity-50"
+                className="flex-1 py-2 rounded-xl bg-[#DC2626] hover:bg-[#B91C1C] text-white text-xs font-bold shadow-xs"
               >
-                {isSubmitting ? 'Removing...' : 'Confirm Remove'}
+                {isSubmitting ? 'Deleting...' : 'Delete'}
               </button>
             </div>
           </div>
@@ -592,3 +546,4 @@ export const Products: React.FC = () => {
   );
 };
 
+export default Products;

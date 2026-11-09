@@ -1,0 +1,1001 @@
+external_product_id,name,telugu_name,category,department,unit,selling_price,cost_price,stock_quantity,low_stock_threshold
+INSTA_24852,Banana,అరటిపండు,Fresh Fruits,Produce,kg,115.0,94.41,21,5
+INSTA_13176,Bag of Organic Bananas,ఆర్గానిక్ బనానాస్ బ్యాగ్,Fresh Fruits,Produce,kg,60.0,46.2,40,10
+INSTA_21137,Organic Strawberries,సేంద్రీయ స్ట్రాబెర్రీలు,Fresh Fruits,Produce,kg,45.0,34.92,66,10
+INSTA_21903,Organic Baby Spinach,సేంద్రీయ బేబీ బచ్చలికూర,Packaged Vegetables Fruits,Produce,kg,115.0,95.45,140,10
+INSTA_47626,Large Lemon,పెద్ద నిమ్మకాయ,Fresh Fruits,Produce,kg,115.0,95.56,111,10
+INSTA_47766,Organic Avocado,సేంద్రీయ అవోకాడో,Fresh Fruits,Produce,kg,70.0,54.74,102,10
+INSTA_47209,Organic Hass Avocado,ఆర్గానిక్ హాస్ అవోకాడో,Fresh Fruits,Produce,kg,35.0,26.71,53,10
+INSTA_16797,Strawberries,స్ట్రాబెర్రీలు,Fresh Fruits,Produce,kg,40.0,32.4,60,10
+INSTA_26209,Limes,నిమ్మకాయలు,Fresh Fruits,Produce,kg,55.0,45.48,57,10
+INSTA_27966,Organic Raspberries,సేంద్రీయ రాస్ప్బెర్రీస్,Packaged Vegetables Fruits,Produce,kg,20.0,15.02,141,10
+INSTA_39275,Organic Blueberries,సేంద్రీయ బ్లూబెర్రీస్,Packaged Vegetables Fruits,Produce,kg,110.0,88.77,37,10
+INSTA_27845,Organic Whole Milk,సేంద్రీయ సంపూర్ణ పాలు,Milk,Dairy Eggs,litre,130.0,108.68,96,10
+INSTA_30391,Organic Cucumber,సేంద్రీయ దోసకాయ,Fresh Vegetables,Produce,kg,135.0,109.21,109,10
+INSTA_45007,Organic Zucchini,సేంద్రీయ గుమ్మడికాయ,Fresh Vegetables,Produce,kg,80.0,60.08,41,10
+INSTA_22935,Organic Yellow Onion,సేంద్రీయ పసుపు ఉల్లిపాయ,Fresh Vegetables,Produce,kg,30.0,24.39,93,10
+INSTA_24964,Organic Garlic,సేంద్రీయ వెల్లుల్లి,Fresh Vegetables,Produce,kg,100.0,82.4,64,10
+INSTA_4920,Seedless Red Grapes,విత్తనాలు లేని ఎర్ర ద్రాక్ష,Packaged Vegetables Fruits,Produce,kg,100.0,80.7,107,10
+INSTA_46979,Asparagus,ఆస్పరాగస్,Fresh Vegetables,Produce,kg,60.0,46.44,44,10
+INSTA_40706,Organic Grape Tomatoes,సేంద్రీయ ద్రాక్ష టమోటాలు,Packaged Vegetables Fruits,Produce,kg,50.0,40.1,62,10
+INSTA_8518,Organic Red Onion,సేంద్రీయ ఎర్ర ఉల్లిపాయ,Fresh Vegetables,Produce,kg,130.0,100.75,75,10
+INSTA_4605,Yellow Onions,పసుపు ఉల్లిపాయలు,Fresh Vegetables,Produce,kg,75.0,62.1,68,10
+INSTA_42265,Organic Baby Carrots,సేంద్రీయ బేబీ క్యారెట్లు,Packaged Vegetables Fruits,Produce,kg,55.0,46.03,67,10
+INSTA_45066,Honeycrisp Apple,హనీక్రిస్ప్ ఆపిల్,Fresh Fruits,Produce,kg,20.0,15.32,126,10
+INSTA_31717,Organic Cilantro,సేంద్రీయ కొత్తిమీర,Fresh Herbs,Produce,kg,90.0,76.41,49,10
+INSTA_5876,Organic Lemon,సేంద్రీయ నిమ్మకాయ,Fresh Fruits,Produce,kg,80.0,66.88,76,10
+INSTA_44632,Sparkling Water Grapefruit,మెరిసే నీటి ద్రాక్షపండు,Water Seltzer Sparkling Water,Beverages,litre,155.0,124.0,70,10
+INSTA_43352,Raspberries,రాస్ప్బెర్రీస్,Packaged Produce,Produce,kg,95.0,72.96,48,10
+INSTA_28204,Organic Fuji Apple,సేంద్రీయ ఫుజి ఆపిల్,Fresh Fruits,Produce,kg,55.0,45.92,45,10
+INSTA_5450,Small Hass Avocado,స్మాల్ హాస్ అవోకాడో,Fresh Fruits,Produce,kg,45.0,34.56,78,10
+INSTA_8424,Broccoli Crown,బ్రోకలీ క్రౌన్,Fresh Vegetables,Produce,kg,25.0,20.03,141,10
+INSTA_21616,Organic Baby Arugula,ఆర్గానిక్ బేబీ అరుగూలా,Packaged Vegetables Fruits,Produce,kg,95.0,75.53,65,10
+INSTA_24184,Red Peppers,రెడ్ పెప్పర్స్,Fresh Vegetables,Produce,kg,50.0,39.95,139,10
+INSTA_19057,Organic Large Extra Fancy Fuji Apple,ఆర్గానిక్ లార్జ్ ఎక్స్‌ట్రా ఫ్యాన్సీ ఫుజి ఆపిల్,Fresh Fruits,Produce,kg,80.0,60.72,69,10
+INSTA_30489,Original Hummus,అసలు హమ్మస్,Fresh Dips Tapenades,Deli,packet,60.0,48.18,43,10
+INSTA_26604,Organic Blackberries,సేంద్రీయ బ్లాక్బెర్రీస్,Fresh Fruits,Produce,kg,90.0,67.5,70,10
+INSTA_37646,Organic Gala Apples,సేంద్రీయ గాలా యాపిల్స్,Fresh Fruits,Produce,kg,125.0,102.5,90,10
+INSTA_27104,Fresh Cauliflower,తాజా కాలీఫ్లవర్,Fresh Vegetables,Produce,kg,50.0,40.15,23,5
+INSTA_49235,Organic Half & Half,ఆర్గానిక్ హాఫ్ & హాఫ్,Cream,Dairy Eggs,packet,60.0,48.54,79,10
+INSTA_28985,Michigan Organic Kale,మిచిగాన్ ఆర్గానిక్ కాలే,Fresh Vegetables,Produce,kg,90.0,73.89,21,5
+INSTA_44359,Organic Small Bunch Celery,సేంద్రీయ చిన్న బంచ్ సెలెరీ,Fresh Vegetables,Produce,kg,105.0,80.01,62,10
+INSTA_48679,Organic Garnet Sweet Potato (Yam),ఆర్గానిక్ గార్నెట్ స్వీట్ పొటాటో (యమ్),Fresh Vegetables,Produce,kg,95.0,74.77,97,10
+INSTA_41950,Organic Tomato Cluster,సేంద్రీయ టమోటా క్లస్టర్,Fresh Vegetables,Produce,kg,130.0,110.11,57,10
+INSTA_21938,Green Bell Pepper,గ్రీన్ బెల్ పెప్పర్,Fresh Vegetables,Produce,kg,140.0,116.34,131,10
+INSTA_17794,Carrots,క్యారెట్లు,Fresh Vegetables,Produce,kg,95.0,72.67,35,10
+INSTA_43961,Organic Peeled Whole Baby Carrots,సేంద్రీయ ఒలిచిన మొత్తం బేబీ క్యారెట్లు,Packaged Vegetables Fruits,Produce,kg,60.0,46.74,59,10
+INSTA_27086,Half & Half,హాఫ్ & హాఫ్,Cream,Dairy Eggs,packet,35.0,28.84,134,10
+INSTA_49683,Cucumber Kirby,దోసకాయ కిర్బీ,Fresh Vegetables,Produce,kg,120.0,94.8,120,10
+INSTA_34126,Organic Italian Parsley Bunch,సేంద్రీయ ఇటాలియన్ పార్స్లీ బంచ్,Fresh Herbs,Produce,kg,115.0,97.29,56,10
+INSTA_10749,Organic Red Bell Pepper,సేంద్రీయ రెడ్ బెల్ పెప్పర్,Fresh Vegetables,Produce,kg,45.0,34.38,34,10
+INSTA_39877,Organic Granny Smith Apple,ఆర్గానిక్ గ్రానీ స్మిత్ ఆపిల్,Fresh Fruits,Produce,kg,130.0,98.28,146,10
+INSTA_37067,Organic Banana,సేంద్రీయ అరటిపండు,Fresh Fruits,Produce,kg,30.0,25.47,149,10
+INSTA_9076,Blueberries,బ్లూబెర్రీస్,Frozen Produce,Frozen,packet,225.0,171.68,43,10
+INSTA_5077,100% Whole Wheat Bread,100% హోల్ వీట్ బ్రెడ్,Bread,Bakery,packet,90.0,72.99,71,10
+INSTA_12341,Hass Avocados,అవోకాడోస్ ఉంది,Packaged Produce,Produce,kg,30.0,24.45,55,10
+INSTA_8277,Apple Honeycrisp Organic,ఆపిల్ హనీక్రిస్ప్ ఆర్గానిక్,Fresh Fruits,Produce,kg,125.0,102.88,43,10
+INSTA_34969,Red Vine Tomato,రెడ్ వైన్ టొమాటో,Fresh Vegetables,Produce,kg,130.0,97.5,40,10
+INSTA_19660,Spring Water,సహజ ఊట నీరు,Water Seltzer Sparkling Water,Beverages,litre,110.0,87.89,29,5
+INSTA_35951,Organic Unsweetened Almond Milk,సేంద్రీయ తియ్యని బాదం పాలు,Soy Lactosefree,Dairy Eggs,litre,35.0,28.63,108,10
+INSTA_24838,Unsweetened Almondmilk,తియ్యని బాదంమిల్క్,Soy Lactosefree,Dairy Eggs,litre,155.0,123.85,69,10
+INSTA_25890,Boneless Skinless Chicken Breasts,ఎముకలు లేని స్కిన్‌లెస్ చికెన్ బ్రెస్ట్‌లు,Packaged Poultry,Meat Seafood,kg,135.0,107.33,55,10
+INSTA_31506,Extra Virgin Olive Oil,అదనపు వర్జిన్ ఆలివ్ ఆయిల్,Oils Vinegars,Pantry,kg,190.0,158.84,26,5
+INSTA_46667,Organic Ginger Root,సేంద్రీయ అల్లం రూట్,Fresh Vegetables,Produce,kg,100.0,82.5,115,10
+INSTA_22035,Organic Whole String Cheese,ఆర్గానిక్ హోల్ స్ట్రింగ్ చీజ్,Packaged Cheese,Dairy Eggs,packet,30.0,23.85,65,10
+INSTA_8174,Organic Navel Orange,సేంద్రీయ నాభి ఆరెంజ్,Fresh Fruits,Produce,kg,70.0,55.02,116,10
+INSTA_35221,Lime Sparkling Water,లైమ్ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,20.0,15.0,90,10
+INSTA_29487,Roma Tomato,రోమా టొమాటో,Fresh Vegetables,Produce,kg,120.0,95.76,148,10
+INSTA_28842,Bunched Cilantro,బంచ్డ్ కొత్తిమీర,Fresh Herbs,Produce,kg,85.0,68.68,148,10
+INSTA_34358,Garlic,వెల్లుల్లి,Fresh Vegetables,Produce,kg,110.0,88.44,84,10
+INSTA_20114,Jalapeno Peppers,జలపెనో మిరియాలు,Fresh Vegetables,Produce,kg,115.0,97.17,95,10
+INSTA_11520,Large Alfresco Eggs,పెద్ద ఆల్ఫ్రెస్కో గుడ్లు,Eggs,Dairy Eggs,piece,155.0,124.62,54,10
+INSTA_22825,Organic D'Anjou Pears,ఆర్గానిక్ డి'అంజౌ పియర్స్,Fresh Fruits,Produce,kg,50.0,40.7,94,10
+INSTA_39928,Organic Kiwi,సేంద్రీయ కివి,Fresh Fruits,Produce,kg,25.0,20.05,82,10
+INSTA_15290,Orange Bell Pepper,ఆరెంజ్ బెల్ పెప్పర్,Fresh Vegetables,Produce,kg,40.0,32.52,113,10
+INSTA_33198,Sparkling Natural Mineral Water,మెరిసే సహజ మినరల్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,175.0,145.78,113,10
+INSTA_27344,Uncured Genoa Salami,నయం చేయని జెనోవా సలామీ,Lunch Meat,Deli,packet,80.0,65.84,93,10
+INSTA_18465,Organic Grade A Free Range Large Brown Eggs,ఆర్గానిక్ గ్రేడ్ A ఉచిత శ్రేణి పెద్ద గోధుమ రంగు గుడ్లు,Eggs,Dairy Eggs,piece,115.0,95.45,80,10
+INSTA_27521,Organic Lacinato (Dinosaur) Kale,ఆర్గానిక్ లాసినాటో (డైనోసార్) కాలే,Fresh Vegetables,Produce,kg,65.0,53.49,33,10
+INSTA_16759,Organic Carrot Bunch,సేంద్రీయ క్యారెట్ బంచ్,Fresh Vegetables,Produce,kg,120.0,93.96,83,10
+INSTA_33731,Grated Parmesan,తురిమిన పర్మేసన్,Packaged Cheese,Dairy Eggs,packet,140.0,113.12,148,10
+INSTA_9839,Organic Broccoli,సేంద్రీయ బ్రోకలీ,Fresh Vegetables,Produce,kg,130.0,100.1,70,10
+INSTA_38739,Hass Avocado,అవోకాడో ఉంది,Fresh Vegetables,Produce,kg,85.0,66.64,124,10
+INSTA_27156,Organic Black Beans,సేంద్రీయ బ్లాక్ బీన్స్,Canned Meals Beans,Canned Goods,can,145.0,121.8,110,10
+INSTA_23909,2% Reduced Fat Milk,2% తగ్గిన కొవ్వు పాలు,Milk,Dairy Eggs,litre,65.0,54.47,108,10
+INSTA_5785,Organic Reduced Fat 2% Milk,సేంద్రీయ తగ్గిన కొవ్వు 2% పాలు,Milk,Dairy Eggs,litre,90.0,75.33,97,10
+INSTA_46906,Grape White/Green Seedless,గ్రేప్ వైట్/గ్రీన్ సీడ్‌లెస్,Fresh Fruits,Produce,kg,50.0,40.7,24,5
+INSTA_196,Soda,సోడా,Soft Drinks,Beverages,litre,180.0,151.38,51,10
+INSTA_11777,Red Raspberries,ఎరుపు రాస్ప్బెర్రీస్,Packaged Vegetables Fruits,Produce,kg,130.0,110.37,129,10
+INSTA_28199,"Clementines, Bag","క్లెమెంటైన్స్, బ్యాగ్",Packaged Vegetables Fruits,Produce,kg,60.0,46.26,51,10
+INSTA_33000,Pure Irish Butter,స్వచ్ఛమైన ఐరిష్ వెన్న,Butter,Dairy Eggs,packet,145.0,122.23,53,10
+INSTA_44142,Red Onion,ఎర్ర ఉల్లిపాయ,Fresh Vegetables,Produce,kg,65.0,53.17,128,10
+INSTA_47144,Unsweetened Original Almond Breeze Almond Milk,తియ్యని ఒరిజినల్ ఆల్మండ్ బ్రీజ్ ఆల్మండ్ మిల్క్,Soy Lactosefree,Dairy Eggs,litre,105.0,87.88,107,10
+INSTA_40604,Feta Cheese Crumbles,ఫెటా చీజ్ కృంగిపోతుంది,Packaged Cheese,Dairy Eggs,packet,30.0,23.4,100,10
+INSTA_5025,Green Onions,ఆకుపచ్చ ఉల్లిపాయలు,Fresh Vegetables,Produce,kg,55.0,41.86,81,10
+INSTA_42736,Unsalted Butter,ఉప్పు లేని వెన్న,Butter,Dairy Eggs,packet,30.0,23.88,56,10
+INSTA_21709,Sparkling Lemon Water,మెరిసే నిమ్మకాయ నీరు,Water Seltzer Sparkling Water,Beverages,litre,130.0,109.59,133,10
+INSTA_8193,Russet Potato,రస్సెట్ బంగాళాదుంప,Fresh Vegetables,Produce,kg,90.0,75.24,146,10
+INSTA_9387,Granny Smith Apples,గ్రానీ స్మిత్ యాపిల్స్,Fresh Fruits,Produce,kg,140.0,117.6,20,5
+INSTA_37687,Organic Spring Mix,సేంద్రీయ స్ప్రింగ్ మిక్స్,Packaged Vegetables Fruits,Produce,kg,70.0,52.64,122,10
+INSTA_20995,Organic Broccoli Florets,సేంద్రీయ బ్రోకలీ పుష్పాలు,Frozen Produce,Frozen,packet,230.0,182.85,65,10
+INSTA_6184,Clementines,క్లెమెంటైన్స్,Packaged Produce,Produce,kg,35.0,27.41,113,10
+INSTA_34243,Organic Baby Broccoli,ఆర్గానిక్ బేబీ బ్రోకలీ,Fresh Vegetables,Produce,kg,80.0,66.56,82,10
+INSTA_7781,Organic Sticks Low Moisture Part Skim Mozzarella String Cheese,ఆర్గానిక్ స్టిక్స్ తక్కువ తేమ పార్ట్ స్కిమ్ మోజారెల్లా స్ట్రింగ్ చీజ్,Packaged Cheese,Dairy Eggs,packet,75.0,61.42,89,10
+INSTA_4210,Whole Milk,సంపూర్ణ పాలు,Milk,Dairy Eggs,litre,70.0,55.37,61,10
+INSTA_4799,Shredded Parmesan,తురిమిన పర్మేసన్,Packaged Cheese,Dairy Eggs,packet,110.0,84.48,68,10
+INSTA_3957,100% Raw Coconut Water,100% ముడి కొబ్బరి నీరు,Refrigerated,Beverages,litre,50.0,41.85,97,10
+INSTA_31553,Fresh Ginger Root,తాజా అల్లం రూట్,Fresh Vegetables,Produce,kg,65.0,53.95,70,10
+INSTA_432,Vanilla Almond Breeze Almond Milk,వెనిలా ఆల్మండ్ బ్రీజ్ ఆల్మండ్ మిల్క్,Soy Lactosefree,Dairy Eggs,litre,155.0,125.55,70,10
+INSTA_16185,Sharp Cheddar Cheese,పదునైన చెడ్డార్ చీజ్,Packaged Cheese,Dairy Eggs,packet,155.0,124.0,90,10
+INSTA_28849,No Salt Added Black Beans,ఉప్పు జోడించబడని బ్లాక్ బీన్స్,Canned Meals Beans,Canned Goods,can,105.0,79.28,55,10
+INSTA_43295,Unsweetened Vanilla Almond Milk,తియ్యని వనిల్లా బాదం పాలు,Soy Lactosefree,Dairy Eggs,litre,110.0,84.48,138,10
+INSTA_43789,Organic Basil,సేంద్రీయ తులసి,Fresh Herbs,Produce,kg,105.0,88.62,104,10
+INSTA_26369,Organic Roma Tomato,సేంద్రీయ రోమా టొమాటో,Fresh Vegetables,Produce,kg,75.0,60.75,60,10
+INSTA_19348,Fat Free Milk,కొవ్వు రహిత పాలు,Milk,Dairy Eggs,litre,40.0,30.48,102,10
+INSTA_41844,Honey Nut Cheerios,హనీ నట్ చీరియోస్,Cereal,Breakfast,box,140.0,105.42,83,10
+INSTA_260,Cantaloupe,సీతాఫలం,Fresh Fruits,Produce,kg,105.0,80.53,37,10
+INSTA_24489,Organic Whole Strawberries,సేంద్రీయ మొత్తం స్ట్రాబెర్రీలు,Frozen Produce,Frozen,packet,85.0,64.6,30,5
+INSTA_41787,Bartlett Pears,బార్ట్లెట్ పియర్స్,Fresh Fruits,Produce,kg,105.0,80.95,61,10
+INSTA_38689,Organic Reduced Fat Milk,సేంద్రీయ తగ్గిన కొవ్వు పాలు,Milk,Dairy Eggs,litre,135.0,103.81,129,10
+INSTA_42585,Organic Extra Firm Tofu,సేంద్రీయ అదనపు సంస్థ టోఫు,Tofu Meat Alternatives,Deli,packet,90.0,70.56,134,10
+INSTA_8021,100% Recycled Paper Towels,100% రీసైకిల్ పేపర్ టవల్స్,Paper Goods,Household,piece,100.0,76.1,41,10
+INSTA_19678,Organic Russet Potato,సేంద్రీయ రస్సెట్ బంగాళాదుంప,Fresh Vegetables,Produce,kg,105.0,81.59,67,10
+INSTA_2295,Yellow Bell Pepper,పసుపు బెల్ పెప్పర్,Fresh Vegetables,Produce,kg,105.0,88.52,103,10
+INSTA_14992,Green Beans,గ్రీన్ బీన్స్,Fresh Vegetables,Produce,kg,90.0,75.78,82,10
+INSTA_41220,Organic Romaine Lettuce,సేంద్రీయ రోమైన్ పాలకూర,Fresh Vegetables,Produce,kg,60.0,47.22,57,10
+INSTA_24830,Organic Romaine,సేంద్రీయ రోమైన్,Packaged Vegetables Fruits,Produce,kg,35.0,26.57,79,10
+INSTA_44683,Brussels Sprouts,బ్రస్సెల్స్ మొలకలు,Fresh Vegetables,Produce,kg,40.0,32.08,82,10
+INSTA_11182,Baby Spinach,బేబీ బచ్చలికూర,Packaged Vegetables Fruits,Produce,kg,45.0,37.94,113,10
+INSTA_42768,Organic Garbanzo Beans,సేంద్రీయ గార్బాంజో బీన్స్,Canned Meals Beans,Canned Goods,can,105.0,81.9,110,10
+INSTA_30233,Organic Large Brown Grade AA Cage Free Eggs,ఆర్గానిక్ లార్జ్ బ్రౌన్ గ్రేడ్ AA కేజ్ ఉచిత గుడ్లు,Eggs,Dairy Eggs,piece,90.0,75.78,42,10
+INSTA_5479,Italian Sparkling Mineral Water,ఇటాలియన్ మెరిసే మినరల్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,50.0,41.9,38,10
+INSTA_14947,Pure Sparkling Water,స్వచ్ఛమైన మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,45.0,36.45,90,10
+INSTA_22963,Organic Roasted Turkey Breast,సేంద్రీయ కాల్చిన టర్కీ బ్రెస్ట్,Lunch Meat,Deli,packet,60.0,49.02,127,10
+INSTA_42828,Whipped Cream Cheese,కొరడాతో చేసిన క్రీమ్ చీజ్,Other Creams Cheeses,Dairy Eggs,packet,45.0,35.37,56,10
+INSTA_21288,Blackberries,బ్లాక్బెర్రీస్,Fresh Fruits,Produce,kg,130.0,99.45,85,10
+INSTA_46802,Pineapple Chunks,పైనాపిల్ ముక్కలు,Frozen Produce,Frozen,kg,210.0,170.52,72,10
+INSTA_17948,Frozen Organic Wild Blueberries,ఘనీభవించిన ఆర్గానిక్ వైల్డ్ బ్లూబెర్రీస్,Frozen Produce,Frozen,packet,155.0,119.2,139,10
+INSTA_10246,Organic Celery Hearts,సేంద్రీయ సెలెరీ హార్ట్స్,Fresh Vegetables,Produce,kg,30.0,24.99,123,10
+INSTA_25146,Original Orange Juice,ఒరిజినల్ ఆరెంజ్ జ్యూస్,Refrigerated,Beverages,litre,155.0,124.78,75,10
+INSTA_32655,Organic Large Grade AA Brown Eggs,ఆర్గానిక్ లార్జ్ గ్రేడ్ AA బ్రౌన్ గుడ్లు,Eggs,Dairy Eggs,piece,35.0,29.08,41,10
+INSTA_42701,Organic Sour Cream,సేంద్రీయ సోర్ క్రీం,Other Creams Cheeses,Dairy Eggs,packet,100.0,80.7,37,10
+INSTA_20842,Total 0% Greek Yogurt,మొత్తం 0% గ్రీక్ యోగర్ట్,Yogurt,Dairy Eggs,packet,30.0,23.31,147,10
+INSTA_25659,Organic Coconut Milk,సేంద్రీయ కొబ్బరి పాలు,Soy Lactosefree,Dairy Eggs,litre,145.0,121.36,37,10
+INSTA_21405,"Organic Red Radish, Bunch","సేంద్రీయ రెడ్ ముల్లంగి, బంచ్",Fresh Vegetables,Produce,kg,100.0,81.2,82,10
+INSTA_31343,Shredded Mild Cheddar Cheese,తురిమిన తేలికపాటి చెడ్దార్ చీజ్,Packaged Cheese,Dairy Eggs,packet,80.0,60.88,31,10
+INSTA_43772,Cherubs Heavenly Salad Tomatoes,చెరుబ్స్ హెవెన్లీ సలాడ్ టొమాటోస్,Fresh Vegetables,Produce,kg,30.0,24.81,47,10
+INSTA_23734,Sour Cream,సోర్ క్రీం,Other Creams Cheeses,Dairy Eggs,packet,115.0,94.64,23,5
+INSTA_46676,Total 0% Nonfat Greek Yogurt,మొత్తం 0% నాన్‌ఫ్యాట్ గ్రీక్ యోగర్ట్,Yogurt,Dairy Eggs,packet,150.0,115.5,80,10
+INSTA_13870,Lightly Salted Baked Snap Pea Crisps,తేలికగా సాల్టెడ్ కాల్చిన స్నాప్ పీ క్రిస్ప్స్,Chips Pretzels,Snacks,packet,30.0,23.55,125,10
+INSTA_16953,Creamy Peanut Butter,క్రీమీ పీనట్ బటర్,Spreads,Pantry,kg,190.0,157.89,131,10
+INSTA_32689,Romaine Hearts,రోమైన్ హార్ట్స్,Packaged Vegetables Fruits,Produce,kg,120.0,95.16,83,10
+INSTA_43122,Organic Bartlett Pear,సేంద్రీయ బార్ట్లెట్ పియర్,Fresh Fruits,Produce,kg,55.0,41.3,111,10
+INSTA_33754,Total 2% with Strawberry Lowfat Greek Strained Yogurt,స్ట్రాబెర్రీ లోఫ్యాట్ గ్రీక్ స్ట్రెయిన్డ్ యోగర్ట్‌తో మొత్తం 2%,Yogurt,Dairy Eggs,packet,130.0,107.77,149,10
+INSTA_39408,Gala Apples,గాలా యాపిల్స్,Fresh Fruits,Produce,kg,125.0,104.75,68,10
+INSTA_38293,Ground Turkey Breast,గ్రౌండ్ టర్కీ బ్రెస్ట్,Poultry Counter,Meat Seafood,kg,185.0,156.14,34,10
+INSTA_39475,Total Greek Strained Yogurt,టోటల్ గ్రీక్ స్ట్రెయిన్డ్ యోగర్ట్,Yogurt,Dairy Eggs,packet,55.0,42.73,137,10
+INSTA_8859,Natural Spring Water,సహజ ఊట నీరు,Water Seltzer Sparkling Water,Beverages,litre,110.0,90.86,36,10
+INSTA_29987,Shredded Mozzarella,తురిమిన మోజారెల్లా,Packaged Cheese,Dairy Eggs,packet,120.0,91.8,45,10
+INSTA_6046,Boneless Skinless Chicken Breast,ఎముకలు లేని స్కిన్‌లెస్ చికెన్ బ్రెస్ట్,Poultry Counter,Meat Seafood,kg,285.0,241.97,79,10
+INSTA_43768,Organic Bell Pepper,సేంద్రీయ బెల్ పెప్పర్,Fresh Vegetables,Produce,kg,115.0,97.41,47,10
+INSTA_18362,Organic Bread with 21 Whole Grains,21 తృణధాన్యాలు కలిగిన సేంద్రీయ రొట్టె,Bread,Bakery,packet,95.0,80.47,147,10
+INSTA_1940,Organic 2% Reduced Fat Milk,సేంద్రీయ 2% తగ్గిన కొవ్వు పాలు,Milk,Dairy Eggs,litre,150.0,113.85,129,10
+INSTA_42342,Roasted Turkey Breast,కాల్చిన టర్కీ బ్రెస్ట్,Lunch Meat,Deli,packet,145.0,115.42,136,10
+INSTA_36695,Organic Hothouse Cucumbers,సేంద్రీయ హాట్‌హౌస్ దోసకాయలు,Fresh Vegetables,Produce,kg,45.0,34.92,76,10
+INSTA_48364,Sweet Onion,స్వీట్ ఉల్లిపాయ,Fresh Vegetables,Produce,kg,25.0,20.08,33,10
+INSTA_32864,Organic Baby Rainbow Carrots,సేంద్రీయ బేబీ రెయిన్బో క్యారెట్లు,Packaged Vegetables Fruits,Produce,kg,35.0,27.27,79,10
+INSTA_26620,Peach Pear Flavored Sparkling Water,పీచ్ పియర్ ఫ్లేవర్డ్ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,20.0,15.08,114,10
+INSTA_40310,Oven Roasted Turkey Breast,ఓవెన్ కాల్చిన టర్కీ బ్రెస్ట్,Lunch Meat,Deli,packet,120.0,92.28,69,10
+INSTA_44987,Heavy Whipping Cream,భారీ విప్పింగ్ క్రీమ్,Cream,Dairy Eggs,packet,120.0,100.56,88,10
+INSTA_48205,Spinach,పాలకూర,Packaged Vegetables Fruits,Produce,kg,120.0,92.64,142,10
+INSTA_46654,Organic Grade A Large Brown Eggs,సేంద్రీయ గ్రేడ్ A పెద్ద బ్రౌన్ గుడ్లు,Eggs,Dairy Eggs,piece,35.0,28.95,37,10
+INSTA_5818,White Onion,తెల్ల ఉల్లిపాయ,Fresh Vegetables,Produce,kg,130.0,102.18,76,10
+INSTA_18531,Organic Heavy Whipping Cream,ఆర్గానిక్ హెవీ విప్పింగ్ క్రీమ్,Cream,Dairy Eggs,packet,35.0,29.26,56,10
+INSTA_1463,Organic Milk,సేంద్రీయ పాలు,Milk,Dairy Eggs,litre,70.0,53.97,141,10
+INSTA_30776,Organic Raw Kombucha Gingerade,సేంద్రీయ రా Kombucha Gingerade,Refrigerated,Beverages,bottle,25.0,19.8,112,10
+INSTA_5212,Watermelon Chunks,పుచ్చకాయ ముక్కలు,Packaged Vegetables Fruits,Produce,litre,20.0,15.26,93,10
+INSTA_30450,Creamy Almond Butter,క్రీము బాదం వెన్న,Spreads,Pantry,kg,40.0,30.08,82,10
+INSTA_35939,Organic Jalapeno Pepper,సేంద్రీయ జలపెనో మిరియాలు,Fresh Vegetables,Produce,kg,35.0,27.41,143,10
+INSTA_38383,Organic White Onions,సేంద్రీయ తెల్ల ఉల్లిపాయలు,Fresh Vegetables,Produce,kg,25.0,19.85,124,10
+INSTA_26165,Electrolyte Enhanced Water,ఎలక్ట్రోలైట్ మెరుగైన నీరు,Water Seltzer Sparkling Water,Beverages,litre,170.0,131.24,92,10
+INSTA_38456,Large Grapefruit,పెద్ద ద్రాక్షపండు,Fresh Fruits,Produce,kg,110.0,90.2,40,10
+INSTA_890,Organic Diced Tomatoes,సేంద్రీయ ముక్కలు చేసిన టమోటాలు,Canned Jarred Vegetables,Canned Goods,can,115.0,95.56,111,10
+INSTA_47672,Uncured Hickory Smoked Sunday Bacon,అన్‌క్యూర్డ్ హికోరీ స్మోక్డ్ సండే బేకన్,Hot Dogs Bacon Sausage,Meat Seafood,kg,145.0,120.06,118,10
+INSTA_33120,Organic Egg Whites,సేంద్రీయ గుడ్డులోని తెల్లసొన,Eggs,Dairy Eggs,piece,30.0,23.25,55,10
+INSTA_28289,Organic Shredded Carrots,సేంద్రీయ తురిమిన క్యారెట్లు,Packaged Vegetables Fruits,Produce,kg,95.0,74.48,124,10
+INSTA_41149,Organic Riced Cauliflower,ఆర్గానిక్ రైస్డ్ కాలీఫ్లవర్,Missing,Missing,piece,75.0,56.33,121,10
+INSTA_2086,Sustainably Soft Bath Tissue,సస్టైనబుల్ సాఫ్ట్ బాత్ టిష్యూ,Paper Goods,Household,piece,130.0,105.17,119,10
+INSTA_31683,Original No Pulp 100% Florida Orange Juice,ఒరిజినల్ నో పల్ప్ 100% ఫ్లోరిడా ఆరెంజ్ జ్యూస్,Refrigerated,Beverages,litre,145.0,121.07,95,10
+INSTA_36011,Organic Fat Free Milk,సేంద్రీయ కొవ్వు రహిత పాలు,Milk,Dairy Eggs,litre,160.0,134.88,33,10
+INSTA_18523,Total 2% All Natural Greek Strained Yogurt with Honey,మొత్తం 2% తేనెతో సహజ గ్రీకు వడకట్టిన పెరుగు,Yogurt,Dairy Eggs,packet,75.0,61.12,25,5
+INSTA_35108,Salted Butter,సాల్టెడ్ వెన్న,Butter,Dairy Eggs,packet,140.0,111.3,55,10
+INSTA_3952,Organic Broccoli Crowns,సేంద్రీయ బ్రోకలీ కిరీటాలు,Fresh Vegetables,Produce,kg,50.0,39.8,46,10
+INSTA_47630,Medium Navel Orange,మధ్యస్థ నాభి ఆరెంజ్,Fresh Fruits,Produce,kg,125.0,103.75,20,5
+INSTA_23288,Distilled Water,స్వేదనజలం,Water Seltzer Sparkling Water,Beverages,litre,100.0,84.8,128,10
+INSTA_21019,Roasted Red Pepper Hummus,కాల్చిన రెడ్ పెప్పర్ హమ్ముస్,Fresh Dips Tapenades,Deli,packet,110.0,88.22,122,10
+INSTA_41290,Lemonade,నిమ్మరసం,Refrigerated,Beverages,bottle,40.0,30.44,91,10
+INSTA_47734,Organic Green Cabbage,సేంద్రీయ గ్రీన్ క్యాబేజీ,Fresh Vegetables,Produce,kg,50.0,40.7,54,10
+INSTA_15937,Shallot,షాలోట్,Fresh Vegetables,Produce,kg,105.0,80.22,74,10
+INSTA_44910,Organic Spring Mix Salad,సేంద్రీయ స్ప్రింగ్ మిక్స్ సలాడ్,Packaged Vegetables Fruits,Produce,kg,40.0,32.72,58,10
+INSTA_4562,English Seedless Cucumber,ఇంగ్లీష్ సీడ్‌లెస్ దోసకాయ,Fresh Vegetables,Produce,kg,135.0,107.06,93,10
+INSTA_13629,Organic Snipped Green Beans,సేంద్రీయ స్నిప్డ్ గ్రీన్ బీన్స్,Fresh Vegetables,Produce,kg,25.0,20.15,76,10
+INSTA_39619,Organic Tomato Basil Pasta Sauce,సేంద్రీయ టొమాటో బాసిల్ పాస్తా సాస్,Pasta Sauce,Dry Goods Pasta,packet,110.0,87.23,133,10
+INSTA_35921,Organic Large Grade A Brown Eggs,ఆర్గానిక్ లార్జ్ గ్రేడ్ A బ్రౌన్ ఎగ్స్,Eggs,Dairy Eggs,piece,70.0,55.65,85,10
+INSTA_23165,Organic Leek,సేంద్రీయ లీక్,Fresh Vegetables,Produce,kg,60.0,48.0,110,10
+INSTA_32478,Reduced Fat 2% Milk,తగ్గిన కొవ్వు 2% పాలు,Milk,Dairy Eggs,litre,115.0,95.45,110,10
+INSTA_43713,Organic Creamy Peanut Butter,సేంద్రీయ క్రీమీ పీనట్ బటర్,Spreads,Pantry,kg,70.0,54.88,74,10
+INSTA_24799,Vanilla Skyr Nonfat Yogurt,వనిల్లా స్కైర్ నాన్‌ఫాట్ పెరుగు,Yogurt,Dairy Eggs,packet,30.0,24.09,33,10
+INSTA_23375,Marinara Sauce,మరినారా సాస్,Pasta Sauce,Dry Goods Pasta,packet,85.0,68.77,29,5
+INSTA_36070,"Super Spinach! Baby Spinach, Baby Bok Choy, Sweet Baby Kale","సూపర్ బచ్చలికూర! బేబీ స్పినాచ్, బేబీ బోక్ చోయ్, స్వీట్ బేబీ కాలే",Packaged Vegetables Fruits,Produce,kg,50.0,39.4,48,10
+INSTA_14678,Organic Frozen Peas,సేంద్రీయ ఘనీభవించిన బఠానీలు,Frozen Produce,Frozen,packet,130.0,98.67,119,10
+INSTA_21376,Pretzel Crisps Original Deli Style Pretzel Crackers,ప్రెట్జెల్ క్రిస్ప్స్ ఒరిజినల్ డెలి స్టైల్ జంతిక క్రాకర్స్,Chips Pretzels,Snacks,packet,40.0,32.0,50,10
+INSTA_44422,Organic Old Fashioned Rolled Oats,ఆర్గానిక్ ఓల్డ్ ఫ్యాషన్ రోల్డ్ ఓట్స్,Hot Cereal Pancake Mixes,Breakfast,box,100.0,80.8,28,5
+INSTA_1158,Mango Chunks,మామిడికాయ ముక్కలు,Frozen Produce,Frozen,packet,135.0,104.49,104,10
+INSTA_7948,Organic Unsalted Butter,సేంద్రీయ ఉప్పు లేని వెన్న,Butter,Dairy Eggs,packet,120.0,91.08,59,10
+INSTA_13984,Organic Mint,సేంద్రీయ పుదీనా,Fresh Herbs,Produce,kg,45.0,34.65,120,10
+INSTA_21267,Sourdough Bread,సోర్డోఫ్ బ్రెడ్,Bread,Bakery,packet,65.0,52.33,125,10
+INSTA_2078,Unsalted Pure Irish Butter,ఉప్పు లేని స్వచ్ఛమైన ఐరిష్ వెన్న,Butter,Dairy Eggs,packet,140.0,112.0,110,10
+INSTA_35042,Black Beans,బ్లాక్ బీన్స్,Canned Meals Beans,Canned Goods,can,90.0,69.3,40,10
+INSTA_17600,"YoKids Squeezers Organic Low-Fat Yogurt, Strawberry","YoKids స్క్వీజర్స్ ఆర్గానిక్ తక్కువ కొవ్వు పెరుగు, స్ట్రాబెర్రీ",Yogurt,Dairy Eggs,packet,145.0,119.62,55,10
+INSTA_26940,Organic Large Green Asparagus,ఆర్గానిక్ లార్జ్ గ్రీన్ ఆస్పరాగస్,Fresh Vegetables,Produce,kg,30.0,24.96,92,10
+INSTA_40723,Organic Cripps Pink Apples,ఆర్గానిక్ క్రిప్స్ పింక్ యాపిల్స్,Fresh Fruits,Produce,kg,60.0,48.18,93,10
+INSTA_2966,Pure Coconut Water,స్వచ్ఛమైన కొబ్బరి నీరు,Juice Nectars,Beverages,litre,30.0,24.33,51,10
+INSTA_28993,Iceberg Lettuce,మంచుకొండ పాలకూర,Fresh Vegetables,Produce,kg,130.0,110.11,27,5
+INSTA_13535,Organic Medium Salsa,ఆర్గానిక్ మీడియం సల్సా,Preserved Dips Spreads,Pantry,kg,240.0,184.8,80,10
+INSTA_19048,Organic Butternut Squash,సేంద్రీయ బటర్‌నట్ స్క్వాష్,Fresh Vegetables,Produce,kg,65.0,54.47,78,10
+INSTA_20119,Sparkling Water Berry,మెరిసే నీటి బెర్రీ,Water Seltzer Sparkling Water,Beverages,litre,60.0,48.48,38,10
+INSTA_42450,Macaroni & Cheese,మాకరోనీ & చీజ్,Frozen Meals,Frozen,packet,180.0,138.6,50,10
+INSTA_25931,Organic Baby Spinach Salad,ఆర్గానిక్ బేబీ స్పినాచ్ సలాడ్,Packaged Vegetables Fruits,Produce,kg,135.0,110.7,120,10
+INSTA_39993,Vine Ripe Tomatoes,వైన్ పండిన టమోటాలు,Fresh Vegetables,Produce,kg,100.0,81.5,75,10
+INSTA_7021,Organic Tomato Paste,సేంద్రీయ టొమాటో పేస్ట్,Canned Jarred Vegetables,Canned Goods,can,85.0,70.3,37,10
+INSTA_31040,Sea Salt Pita Chips,సముద్ర ఉప్పు పిటా చిప్స్,Chips Pretzels,Snacks,packet,115.0,91.2,113,10
+INSTA_46969,Organic Bosc Pear,ఆర్గానిక్ బాస్క్ పియర్,Fresh Fruits,Produce,kg,45.0,34.65,80,10
+INSTA_28465,Icelandic Style Skyr Blueberry Non-fat Yogurt,ఐస్లాండిక్ స్టైల్ స్కైర్ బ్లూబెర్రీ నాన్-ఫ్యాట్ యోగర్ట్,Yogurt,Dairy Eggs,packet,120.0,91.92,26,5
+INSTA_16349,Organic Yams,సేంద్రీయ యమ్స్,Fresh Vegetables,Produce,kg,100.0,79.8,148,10
+INSTA_12206,Basil Pesto,బాసిల్ పెస్టో,Pasta Sauce,Dry Goods Pasta,packet,60.0,45.96,86,10
+INSTA_18027,Ezekiel 4:9 Bread Organic Sprouted Whole Grain,యెహెజ్కేలు 4:9 బ్రెడ్ ఆర్గానిక్ మొలకెత్తిన ధాన్యం,Bread,Bakery,packet,70.0,53.34,52,10
+INSTA_10132,Organic American Cheese Singles,ఆర్గానిక్ అమెరికన్ చీజ్ సింగిల్స్,Packaged Cheese,Dairy Eggs,packet,135.0,105.7,33,10
+INSTA_33129,Classic Hummus,క్లాసిక్ హమ్మస్,Fresh Dips Tapenades,Deli,packet,85.0,63.75,140,10
+INSTA_30827,Seedless Cucumbers,విత్తనాలు లేని దోసకాయలు,Packaged Produce,Produce,kg,110.0,89.65,115,10
+INSTA_38159,Organic Yellow Peaches,సేంద్రీయ పసుపు పీచెస్,Fresh Fruits,Produce,kg,25.0,19.7,148,10
+INSTA_40332,"Cage Free Brown Eggs-Large, Grade A","కేజ్ ఫ్రీ బ్రౌన్ ఎగ్స్-పెద్ద, గ్రేడ్ A",Eggs,Dairy Eggs,piece,35.0,28.8,143,10
+INSTA_25466,Water,నీరు,Water Seltzer Sparkling Water,Beverages,litre,155.0,121.37,73,10
+INSTA_28934,Frozen Broccoli Florets,ఘనీభవించిన బ్రోకలీ పుష్పాలు,Frozen Produce,Frozen,packet,225.0,170.78,129,10
+INSTA_15872,Celery Hearts,సెలెరీ హార్ట్స్,Fresh Vegetables,Produce,kg,25.0,19.85,74,10
+INSTA_40174,2% Reduced Fat Organic Milk,2% తగ్గిన కొవ్వు సేంద్రీయ పాలు,Milk,Dairy Eggs,litre,80.0,61.68,91,10
+INSTA_43154,Sparkling Mineral Water,మెరిసే మినరల్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,155.0,122.14,108,10
+INSTA_34448,Original Veggie Straws,ఒరిజినల్ వెజ్జీ స్ట్రాస్,Fruit Vegetable Snacks,Snacks,piece,100.0,77.0,130,10
+INSTA_5258,Sparkling Water,మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,110.0,88.88,88,10
+INSTA_17122,Honeycrisp Apples,హనీక్రిస్ప్ యాపిల్స్,Fresh Fruits,Produce,kg,115.0,86.71,134,10
+INSTA_10673,Original Nooks & Crannies English Muffins,ఒరిజినల్ నూక్స్ & క్రానీస్ ఇంగ్లీష్ మఫిన్లు,Breakfast Bakery,Bakery,packet,50.0,40.3,116,10
+INSTA_40545,Berry Medley,బెర్రీ మెడ్లీ,Frozen Produce,Frozen,packet,170.0,141.44,22,5
+INSTA_39812,Organic Thyme,సేంద్రీయ థైమ్,Fresh Herbs,Produce,kg,125.0,104.38,65,10
+INSTA_41665,Organic Mexican Blend Finely Shredded Cheese,సేంద్రీయ మెక్సికన్ బ్లెండ్ సరసముగా తురిమిన చీజ్,Packaged Cheese,Dairy Eggs,packet,75.0,60.75,40,10
+INSTA_48745,Globe Eggplant,గ్లోబ్ వంకాయ,Fresh Vegetables,Produce,piece,130.0,97.76,42,10
+INSTA_28156,Total 0% Nonfat Plain Greek Yogurt,మొత్తం 0% నాన్‌ఫ్యాట్ ప్లెయిన్ గ్రీక్ యోగర్ట్,Yogurt,Dairy Eggs,packet,160.0,134.72,132,10
+INSTA_42625,"Flat Parsley, Bunch","ఫ్లాట్ పార్స్లీ, బంచ్",Fresh Herbs,Produce,kg,25.0,19.88,125,10
+INSTA_30720,Sugar Snap Peas,షుగర్ స్నాప్ బఠానీలు,Fresh Vegetables,Produce,kg,75.0,59.4,132,10
+INSTA_40396,Guacamole,గ్వాకామోల్,Fresh Dips Tapenades,Deli,packet,155.0,119.04,48,10
+INSTA_7628,"Dressing, Jersey Sweet Onion, Calorie Free","డ్రెస్సింగ్, జెర్సీ స్వీట్ ఆనియన్, క్యాలరీ ఉచితం",Fresh Vegetables,Produce,kg,115.0,87.28,49,10
+INSTA_26790,Organic AppleApple,సేంద్రీయ ఆపిల్ ఆపిల్,Canned Fruit Applesauce,Canned Goods,kg,160.0,120.32,32,10
+INSTA_49520,Orange Sparkling Water,ఆరెంజ్ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,35.0,26.32,132,10
+INSTA_40571,Total 2% Greek Strained Yogurt with Cherry 5.3 oz,చెర్రీ 5.3 ozతో మొత్తం 2% గ్రీక్ స్ట్రెయిన్డ్ యోగర్ట్,Yogurt,Dairy Eggs,packet,35.0,29.29,147,10
+INSTA_4957,Total 2% Lowfat Greek Strained Yogurt With Blueberry,బ్లూబెర్రీతో మొత్తం 2% లోఫ్యాట్ గ్రీక్ స్ట్రెయిన్డ్ యోగర్ట్,Yogurt,Dairy Eggs,packet,55.0,41.52,105,10
+INSTA_5782,Grade A Large White Eggs,గ్రేడ్ A పెద్ద తెల్ల గుడ్లు,Eggs,Dairy Eggs,piece,145.0,121.07,35,10
+INSTA_17461,Air Chilled Organic Boneless Skinless Chicken Breasts,గాలి చల్లబడిన ఆర్గానిక్ బోన్‌లెస్ స్కిన్‌లెస్ చికెన్ బ్రెస్ట్‌లు,Poultry Counter,Meat Seafood,kg,290.0,221.27,143,10
+INSTA_10957,Fridge Pack Cola,ఫ్రిజ్ ప్యాక్ కోలా,Soft Drinks,Beverages,bottle,160.0,134.24,49,10
+INSTA_33787,Total 2% Lowfat Greek Strained Yogurt with Peach,పీచుతో మొత్తం 2% లోఫ్యాట్ గ్రీక్ స్ట్రెయిన్డ్ యోగర్ట్,Yogurt,Dairy Eggs,packet,150.0,118.05,77,10
+INSTA_43086,Super Greens Salad,సూపర్ గ్రీన్స్ సలాడ్,Packaged Vegetables Fruits,Produce,kg,45.0,37.8,50,10
+INSTA_45603,Trilogy Kombucha Drink,త్రయం Kombucha పానీయం,Refrigerated,Beverages,bottle,150.0,112.5,120,10
+INSTA_13198,85% Lean Ground Beef,85% లీన్ గ్రౌండ్ బీఫ్,Meat Counter,Meat Seafood,kg,310.0,255.44,54,10
+INSTA_49383,Organic Bunch Beets,సేంద్రీయ బంచ్ దుంపలు,Fresh Vegetables,Produce,kg,115.0,97.63,29,5
+INSTA_32734,Spaghetti,స్పఘెట్టి,Dry Pasta,Dry Goods Pasta,packet,160.0,130.72,27,5
+INSTA_30169,Total 2% All Natural Plain Greek Yogurt,మొత్తం 2% ఆల్ నేచురల్ ప్లెయిన్ గ్రీక్ యోగర్ట్,Yogurt,Dairy Eggs,packet,25.0,19.02,91,10
+INSTA_35561,Organic Tortilla Chips,సేంద్రీయ టోర్టిల్లా చిప్స్,Chips Pretzels,Snacks,packet,85.0,69.02,132,10
+INSTA_16965,Chocolate Ice Cream,చాక్లెట్ ఐస్ క్రీమ్,Ice Cream Ice,Frozen,packet,170.0,141.95,25,5
+INSTA_37766,XL Emerald White Seedless Grapes,XL ఎమరాల్డ్ వైట్ సీడ్‌లెస్ ద్రాక్ష,Packaged Vegetables Fruits,Produce,kg,125.0,102.25,118,10
+INSTA_12916,Ginger Ale,అల్లం ఆలే,Soft Drinks,Beverages,bottle,60.0,48.72,42,10
+INSTA_38400,Asparation/Broccolini/Baby Broccoli,ఆస్పరేషన్/బ్రోకాలినీ/బేబీ బ్రోకలీ,Fresh Vegetables,Produce,kg,115.0,87.63,32,10
+INSTA_8571,Baby Cucumbers,బేబీ దోసకాయలు,Packaged Produce,Produce,kg,75.0,60.9,22,5
+INSTA_39984,Organic Dill,సేంద్రీయ మెంతులు,Fresh Herbs,Produce,kg,45.0,34.02,146,10
+INSTA_47977,Grapefruit Sparkling Water,గ్రేప్‌ఫ్రూట్ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,135.0,102.47,69,10
+INSTA_8670,Diced Tomatoes,ముక్కలు చేసిన టమోటాలు,Canned Jarred Vegetables,Canned Goods,can,105.0,80.01,92,10
+INSTA_17872,Total 2% Lowfat Plain Greek Yogurt,మొత్తం 2% లోఫ్యాట్ ప్లెయిన్ గ్రీక్ యోగర్ట్,Yogurt,Dairy Eggs,packet,50.0,41.9,58,10
+INSTA_45,European Cucumber,యూరోపియన్ దోసకాయ,Fresh Vegetables,Produce,kg,100.0,79.7,27,5
+INSTA_7751,Tomato Ketchup,టొమాటో కెచప్,Condiments,Pantry,kg,85.0,64.26,56,10
+INSTA_40516,Organic Romaine Hearts,ఆర్గానిక్ రోమైన్ హార్ట్స్,Packaged Vegetables Fruits,Produce,kg,45.0,38.02,85,10
+INSTA_13646,Lemon Hummus,నిమ్మకాయ హమ్మస్,Fresh Dips Tapenades,Deli,packet,165.0,136.45,137,10
+INSTA_42356,Strawberry Preserves,స్ట్రాబెర్రీ నిల్వలు,Spreads,Pantry,kg,195.0,165.16,87,10
+INSTA_21195,Organic Extra Virgin Olive Oil,సేంద్రీయ అదనపు వర్జిన్ ఆలివ్ ఆయిల్,Oils Vinegars,Pantry,kg,235.0,196.93,118,10
+INSTA_16083,Organic Large Brown Eggs,సేంద్రీయ పెద్ద బ్రౌన్ గుడ్లు,Eggs,Dairy Eggs,piece,145.0,120.06,118,10
+INSTA_35547,Organic Baby Kale,ఆర్గానిక్ బేబీ కాలే,Fresh Vegetables,Produce,kg,35.0,26.46,76,10
+INSTA_4472,Toasted Coconut Almondmilk Blend,కాల్చిన కొబ్బరి ఆల్మండ్ మిల్క్ బ్లెండ్,Soy Lactosefree,Dairy Eggs,litre,130.0,105.56,62,10
+INSTA_44570,Kale Greens,కాలే గ్రీన్స్,Fresh Vegetables,Produce,kg,140.0,117.04,126,10
+INSTA_26497,Romaine Lettuce,రోమైన్ పాలకూర,Fresh Vegetables,Produce,kg,90.0,75.15,35,10
+INSTA_40199,Chocolate Chip Cookies,చాక్లెట్ చిప్ కుకీలు,Cookies Cakes,Snacks,packet,90.0,67.59,101,10
+INSTA_8048,Packaged Grape Tomatoes,ప్యాక్ చేసిన ద్రాక్ష టమోటాలు,Packaged Produce,Produce,kg,65.0,54.27,75,10
+INSTA_18441,Organic Ketchup,సేంద్రీయ కెచప్,Condiments,Pantry,kg,40.0,30.2,115,10
+INSTA_32177,Blood Oranges,బ్లడ్ ఆరెంజ్,Fresh Fruits,Produce,kg,90.0,75.06,74,10
+INSTA_19508,Corn Tortillas,మొక్కజొన్న టోర్టిల్లాలు,Tortillas Flat Bread,Bakery,packet,25.0,19.4,56,10
+INSTA_27336,Organic Rainbow Carrots,సేంద్రీయ రెయిన్బో క్యారెట్లు,Packaged Vegetables Fruits,Produce,kg,140.0,117.46,39,10
+INSTA_5646,Organic Turkey Bacon,సేంద్రీయ టర్కీ బేకన్,Hot Dogs Bacon Sausage,Meat Seafood,kg,250.0,210.0,80,10
+INSTA_6187,Raisin Bran Cereal,రైసిన్ బ్రాన్ తృణధాన్యాలు,Cereal,Breakfast,box,195.0,149.18,95,10
+INSTA_19691,Green Seedless Grapes,గ్రీన్ సీడ్లెస్ ద్రాక్ష,Packaged Produce,Produce,kg,50.0,39.65,23,5
+INSTA_17795,Organic Green Leaf Lettuce,సేంద్రీయ గ్రీన్ లీఫ్ లెట్యూస్,Fresh Vegetables,Produce,kg,125.0,103.88,51,10
+INSTA_40709,Sea Salt & Vinegar Potato Chips,సముద్ర ఉప్పు & వెనిగర్ పొటాటో చిప్స్,Chips Pretzels,Snacks,kg,20.0,15.88,44,10
+INSTA_38557,Citrus Mandarins Organic,సిట్రస్ మాండరిన్స్ ఆర్గానిక్,Fresh Fruits,Produce,kg,70.0,53.2,60,10
+INSTA_3376,Organic Whole Kernel Sweet Corn No Salt Added,ఆర్గానిక్ హోల్ కెర్నల్ స్వీట్ కార్న్ ఉప్పు జోడించబడలేదు,Canned Jarred Vegetables,Canned Goods,can,175.0,147.53,123,10
+INSTA_18370,Organic Shredded Mozzarella,సేంద్రీయ తురిమిన మోజారెల్లా,Packaged Cheese,Dairy Eggs,packet,130.0,108.94,98,10
+INSTA_38768,Sweet Kale Salad Mix,స్వీట్ కాలే సలాడ్ మిక్స్,Packaged Produce,Produce,kg,100.0,81.3,93,10
+INSTA_20955,Cereal,తృణధాన్యాలు,Cereal,Breakfast,box,150.0,121.05,57,10
+INSTA_38777,Organic Green Seedless Grapes,సేంద్రీయ ఆకుపచ్చ విత్తనాలు లేని ద్రాక్ష,Packaged Vegetables Fruits,Produce,kg,95.0,73.15,50,10
+INSTA_48775,Organic Red Cabbage,సేంద్రీయ రెడ్ క్యాబేజీ,Fresh Vegetables,Produce,kg,25.0,19.6,134,10
+INSTA_6873,Organic Iceberg Lettuce,సేంద్రీయ మంచుకొండ పాలకూర,Fresh Vegetables,Produce,kg,95.0,74.0,59,10
+INSTA_651,Organic Salted Butter,సేంద్రీయ సాల్టెడ్ వెన్న,Butter,Dairy Eggs,packet,155.0,125.24,78,10
+INSTA_44449,Organic Tomato Sauce,సేంద్రీయ టొమాటో సాస్,Canned Jarred Vegetables,Canned Goods,can,115.0,94.76,64,10
+INSTA_34050,Orange Juice,ఆరెంజ్ జ్యూస్,Refrigerated,Beverages,litre,45.0,36.14,103,10
+INSTA_10644,Italian Extra Virgin Olive Oil,ఇటాలియన్ ఎక్స్‌ట్రా వర్జిన్ ఆలివ్ ఆయిల్,Oils Vinegars,Pantry,kg,150.0,112.95,73,10
+INSTA_5618,Cauliflower,కాలీఫ్లవర్,Fresh Vegetables,Produce,kg,135.0,111.24,84,10
+INSTA_36865,Non Fat Raspberry Yogurt,నాన్ ఫ్యాట్ రాస్ప్బెర్రీ యోగర్ట్,Yogurt,Dairy Eggs,packet,150.0,118.5,50,10
+INSTA_1511,2% Reduced Fat DHA Omega-3 Reduced Fat Milk,2% తగ్గిన కొవ్వు DHA ఒమేగా-3 తగ్గిన కొవ్వు పాలు,Milk,Dairy Eggs,litre,130.0,105.3,30,5
+INSTA_29447,"Milk, Organic, Vitamin D","పాలు, ఆర్గానిక్, విటమిన్ డి",Milk,Dairy Eggs,litre,80.0,67.28,81,10
+INSTA_49075,Organic Brown Rice,సేంద్రీయ బ్రౌన్ రైస్,Frozen Meals,Frozen,packet,120.0,97.44,72,10
+INSTA_37158,Chicken & Maple Breakfast Sausage,చికెన్ & మాపుల్ బ్రేక్ ఫాస్ట్ సాసేజ్,Frozen Breakfast,Frozen,packet,200.0,151.0,55,10
+INSTA_33401,Goat Cheese Crumbles,మేక చీజ్ కృంగిపోతుంది,Packaged Cheese,Dairy Eggs,packet,130.0,105.69,123,10
+INSTA_7175,Organic Whipped Naturally Buttery Spread,సేంద్రీయ కొరడాతో సహజంగా వెన్న స్ప్రెడ్,Soy Lactosefree,Dairy Eggs,packet,25.0,19.12,75,10
+INSTA_47141,Cola,కోలా,Soft Drinks,Beverages,bottle,150.0,113.7,148,10
+INSTA_6348,Mini Original Babybel Cheese,మినీ ఒరిజినల్ బేబీబెల్ చీజ్,Packaged Cheese,Dairy Eggs,packet,130.0,108.03,41,10
+INSTA_19677,Original Pure Creamy Almond Milk,ఒరిజినల్ ప్యూర్ క్రీమీ ఆల్మండ్ మిల్క్,Soy Lactosefree,Dairy Eggs,litre,110.0,84.92,72,10
+INSTA_36550,Organic Extra Large Grade AA Brown Eggs,సేంద్రీయ అదనపు పెద్ద గ్రేడ్ AA బ్రౌన్ గుడ్లు,Eggs,Dairy Eggs,piece,115.0,92.92,78,10
+INSTA_6104,Whole Milk Plain Yogurt,మొత్తం పాలు సాదా పెరుగు,Yogurt,Dairy Eggs,litre,40.0,30.56,24,5
+INSTA_14233,Natural Artesian Water,సహజ ఆర్టీసియన్ నీరు,Water Seltzer Sparkling Water,Beverages,litre,70.0,54.39,37,10
+INSTA_27695,Natural Chicken & Sage Breakfast Sausage,సహజ చికెన్ & సేజ్ బ్రేక్ ఫాస్ట్ సాసేజ్,Hot Dogs Bacon Sausage,Meat Seafood,kg,315.0,264.91,121,10
+INSTA_32303,Red Seedless Grapes,ఎర్ర విత్తన రహిత ద్రాక్ష,Fresh Fruits,Produce,kg,50.0,39.7,84,10
+INSTA_15902,100 Calorie  Per Bag Popcorn,ఒక్కో బ్యాగ్ పాప్‌కార్న్‌కు 100 కేలరీలు,Popcorn Jerky,Snacks,packet,95.0,76.29,143,10
+INSTA_3599,Baked Aged White Cheddar Rice and Corn Puffs,కాల్చిన ఏజ్డ్ వైట్ చెడ్డార్ రైస్ మరియు కార్న్ పఫ్స్,Popcorn Jerky,Snacks,packet,45.0,36.72,126,10
+INSTA_45123,Organic 21 Grain Thin Sliced Bread,సేంద్రీయ 21 ధాన్యం సన్నని ముక్కలు చేసిన బ్రెడ్,Bread,Bakery,packet,70.0,57.61,113,10
+INSTA_14084,Organic Unsweetened Vanilla Almond Milk,సేంద్రీయ తియ్యని వనిల్లా బాదం పాలు,Soy Lactosefree,Dairy Eggs,litre,40.0,33.72,33,10
+INSTA_10017,Tilapia Filet,టిలాపియా ఫైలెట్,Seafood Counter,Meat Seafood,kg,165.0,130.35,90,10
+INSTA_27323,Pure & Natural Sour Cream,స్వచ్ఛమైన & సహజ సోర్ క్రీం,Other Creams Cheeses,Dairy Eggs,packet,75.0,60.53,37,10
+INSTA_22395,Tomato Sauce,టొమాటో సాస్,Canned Jarred Vegetables,Canned Goods,can,120.0,92.76,103,10
+INSTA_33768,Sinfully Sweet Campari Tomatoes,పాపం స్వీట్ కాంపరి టొమాటోస్,Fresh Vegetables,Produce,kg,55.0,46.53,146,10
+INSTA_14218,Grade A Large Eggs Cage Free Omega 3,గ్రేడ్ A పెద్ద గుడ్లు కేజ్ ఉచిత ఒమేగా 3,Eggs,Dairy Eggs,piece,100.0,81.2,102,10
+INSTA_21573,Roasted Pine Nut Hummus,కాల్చిన పైన్ గింజ హమ్ముస్,Fresh Dips Tapenades,Deli,packet,125.0,97.75,42,10
+INSTA_24561,Organic Cheese Frozen Pizza,సేంద్రీయ చీజ్ ఘనీభవించిన పిజ్జా,Frozen Pizza,Frozen,packet,200.0,150.4,62,10
+INSTA_21292,Rainbow Bell Peppers,రెయిన్బో బెల్ పెప్పర్స్,Packaged Produce,Produce,kg,130.0,99.58,36,10
+INSTA_45535,Organic Low Sodium Chicken Broth,సేంద్రీయ తక్కువ సోడియం చికెన్ ఉడకబెట్టిన పులుసు,Soup Broth Bouillon,Canned Goods,can,80.0,62.32,99,10
+INSTA_37710,Trail Mix,ట్రైల్ మిక్స్,Trail Mix Snack Mix,Snacks,packet,110.0,84.7,80,10
+INSTA_42244,Total 2% All Natural Low Fat 2% Milkfat Greek Strained Yogurt,మొత్తం 2% ఆల్ నేచురల్ లో ఫ్యాట్ 2% మిల్క్‌ఫ్యాట్ గ్రీక్ స్ట్రెయిన్డ్ యోగర్ట్,Yogurt,Dairy Eggs,litre,115.0,95.22,38,10
+INSTA_46720,Organic Free Range Chicken Broth,సేంద్రీయ ఉచిత రేంజ్ చికెన్ ఉడకబెట్టిన పులుసు,Soup Broth Bouillon,Canned Goods,can,120.0,91.32,61,10
+INSTA_13733,Red Potatoes,ఎర్ర బంగాళాదుంపలు,Fresh Vegetables,Produce,kg,60.0,46.2,30,5
+INSTA_15424,Purified Water,శుద్ధి చేసిన నీరు,Water Seltzer Sparkling Water,Beverages,litre,65.0,54.99,36,10
+INSTA_25824,Pita Chips Simply Naked,పిటా చిప్స్ కేవలం నేకెడ్,Chips Pretzels,Snacks,packet,20.0,16.38,119,10
+INSTA_20082,Organic Whole Milk with DHA Omega-3,DHA ఒమేగా-3తో కూడిన ఆర్గానిక్ హోల్ మిల్క్,Milk,Dairy Eggs,litre,105.0,88.52,113,10
+INSTA_12456,Organic Sunday Bacon,సేంద్రీయ ఆదివారం బేకన్,Hot Dogs Bacon Sausage,Meat Seafood,kg,235.0,189.41,126,10
+INSTA_13829,Mild Salsa,తేలికపాటి సల్సా,Preserved Dips Spreads,Pantry,kg,180.0,141.12,134,10
+INSTA_10385,Organic English Cucumber,ఆర్గానిక్ ఇంగ్లీష్ దోసకాయ,Fresh Vegetables,Produce,kg,130.0,110.24,88,10
+INSTA_25138,Organic Plain Greek Whole Milk Yogurt,సేంద్రీయ ప్లెయిన్ గ్రీక్ హోల్ మిల్క్ యోగర్ట్,Yogurt,Dairy Eggs,litre,130.0,105.3,110,10
+INSTA_39947,Blackberry Cucumber Sparkling Water,బ్లాక్బెర్రీ దోసకాయ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,65.0,53.36,61,10
+INSTA_5456,Green Tea With Ginseng and Honey,జిన్సెంగ్ మరియు తేనెతో గ్రీన్ టీ,Lunch Meat,Deli,packet,150.0,124.05,27,5
+INSTA_21333,Original Whipped Cream Cheese,ఒరిజినల్ విప్డ్ క్రీమ్ చీజ్,Other Creams Cheeses,Dairy Eggs,packet,50.0,40.95,49,10
+INSTA_39190,Vanilla Unsweetened Almond Milk,వనిల్లా తియ్యని బాదం పాలు,Soy Lactosefree,Dairy Eggs,litre,110.0,85.8,130,10
+INSTA_13249,Skim Milk,స్కిమ్ మిల్క్,Milk,Dairy Eggs,litre,35.0,29.05,100,10
+INSTA_5134,Organic Thompson Seedless Raisins,సేంద్రీయ థాంప్సన్ సీడ్‌లెస్ రైసిన్‌లు,Nuts Seeds Dried Fruit,Snacks,packet,80.0,61.44,98,10
+INSTA_18288,Sea Salt Potato Chips,సముద్ర ఉప్పు బంగాళాదుంప చిప్స్,Chips Pretzels,Snacks,kg,35.0,29.61,46,10
+INSTA_38273,Marinara Pasta Sauce,మరినారా పాస్తా సాస్,Pasta Sauce,Dry Goods Pasta,packet,55.0,44.55,20,5
+INSTA_4086,Mint,పుదీనా,Fresh Herbs,Produce,kg,70.0,52.92,106,10
+INSTA_5769,Organic Chicken Stock,సేంద్రీయ చికెన్ స్టాక్,Soup Broth Bouillon,Canned Goods,can,160.0,121.28,108,10
+INSTA_19019,Uncured Slow Cooked Ham,అన్‌క్యూర్డ్ స్లో వండిన హామ్,Lunch Meat,Deli,packet,200.0,167.2,76,10
+INSTA_17758,Strawberry Rhubarb Yoghurt,స్ట్రాబెర్రీ రబర్బ్ యోగర్ట్,Yogurt,Dairy Eggs,packet,60.0,47.7,55,10
+INSTA_40198,Blueberry Yoghurt,బ్లూబెర్రీ యోగర్ట్,Yogurt,Dairy Eggs,packet,95.0,71.92,37,10
+INSTA_14197,Tomato Paste,టొమాటో పేస్ట్,Pasta Sauce,Dry Goods Pasta,packet,110.0,86.57,57,10
+INSTA_49191,Cran Raspberry Sparkling Water,క్రాన్ రాస్ప్బెర్రీ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,60.0,47.64,54,10
+INSTA_31915,Organic Red Delicious Apple,సేంద్రీయ ఎరుపు రుచికరమైన ఆపిల్,Fresh Fruits,Produce,kg,55.0,45.48,107,10
+INSTA_23537,Light Brown Sugar,లైట్ బ్రౌన్ షుగర్,Baking Ingredients,Pantry,kg,90.0,69.21,119,10
+INSTA_13517,Whole Wheat Bread,హోల్ వీట్ బ్రెడ్,Bread,Bakery,packet,55.0,41.58,46,10
+INSTA_25513,Boomchickapop Sea Salt Popcorn,బూమ్‌చికాపాప్ సీ సాల్ట్ పాప్‌కార్న్,Popcorn Jerky,Snacks,packet,70.0,55.79,127,10
+INSTA_32433,Green Peas,పచ్చి బఠానీలు,Frozen Produce,Frozen,packet,135.0,103.95,110,10
+INSTA_27548,Original Semisoft Cheese,ఒరిజినల్ సెమిసాఫ్ట్ చీజ్,Packaged Cheese,Dairy Eggs,packet,140.0,113.12,68,10
+INSTA_15613,Salted Tub of Butter,సాల్టెడ్ టబ్ ఆఫ్ వెన్న,Butter,Dairy Eggs,packet,50.0,41.65,63,10
+INSTA_23029,Organic Uncured Sliced Black Forest Ham,ఆర్గానిక్ అన్‌క్యూర్డ్ స్లైస్డ్ బ్లాక్ ఫారెస్ట్ హామ్,Lunch Meat,Deli,packet,95.0,77.33,114,10
+INSTA_35898,Original Hot Sauce,ఒరిజినల్ హాట్ సాస్,Condiments,Pantry,kg,150.0,112.5,30,5
+INSTA_26283,White Corn,వైట్ కార్న్,Fresh Vegetables,Produce,kg,90.0,74.79,71,10
+INSTA_34262,Hint Of Sea Salt Almond Nut Thins,సముద్రపు ఉప్పు బాదం గింజ పలుచని సూచన,Crackers,Snacks,packet,45.0,37.03,103,10
+INSTA_16696,Coke Classic,కోక్ క్లాసిక్,Soft Drinks,Beverages,bottle,130.0,97.89,43,10
+INSTA_35163,Red Leaf Lettuce,రెడ్ లీఫ్ లెట్యూస్,Fresh Vegetables,Produce,kg,35.0,27.12,125,10
+INSTA_7963,Gluten Free Whole Grain Bread,గ్లూటెన్ ఫ్రీ హోల్ గ్రెయిన్ బ్రెడ్,Frozen Breads Doughs,Frozen,packet,130.0,98.28,136,10
+INSTA_26348,Mixed Fruit Fruit Snacks,మిక్స్డ్ ఫ్రూట్ ఫ్రూట్ స్నాక్స్,Fruit Vegetable Snacks,Snacks,packet,65.0,52.84,33,10
+INSTA_47759,Mandarin Oranges,మాండరిన్ నారింజ,Fresh Fruits,Produce,kg,55.0,45.81,133,10
+INSTA_22959,Reduced Fat Milk 100% Lactose Free,తగ్గిన కొవ్వు పాలు 100% లాక్టోస్ ఉచితం,Soy Lactosefree,Dairy Eggs,litre,65.0,54.27,115,10
+INSTA_27796,Real Mayonnaise,నిజమైన మయోన్నైస్,Condiments,Pantry,kg,100.0,82.1,41,10
+INSTA_1244,Organic Orange Bell Pepper,సేంద్రీయ ఆరెంజ్ బెల్ పెప్పర్,Fresh Vegetables,Produce,kg,80.0,60.16,82,10
+INSTA_11422,Plain Greek Yogurt,సాధారణ గ్రీకు పెరుగు,Yogurt,Dairy Eggs,packet,115.0,94.07,108,10
+INSTA_11408,Crushed Tomatoes,పిండిచేసిన టమోటాలు,Canned Jarred Vegetables,Canned Goods,can,145.0,122.81,37,10
+INSTA_9339,Organic Chicken & Apple Sausage,ఆర్గానిక్ చికెన్ & యాపిల్ సాసేజ్,Hot Dogs Bacon Sausage,Meat Seafood,kg,435.0,351.05,57,10
+INSTA_31964,Passionfruit Sparkling Water,పాషన్‌ఫ్రూట్ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,65.0,54.47,98,10
+INSTA_39180,Organic Lowfat 1% Milk,సేంద్రీయ లోఫ్యాట్ 1% పాలు,Milk,Dairy Eggs,litre,110.0,87.34,134,10
+INSTA_329,Organic Whole Grassmilk Milk,ఆర్గానిక్ హోల్ గ్రాస్‌మిల్క్ మిల్క్,Milk,Dairy Eggs,litre,155.0,126.48,66,10
+INSTA_35140,Organic Whole Cashews,సేంద్రీయ మొత్తం జీడిపప్పు,Nuts Seeds Dried Fruit,Snacks,packet,30.0,24.48,116,10
+INSTA_5194,Organic Bunny Fruit Snacks Berry Patch,సేంద్రీయ బన్నీ ఫ్రూట్ స్నాక్స్ బెర్రీ ప్యాచ్,Fruit Vegetable Snacks,Snacks,packet,60.0,47.52,52,10
+INSTA_13740,Organic Summer Strawberry Bunny Fruit Snacks,సేంద్రీయ వేసవి స్ట్రాబెర్రీ బన్నీ ఫ్రూట్ స్నాక్స్,Fruit Vegetable Snacks,Snacks,packet,50.0,38.95,89,10
+INSTA_18234,Organic Spinach Bunch,సేంద్రీయ బచ్చలికూర బంచ్,Fresh Vegetables,Produce,kg,65.0,52.52,138,10
+INSTA_21174,I Heart Baby Kale,ఐ హార్ట్ బేబీ కాలే,Packaged Vegetables Fruits,Produce,kg,70.0,54.67,101,10
+INSTA_13380,Organic Blue Corn Tortilla Chips,ఆర్గానిక్ బ్లూ కార్న్ టోర్టిల్లా చిప్స్,Chips Pretzels,Snacks,packet,45.0,37.71,38,10
+INSTA_20345,Thin Crust Pepperoni Pizza,సన్నని క్రస్ట్ పెప్పరోని పిజ్జా,Frozen Pizza,Frozen,packet,130.0,98.41,47,10
+INSTA_7969,Lime,నిమ్మకాయ,Fresh Fruits,Produce,kg,135.0,107.87,49,10
+INSTA_29553,Super Soft Taco Flour Tortillas,సూపర్ సాఫ్ట్ టాకో పిండి టోర్టిల్లాలు,Tortillas Flat Bread,Bakery,packet,60.0,49.68,28,5
+INSTA_30696,Eggo Homestyle Waffles,ఎగ్గో హోమ్‌స్టైల్ వాఫ్ఫల్స్,Frozen Breakfast,Frozen,piece,200.0,169.8,99,10
+INSTA_17316,Vitamin D Organic Whole Milk,విటమిన్ డి ఆర్గానిక్ హోల్ మిల్క్,Milk,Dairy Eggs,litre,100.0,81.6,146,10
+INSTA_12576,Kiwi Sandia Sparkling Water,కివి శాండియా మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,175.0,144.9,118,10
+INSTA_44765,Colby Cheese Sticks,కోల్బీ చీజ్ స్టిక్స్,Packaged Cheese,Dairy Eggs,packet,80.0,67.84,78,10
+INSTA_11068,Medium Cheddar Cheese Block,మధ్యస్థ చెడ్డార్ చీజ్ బ్లాక్,Packaged Cheese,Dairy Eggs,packet,70.0,54.88,114,10
+INSTA_18811,Organic Apple Juice,సేంద్రీయ ఆపిల్ రసం,Juice Nectars,Beverages,litre,125.0,99.0,122,10
+INSTA_24024,1% Lowfat Milk,1% తక్కువ కొవ్వు పాలు,Milk,Dairy Eggs,litre,130.0,105.3,40,10
+INSTA_38164,Almonds & Sea Salt in Dark Chocolate,డార్క్ చాక్లెట్‌లో బాదం & సీ సాల్ట్,Candy Chocolate,Snacks,packet,30.0,23.94,98,10
+INSTA_36316,Lemon Sparkling Water,నిమ్మకాయ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,60.0,48.48,128,10
+INSTA_37220,Organic Strawberry Fruit Spread,ఆర్గానిక్ స్ట్రాబెర్రీ ఫ్రూట్ స్ప్రెడ్,Spreads,Pantry,kg,175.0,134.75,140,10
+INSTA_7559,Cinnamon Rolls with Icing,ఐసింగ్‌తో దాల్చిన చెక్క రోల్స్,Doughs Gelatins Bake Mixes,Pantry,kg,225.0,178.43,23,5
+INSTA_27730,Almond Breeze Original Almond Milk,ఆల్మండ్ బ్రీజ్ ఒరిజినల్ ఆల్మండ్ మిల్క్,Soy Lactosefree,Dairy Eggs,litre,140.0,111.44,106,10
+INSTA_29307,Baby Arugula,బేబీ అరుగూలా,Packaged Vegetables Fruits,Produce,kg,95.0,72.39,52,10
+INSTA_46584,YoKids Blueberry & Strawberry/Vanilla Yogurt,YoKids బ్లూబెర్రీ & స్ట్రాబెర్రీ/వనిల్లా యోగర్ట్,Yogurt,Dairy Eggs,packet,150.0,114.9,36,10
+INSTA_11712,Cage Free Large White Eggs,కేజ్ ఫ్రీ పెద్ద తెల్ల గుడ్లు,Eggs,Dairy Eggs,piece,50.0,42.3,136,10
+INSTA_46820,Vanilla Pure Almond Milk,వెనిలా ప్యూర్ ఆల్మండ్ మిల్క్,Soy Lactosefree,Dairy Eggs,litre,115.0,95.91,64,10
+INSTA_36735,Organic Roasted Sliced Chicken Breast,సేంద్రీయ కాల్చిన ముక్కలు చేసిన చికెన్ బ్రెస్ట్,Lunch Meat,Deli,packet,165.0,135.63,132,10
+INSTA_2452,Naturals Chicken Nuggets,నేచురల్ చికెన్ నగెట్స్,Frozen Appetizers Sides,Frozen,packet,70.0,55.79,77,10
+INSTA_42719,Natural Premium Coconut Water,సహజ ప్రీమియం కొబ్బరి నీరు,Juice Nectars,Beverages,litre,55.0,41.91,142,10
+INSTA_43504,Organic Chicken Strips,సేంద్రీయ చికెన్ స్ట్రిప్స్,Frozen Meat Seafood,Frozen,packet,230.0,179.86,132,10
+INSTA_44560,Kids Organic Chocolate Chip ZBars,కిడ్స్ ఆర్గానిక్ చాక్లెట్ చిప్ ZBars,Energy Granola Bars,Snacks,packet,35.0,28.63,88,10
+INSTA_1999,Organic Chicken Broth,సేంద్రీయ చికెన్ ఉడకబెట్టిన పులుసు,Soup Broth Bouillon,Canned Goods,can,180.0,138.78,101,10
+INSTA_21872,Organic Italian Salad,సేంద్రీయ ఇటాలియన్ సలాడ్,Packaged Vegetables Fruits,Produce,kg,120.0,93.36,48,10
+INSTA_37524,Fresh Mozzarella Ball,తాజా మోజారెల్లా బాల్,Specialty Cheeses,Dairy Eggs,packet,70.0,53.55,45,10
+INSTA_7503,Whole Almonds,మొత్తం బాదం,Nuts Seeds Dried Fruit,Snacks,packet,55.0,45.15,21,5
+INSTA_35004,Macaroni Shells & White Cheddar Cheese,మాకరోనీ షెల్స్ & వైట్ చెడ్డార్ చీజ్,Instant Foods,Dry Goods Pasta,packet,70.0,56.14,102,10
+INSTA_5161,Dried Mango,ఎండిన మామిడి,Bulk Dried Fruits Vegetables,Bulk,packet,125.0,105.12,51,10
+INSTA_31215,Lemon Yogurt,నిమ్మకాయ పెరుగు,Yogurt,Dairy Eggs,packet,85.0,68.77,89,10
+INSTA_12845,Chopped Walnuts,తరిగిన వాల్నట్,Nuts Seeds Dried Fruit,Snacks,packet,90.0,75.78,102,10
+INSTA_19173,Orange Calcium & Vitamin D Pulp Free,ఆరెంజ్ కాల్షియం & విటమిన్ డి పల్ప్ ఉచితం,Juice Nectars,Beverages,bottle,140.0,112.56,74,10
+INSTA_45200,Organic Cauliflower,సేంద్రీయ కాలీఫ్లవర్,Fresh Vegetables,Produce,kg,120.0,96.24,62,10
+INSTA_49131,Smoked Turkey Breast Slices,స్మోక్డ్ టర్కీ బ్రెస్ట్ స్లైసెస్,Lunch Meat,Deli,packet,135.0,102.6,30,5
+INSTA_20738,Plain Bagels,సాదా బాగెల్స్,Breakfast Bakery,Bakery,packet,60.0,50.64,24,5
+INSTA_32691,Vanilla Ice Cream,వనిల్లా ఐస్ క్రీమ్,Ice Cream Ice,Frozen,packet,260.0,214.24,34,10
+INSTA_34466,Sweet Potatoes,స్వీట్ పొటాటోస్,Frozen Produce,Frozen,kg,105.0,87.99,48,10
+INSTA_35628,Organic Strawberry Smoothie,ఆర్గానిక్ స్ట్రాబెర్రీ స్మూతీ,Yogurt,Dairy Eggs,packet,110.0,87.12,92,10
+INSTA_37065,Serrano Chile Peppers,సెరానో చిలీ పెప్పర్స్,Fresh Vegetables,Produce,kg,50.0,39.85,137,10
+INSTA_18918,Organic Chopped Spinach,సేంద్రీయ తరిగిన బచ్చలికూర,Frozen Produce,Frozen,packet,115.0,91.77,38,10
+INSTA_22124,Total 0% Raspberry Yogurt,మొత్తం 0% రాస్ప్బెర్రీ యోగర్ట్,Yogurt,Dairy Eggs,packet,155.0,128.65,100,10
+INSTA_27325,Alpine Spring Water,ఆల్పైన్ స్ప్రింగ్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,175.0,140.88,115,10
+INSTA_4656,Raspberry Preserves,రాస్ప్బెర్రీ ప్రిజర్వ్స్,Spreads,Pantry,kg,105.0,88.62,34,10
+INSTA_39561,Crackers Cheddar Bunnies Snack Packs,క్రాకర్స్ చెడ్దార్ బన్నీస్ స్నాక్ ప్యాక్స్,Crackers,Snacks,packet,90.0,69.48,32,10
+INSTA_43662,"Yogurt, Strained Low-Fat, Coconut","పెరుగు, వడకట్టిన తక్కువ కొవ్వు, కొబ్బరి",Yogurt,Dairy Eggs,packet,50.0,41.35,67,10
+INSTA_45104,ALMONDBREEZE UNSWEETENED,ఆల్మండ్‌బ్రీజ్ తియ్యనిది,Soy Lactosefree,Dairy Eggs,packet,115.0,95.56,71,10
+INSTA_17008,Shredded Sharp Cheddar Cheese,తురిమిన పదునైన చెడ్దార్ చీజ్,Packaged Cheese,Dairy Eggs,packet,90.0,75.42,38,10
+INSTA_18963,Apple Cider Vinegar,ఆపిల్ సైడర్ వెనిగర్,Oils Vinegars,Pantry,kg,75.0,60.08,61,10
+INSTA_26800,Organic Baby Kale Mix,ఆర్గానిక్ బేబీ కేల్ మిక్స్,Packaged Vegetables Fruits,Produce,kg,130.0,101.53,131,10
+INSTA_5612,Reduced Fat Milk,తగ్గిన కొవ్వు పాలు,Milk,Dairy Eggs,litre,80.0,67.68,66,10
+INSTA_46522,Spaghetti Pasta,స్పఘెట్టి పాస్తా,Dry Pasta,Dry Goods Pasta,packet,110.0,85.36,126,10
+INSTA_47788,Honeydew Melon,హనీడ్యూ మెలోన్,Fresh Fruits,Produce,kg,55.0,45.65,90,10
+INSTA_4367,Garlic & Fine Herbs Gournay Cheese,వెల్లుల్లి & ఫైన్ హెర్బ్స్ గౌర్నే చీజ్,Packaged Cheese,Dairy Eggs,packet,120.0,91.8,95,10
+INSTA_28745,Oven Roasted Turkey,ఓవెన్ కాల్చిన టర్కీ,Lunch Meat,Deli,packet,95.0,78.19,73,10
+INSTA_1194,Natural Artisan Water,సహజ కళాకారుడు నీరు,Water Seltzer Sparkling Water,Beverages,litre,45.0,36.59,43,10
+INSTA_2855,Organic Good Seed Bread,సేంద్రీయ మంచి సీడ్ బ్రెడ్,Bread,Bakery,packet,70.0,56.77,51,10
+INSTA_3464,"Organic Butterhead (Boston, Butter, Bibb) Lettuce","సేంద్రీయ బటర్‌హెడ్ (బోస్టన్, బటర్, బిబ్) పాలకూర",Fresh Vegetables,Produce,kg,95.0,75.53,45,10
+INSTA_6631,No Pulp Calcium & Vitamin D Pure Orange Juice,పల్ప్ కాల్షియం & విటమిన్ డి ప్యూర్ ఆరెంజ్ జ్యూస్ లేదు,Refrigerated,Beverages,litre,105.0,82.42,65,10
+INSTA_42445,Organic Plain Whole Milk Yogurt,సేంద్రీయ ప్లెయిన్ హోల్ మిల్క్ యోగర్ట్,Yogurt,Dairy Eggs,litre,145.0,122.38,104,10
+INSTA_9020,Boneless Skinless Chicken Thighs,ఎముకలు లేని స్కిన్‌లెస్ చికెన్ తొడలు,Poultry Counter,Meat Seafood,kg,185.0,139.31,123,10
+INSTA_9092,Organic Vegetable Broth,సేంద్రీయ కూరగాయల పులుసు,Soup Broth Bouillon,Canned Goods,can,75.0,63.3,24,5
+INSTA_37029,Cream Cheese Spread,క్రీమ్ చీజ్ స్ప్రెడ్,Other Creams Cheeses,Dairy Eggs,packet,150.0,118.8,22,5
+INSTA_9825,Organic Multigrain Waffles,సేంద్రీయ మల్టీగ్రెయిన్ వాఫ్ఫల్స్,Frozen Breakfast,Frozen,packet,105.0,88.52,133,10
+INSTA_10326,Organic Fuji Apples,సేంద్రీయ ఫుజి యాపిల్స్,Fresh Fruits,Produce,kg,70.0,52.5,40,10
+INSTA_30406,Butternut Squash,బటర్నట్ స్క్వాష్,Fresh Vegetables,Produce,kg,80.0,60.48,66,10
+INSTA_12872,Penne Rigate,పెన్నే రిగేట్,Dry Pasta,Dry Goods Pasta,packet,175.0,145.42,41,10
+INSTA_13263,Non Fat Acai & Mixed Berries Yogurt,నాన్ ఫ్యాట్ ఎకై & మిక్స్డ్ బెర్రీస్ యోగర్ట్,Yogurt,Dairy Eggs,packet,55.0,41.86,101,10
+INSTA_20734,Organic Medjool Dates,సేంద్రీయ మెడ్‌జూల్ తేదీలు,Nuts Seeds Dried Fruit,Snacks,packet,35.0,29.26,106,10
+INSTA_29127,Dairy Free Unsweetened Coconut Milk,డైరీ ఫ్రీ తీయని కొబ్బరి పాలు,Soy Lactosefree,Dairy Eggs,litre,140.0,112.56,44,10
+INSTA_12276,Chocolate Chip Cookie Dough Ice Cream,చాక్లెట్ చిప్ కుకీ డౌ ఐస్ క్రీమ్,Ice Cream Ice,Frozen,packet,280.0,227.92,34,10
+INSTA_17706,Organic Whole Grain Wheat English Muffins,ఆర్గానిక్ హోల్ గ్రెయిన్ వీట్ ఇంగ్లీష్ మఫిన్స్,Breakfast Bakery,Bakery,packet,90.0,68.4,80,10
+INSTA_2825,Organic Original Hommus,ఆర్గానిక్ ఒరిజినల్ హోముస్,Fresh Dips Tapenades,Deli,packet,195.0,158.53,73,10
+INSTA_11759,Organic Simply Naked Pita Chips,ఆర్గానిక్ సింప్లీ నేకెడ్ పిటా చిప్స్,Chips Pretzels,Snacks,packet,65.0,52.33,95,10
+INSTA_30353,Curate Cherry Lime Sparkling Water,క్యూరేట్ చెర్రీ లైమ్ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,150.0,116.25,115,10
+INSTA_14715,Coconut Water,కొబ్బరి నీరు,Juice Nectars,Beverages,litre,25.0,19.23,89,10
+INSTA_38928,0% Greek Strained Yogurt,0% గ్రీక్ స్ట్రెయిన్డ్ యోగర్ట్,Yogurt,Dairy Eggs,packet,120.0,90.72,96,10
+INSTA_14161,Kiwi,కివి,Fresh Fruits,Produce,kg,140.0,118.16,84,10
+INSTA_18479,Organic Low Sodium Vegetable Broth,సేంద్రీయ తక్కువ సోడియం కూరగాయల ఉడకబెట్టిన పులుసు,Soup Broth Bouillon,Canned Goods,can,150.0,118.05,57,10
+INSTA_18656,Organic Red Potato,సేంద్రీయ ఎర్ర బంగాళాదుంప,Fresh Vegetables,Produce,kg,75.0,59.7,96,10
+INSTA_10070,Organic 1% Low Fat Milk,సేంద్రీయ 1% తక్కువ కొవ్వు పాలు,Milk,Dairy Eggs,litre,45.0,36.36,128,10
+INSTA_14462,Sliced Black Olives,ముక్కలు చేసిన బ్లాక్ ఆలివ్,Pickled Goods Olives,Pantry,kg,100.0,82.0,20,5
+INSTA_42110,Organic Macaroni Shells & Real Aged Cheddar,ఆర్గానిక్ మాకరోనీ షెల్స్ & రియల్ ఏజ్డ్ చెడ్డార్,Instant Foods,Dry Goods Pasta,packet,60.0,50.28,128,10
+INSTA_46616,Organic Dark Chocolate Peanut Butter Cups,ఆర్గానిక్ డార్క్ చాక్లెట్ పీనట్ బటర్ కప్పులు,Candy Chocolate,Snacks,packet,70.0,52.99,97,10
+INSTA_4461,Organic Raw Unfiltered Apple Cider Vinegar,ఆర్గానిక్ రా అన్‌ఫిల్టర్డ్ యాపిల్ సైడర్ వెనిగర్,Oils Vinegars,Pantry,kg,225.0,178.2,32,10
+INSTA_14897,Sweet Potato Yam,స్వీట్ పొటాటో యమ్,Fresh Vegetables,Produce,kg,110.0,89.65,145,10
+INSTA_31066,Aluminum Foil,అల్యూమినియం ఫాయిల్,Food Storage,Household,piece,165.0,126.56,137,10
+INSTA_2450,Taco Seasoning,టాకో మసాలా,Latino Foods,International,packet,265.0,224.45,127,10
+INSTA_25588,Seedless Small Watermelon,విత్తనాలు లేని చిన్న పుచ్చకాయ,Fresh Fruits,Produce,litre,100.0,81.5,25,5
+INSTA_33352,Organic Kale Greens,సేంద్రీయ కేల్ గ్రీన్స్,Packaged Vegetables Fruits,Produce,kg,75.0,59.93,139,10
+INSTA_44628,Organic Dijon Mustard,సేంద్రీయ డిజోన్ ఆవాలు,Condiments,Pantry,kg,125.0,105.12,101,10
+INSTA_48628,Organic Whole Wheat Bread,సేంద్రీయ హోల్ వీట్ బ్రెడ్,Bread,Bakery,packet,45.0,36.77,87,10
+INSTA_32465,Sliced White Mushrooms,ముక్కలు చేసిన వైట్ పుట్టగొడుగులు,Packaged Vegetables Fruits,Produce,kg,90.0,74.34,26,5
+INSTA_7644,Scoops! Tortilla Chips,స్కూప్స్! టోర్టిల్లా చిప్స్,Chips Pretzels,Snacks,packet,110.0,93.28,98,10
+INSTA_35887,Organic Mixed Vegetables,సేంద్రీయ మిశ్రమ కూరగాయలు,Frozen Produce,Frozen,packet,100.0,82.3,63,10
+INSTA_22474,Cheddar Bunnies Snack Crackers,చెద్దార్ బన్నీస్ స్నాక్ క్రాకర్స్,Crackers,Snacks,packet,40.0,32.28,127,10
+INSTA_44799,Fresh CA Grown Eggs,తాజా CA పెరిగిన గుడ్లు,Eggs,Dairy Eggs,piece,70.0,54.53,59,10
+INSTA_48395,Original Rice Pilaf Mix,ఒరిజినల్ రైస్ పిలాఫ్ మిక్స్,Grains Rice Dried Goods,Dry Goods Pasta,packet,50.0,38.35,117,10
+INSTA_28427,Vitamin D Whole Milk,విటమిన్ డి మొత్తం పాలు,Milk,Dairy Eggs,litre,60.0,48.36,46,10
+INSTA_44008,Organic Greek Whole Milk Blended Vanilla Bean Yogurt,సేంద్రీయ గ్రీక్ హోల్ మిల్క్ బ్లెండెడ్ వనిల్లా బీన్ యోగర్ట్,Yogurt,Dairy Eggs,litre,65.0,54.02,111,10
+INSTA_17616,Goldfish Cheddar Baked Snack Crackers,గోల్డ్ ఫిష్ చెడ్దార్ కాల్చిన స్నాక్ క్రాకర్స్,Crackers,Snacks,packet,120.0,99.48,139,10
+INSTA_34217,Pesto Tortellini  Bowls,పెస్టో టోర్టెల్లిని బౌల్స్,Frozen Meals,Frozen,packet,65.0,50.12,31,10
+INSTA_44234,Squeeze Tomato Ketchup,టొమాటో కెచప్ స్క్వీజ్ చేయండి,Condiments,Pantry,kg,175.0,134.58,109,10
+INSTA_28476,Organic Small Curd Cottage Cheese,సేంద్రీయ చిన్న పెరుగు కాటేజ్ చీజ్,Other Creams Cheeses,Dairy Eggs,packet,115.0,93.26,91,10
+INSTA_29662,Potato Yukon Gold Organic,పొటాటో యుకాన్ గోల్డ్ ఆర్గానిక్,Fresh Vegetables,Produce,kg,55.0,45.7,41,10
+INSTA_15261,Organic Rosemary,సేంద్రీయ రోజ్మేరీ,Fresh Herbs,Produce,kg,105.0,80.22,64,10
+INSTA_41588,Firm Tofu,సంస్థ టోఫు,Tofu Meat Alternatives,Deli,packet,155.0,120.28,116,10
+INSTA_29675,Organic Bagged Carrots,సేంద్రీయ బ్యాగ్డ్ క్యారెట్లు,Fresh Vegetables,Produce,kg,45.0,33.93,24,5
+INSTA_32429,Red Mango,ఎర్ర మామిడి,Fresh Fruits,Produce,kg,25.0,20.05,22,5
+INSTA_16521,Walnut Halves & Pieces,వాల్నట్ హాల్వ్స్ & పీసెస్,Nuts Seeds Dried Fruit,Snacks,packet,120.0,99.84,92,10
+INSTA_39108,Pulp Free Orange Juice,పల్ప్ ఫ్రీ ఆరెంజ్ జ్యూస్,Refrigerated,Beverages,litre,80.0,65.52,119,10
+INSTA_23405,Pure Baking Soda,స్వచ్ఛమైన బేకింగ్ సోడా,Baking Ingredients,Pantry,litre,100.0,82.5,55,10
+INSTA_41065,Organic Yellow Squash,సేంద్రీయ పసుపు స్క్వాష్,Fresh Vegetables,Produce,kg,90.0,75.87,33,10
+INSTA_3990,Natural Sharp Cheddar Sliced Cheese,సహజ పదునైన చెడ్డార్ ముక్కలు చేసిన చీజ్,Packaged Cheese,Dairy Eggs,packet,55.0,43.18,85,10
+INSTA_28535,Cucumber & Garlic  Tzatziki,దోసకాయ & వెల్లుల్లి జాట్జికి,Preserved Dips Spreads,Pantry,kg,165.0,136.45,87,10
+INSTA_4724,Broccoli Florettes,బ్రోకలీ ఫ్లోరెట్స్,Packaged Produce,Produce,kg,115.0,96.14,66,10
+INSTA_11140,Organic Romaine Leaf,సేంద్రీయ రోమైన్ లీఫ్,Packaged Vegetables Fruits,Produce,kg,30.0,25.05,115,10
+INSTA_21295,Organic Spaghetti Squash,సేంద్రీయ స్పఘెట్టి స్క్వాష్,Fresh Vegetables,Produce,kg,65.0,53.95,100,10
+INSTA_49175,Organic Pinto Beans,సేంద్రీయ పింటో బీన్స్,Canned Meals Beans,Canned Goods,can,125.0,102.25,48,10
+INSTA_14168,Penne Pasta,పెన్నే పాస్తా,Dry Pasta,Dry Goods Pasta,packet,115.0,94.18,109,10
+INSTA_24954,Total 0% with Honey Nonfat Greek Strained Yogurt,హనీ నాన్‌ఫాట్ గ్రీక్ స్ట్రెయిన్డ్ యోగర్ట్‌తో మొత్తం 0%,Yogurt,Dairy Eggs,packet,125.0,99.38,35,10
+INSTA_31433,Organic Cinnamon Crunch Cereal,సేంద్రీయ దాల్చిన చెక్క క్రంచ్ తృణధాన్యాలు,Cereal,Breakfast,box,165.0,129.86,107,10
+INSTA_3896,Organic Honey Sweet Whole Wheat Bread,ఆర్గానిక్ హనీ స్వీట్ హోల్ వీట్ బ్రెడ్,Bread,Bakery,packet,35.0,28.7,40,10
+INSTA_1529,"Parsley, Italian (Flat), New England Grown","పార్స్లీ, ఇటాలియన్ (ఫ్లాట్), న్యూ ఇంగ్లాండ్ గ్రోన్",Fresh Herbs,Produce,kg,40.0,32.92,93,10
+INSTA_12409,Organic Distilled White Vinegar,ఆర్గానిక్ డిస్టిల్డ్ వైట్ వెనిగర్,Oils Vinegars,Pantry,kg,205.0,164.41,82,10
+INSTA_13166,"Organic Milk Reduced Fat, 2% Milkfat","సేంద్రీయ పాలు తగ్గిన కొవ్వు, 2% మిల్క్‌ఫ్యాట్",Milk,Dairy Eggs,litre,105.0,87.36,62,10
+INSTA_16616,Organic Sliced White Mushrooms,సేంద్రీయ ముక్కలు చేసిన తెల్ల పుట్టగొడుగులు,Packaged Vegetables Fruits,Produce,kg,60.0,46.92,22,5
+INSTA_22849,Bunny-Luv Fresh Organic Carrots,బన్నీ-లవ్ ఫ్రెష్ ఆర్గానిక్ క్యారెట్లు,Packaged Vegetables Fruits,Produce,kg,70.0,54.53,109,10
+INSTA_29926,Roasted & Salted Almonds,కాల్చిన & సాల్టెడ్ బాదం,Nuts Seeds Dried Fruit,Snacks,packet,80.0,62.56,22,5
+INSTA_40063,Gluten Free Chocolate Chip Cookies,గ్లూటెన్ ఫ్రీ చాక్లెట్ చిప్ కుకీలు,Cookies Cakes,Snacks,packet,55.0,46.36,123,10
+INSTA_41658,Authentic French Brioche Hamburger Buns,ప్రామాణికమైన ఫ్రెంచ్ బ్రియోచీ హాంబర్గర్ బన్స్,Buns Rolls,Bakery,packet,75.0,58.05,34,10
+INSTA_7485,Garlic Hummus,వెల్లుల్లి హమ్ముస్,Fresh Dips Tapenades,Deli,packet,85.0,64.69,21,5
+INSTA_10305,Black Plum,బ్లాక్ ప్లం,Fresh Fruits,Produce,kg,50.0,40.9,28,5
+INSTA_32650,White Giant Paper Towel Rolls,వైట్ జెయింట్ పేపర్ టవల్ రోల్స్,Paper Goods,Household,piece,130.0,105.56,132,10
+INSTA_34584,Organic Sliced Peaches,సేంద్రీయ ముక్కలు పీచెస్,Frozen Produce,Frozen,packet,115.0,89.59,79,10
+INSTA_45646,Grated Parmesan Cheese,తురిమిన పర్మేసన్ చీజ్,Packaged Cheese,Dairy Eggs,packet,115.0,92.34,113,10
+INSTA_24841,Aged White Cheddar Baked Rice & Corn Puffs Gluten Free Lunch Packs,ఏజ్డ్ వైట్ చెడ్డార్ బేక్డ్ రైస్ & కార్న్ పఫ్స్ గ్లూటెన్ ఫ్రీ లంచ్ ప్యాక్స్,Chips Pretzels,Snacks,packet,55.0,45.54,88,10
+INSTA_11512,Honey Yoghurt,తేనె పెరుగు,Yogurt,Dairy Eggs,packet,105.0,89.14,39,10
+INSTA_19488,Select-A-Size White Paper Towels,సెలెక్ట్-ఎ-సైజ్ వైట్ పేపర్ టవల్స్,Paper Goods,Household,piece,75.0,63.52,27,5
+INSTA_5068,Cauliflower Florets,కాలీఫ్లవర్ పుష్పాలు,Packaged Produce,Produce,kg,70.0,55.02,56,10
+INSTA_47042,Organic Red On the Vine Tomato,వైన్ టమోటాపై సేంద్రీయ ఎరుపు,Fresh Vegetables,Produce,kg,90.0,74.34,56,10
+INSTA_1090,Shells & Real Aged Cheddar Macaroni & Cheese,షెల్స్ & రియల్ ఏజ్డ్ చెడ్దర్ మాకరోనీ & చీజ్,Instant Foods,Dry Goods Pasta,packet,125.0,99.62,57,10
+INSTA_15200,Organic Green Beans,సేంద్రీయ గ్రీన్ బీన్స్,Fresh Vegetables,Produce,kg,135.0,108.54,54,10
+INSTA_17949,Mild Cheddar Cheese Sticks,తేలికపాటి చెడ్డార్ చీజ్ స్టిక్స్,Packaged Cheese,Dairy Eggs,packet,155.0,124.93,56,10
+INSTA_46886,Raspberry Yoghurt,రాస్ప్బెర్రీ యోగర్ట్,Yogurt,Dairy Eggs,packet,40.0,33.84,86,10
+INSTA_39558,Gold Potato,బంగారు బంగాళదుంప,Fresh Vegetables,Produce,kg,40.0,33.12,78,10
+INSTA_1700,White Cheddar Popcorn,వైట్ చెడ్డార్ పాప్‌కార్న్,Popcorn Jerky,Snacks,packet,100.0,75.6,116,10
+INSTA_21386,Smartwater,స్మార్ట్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,130.0,97.5,40,10
+INSTA_26317,Organic Lemonade,సేంద్రీయ నిమ్మరసం,Juice Nectars,Beverages,bottle,40.0,31.48,57,10
+INSTA_2361,Mint Chip,మింట్ చిప్,Ice Cream Ice,Frozen,packet,175.0,148.4,108,10
+INSTA_3298,Mozzarella String Cheese,మోజారెల్లా స్ట్రింగ్ చీజ్,Packaged Cheese,Dairy Eggs,packet,70.0,55.3,40,10
+INSTA_8138,Traditional Hummus,సాంప్రదాయ హమ్ముస్,Fresh Dips Tapenades,Deli,packet,135.0,101.25,40,10
+INSTA_38890,No Pulp Calcium & Vitamin D Pure Premium 100% Pure Orange Juice,పల్ప్ కాల్షియం & విటమిన్ డి ప్యూర్ ప్రీమియం 100% స్వచ్ఛమైన ఆరెంజ్ జ్యూస్ లేదు,Juice Nectars,Beverages,litre,60.0,48.84,64,10
+INSTA_12614,Yellow Grape Tomatoes,పసుపు ద్రాక్ష టమోటాలు,Fresh Vegetables,Produce,kg,45.0,34.2,30,5
+INSTA_20940,Organic Low Fat Milk,సేంద్రీయ తక్కువ కొవ్వు పాలు,Milk,Dairy Eggs,litre,75.0,61.2,106,10
+INSTA_31766,Cheese Pizza Snacks,చీజ్ పిజ్జా స్నాక్స్,Frozen Appetizers Sides,Frozen,packet,100.0,81.8,48,10
+INSTA_36086,Philadelphia Original Cream Cheese,ఫిలడెల్ఫియా ఒరిజినల్ క్రీమ్ చీజ్,Other Creams Cheeses,Dairy Eggs,packet,95.0,74.1,20,5
+INSTA_38772,Provolone,ప్రోవోలోన్,Packaged Cheese,Dairy Eggs,packet,40.0,31.04,146,10
+INSTA_42240,Ultra Soft Facial Tissues,అల్ట్రా సాఫ్ట్ ఫేషియల్ టిష్యూస్,Paper Goods,Household,piece,60.0,46.92,142,10
+INSTA_48697,Canola Oil,కనోలా ఆయిల్,Oils Vinegars,Pantry,kg,70.0,55.23,109,10
+INSTA_1408,Mini Cucumbers,మినీ దోసకాయలు,Packaged Vegetables Fruits,Produce,kg,40.0,33.48,27,5
+INSTA_9124,Broccoli & Cheddar Bake Meal Bowl,బ్రోకలీ & చెడ్డార్ బేక్ మీల్ బౌల్,Frozen Meals,Frozen,packet,210.0,169.68,118,10
+INSTA_39922,Celery Sticks,సెలెరీ స్టిక్స్,Packaged Vegetables Fruits,Produce,kg,95.0,74.77,117,10
+INSTA_48559,Synergy Organic Kombucha Gingerberry,సినర్జీ ఆర్గానిక్ కొంబుచా జింజర్‌బెర్రీ,Refrigerated,Beverages,bottle,45.0,35.69,53,10
+INSTA_11005,Organic Cream Cheese Bar,సేంద్రీయ క్రీమ్ చీజ్ బార్,Other Creams Cheeses,Dairy Eggs,packet,80.0,60.48,136,10
+INSTA_28553,Whole Strawberries,మొత్తం స్ట్రాబెర్రీలు,Frozen Produce,Frozen,packet,180.0,140.76,52,10
+INSTA_44661,Bicolor Sweet Corn,బైకలర్ స్వీట్ కార్న్,Fresh Vegetables,Produce,kg,130.0,101.4,90,10
+INSTA_17878,Grilled Chicken Breast Strips,కాల్చిన చికెన్ బ్రెస్ట్ స్ట్రిప్స్,Packaged Poultry,Meat Seafood,kg,185.0,157.06,109,10
+INSTA_23236,Chopped Spinach,తరిగిన బచ్చలికూర,Frozen Produce,Frozen,packet,285.0,235.69,97,10
+INSTA_43129,Panko Bread Crumbs,పాంకో బ్రెడ్ ముక్కలు,Marinades Meat Preparation,Pantry,packet,135.0,104.22,42,10
+INSTA_18594,Emmentaler Swiss Slices,ఎమెంటలర్ స్విస్ స్లైసెస్,Packaged Cheese,Dairy Eggs,packet,85.0,67.06,59,10
+INSTA_24810,Organic Lightly Salted Brown Rice Cakes,ఆర్గానిక్ లైట్లీ సాల్టెడ్ బ్రౌన్ రైస్ కేక్స్,Crackers,Snacks,packet,45.0,36.77,97,10
+INSTA_44479,Organic Stringles Mozzarella String Cheese,ఆర్గానిక్ స్ట్రింగ్స్ మొజారెల్లా స్ట్రింగ్ చీజ్,Packaged Cheese,Dairy Eggs,packet,90.0,73.26,144,10
+INSTA_2091,Almond Nut & Rice Cracker Snacks,బాదం గింజ & రైస్ క్రాకర్ స్నాక్స్,Crackers,Snacks,packet,95.0,75.91,139,10
+INSTA_8309,Nonfat Icelandic Style Strawberry Yogurt,నాన్‌ఫ్యాట్ ఐస్లాండిక్ స్టైల్ స్ట్రాబెర్రీ యోగర్ట్,Yogurt,Dairy Eggs,packet,55.0,42.46,22,5
+INSTA_23341,Large Grade AA Eggs,పెద్ద గ్రేడ్ AA గుడ్లు,Eggs,Dairy Eggs,piece,80.0,67.52,94,10
+INSTA_24382,Ranch Dressing,రాంచ్ డ్రెస్సింగ్,Salad Dressing Toppings,Pantry,kg,160.0,128.64,114,10
+INSTA_39581,French Vanilla Creamer,ఫ్రెంచ్ వనిల్లా క్రీమర్,Cream,Dairy Eggs,packet,60.0,49.38,83,10
+INSTA_4942,Vanilla Almond Breeze,వనిల్లా ఆల్మండ్ బ్రీజ్,Soy Lactosefree,Dairy Eggs,packet,135.0,103.14,124,10
+INSTA_5322,Gluten Free Dark Chocolate Chunk Chewy with a Crunch Granola Bars,క్రంచ్ గ్రానోలా బార్‌లతో గ్లూటెన్ ఫ్రీ డార్క్ చాక్లెట్ చంక్ చెవి,Energy Granola Bars,Snacks,packet,45.0,37.8,40,10
+INSTA_35914,Dha Omega 3 Reduced Fat 2% Milk,ధా ఒమేగా 3 తగ్గిన కొవ్వు 2% పాలు,Milk,Dairy Eggs,litre,155.0,123.23,95,10
+INSTA_32747,Low Fat 1% Milk,తక్కువ కొవ్వు 1% పాలు,Milk,Dairy Eggs,litre,40.0,30.56,94,10
+INSTA_39276,Bananas,అరటిపండ్లు,Fresh Fruits,Produce,kg,140.0,116.34,91,10
+INSTA_13966,Chicken Pot Pie,చికెన్ పాట్ పీ,Frozen Meals,Frozen,packet,230.0,180.09,103,10
+INSTA_24009,Organic Long Grain White Rice,ఆర్గానిక్ లాంగ్ గ్రెయిన్ వైట్ రైస్,Grains Rice Dried Goods,Dry Goods Pasta,packet,85.0,69.02,72,10
+INSTA_41400,Crunchy Oats 'n Honey Granola Bars,క్రంచీ ఓట్స్ మరియు హనీ గ్రానోలా బార్స్,Energy Granola Bars,Snacks,packet,50.0,40.1,22,5
+INSTA_5373,Organic No Salt Added Diced Tomatoes,ఆర్గానిక్ నో సాల్ట్ యాడ్డ్ టొమాటోస్,Canned Jarred Vegetables,Canned Goods,can,115.0,96.14,36,10
+INSTA_35503,Organic Vanilla Almond Milk,సేంద్రీయ వనిల్లా బాదం పాలు,Soy Lactosefree,Dairy Eggs,litre,60.0,48.24,114,10
+INSTA_21543,Organic Quick Oats,సేంద్రీయ త్వరిత వోట్స్,Hot Cereal Pancake Mixes,Breakfast,box,135.0,110.97,32,10
+INSTA_28601,Collard Greens,కొల్లార్డ్ గ్రీన్స్,Fresh Vegetables,Produce,kg,120.0,94.68,99,10
+INSTA_2228,Organic Frozen Mango Chunks,సేంద్రీయ ఘనీభవించిన మామిడి ముక్కలు,Frozen Produce,Frozen,packet,90.0,70.83,87,10
+INSTA_12606,100% Natural Spring Water,100% సహజ స్ప్రింగ్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,145.0,118.32,116,10
+INSTA_47156,Coconut Almond Unsweetened Creamer Blend,కొబ్బరి బాదం తియ్యని క్రీమర్ బ్లెండ్,Cream,Dairy Eggs,packet,115.0,95.8,103,10
+INSTA_43565,Lean Ground Turky,లీన్ గ్రౌండ్ టర్కీ,Packaged Poultry,Meat Seafood,kg,185.0,155.95,83,10
+INSTA_18926,Fat Free Strawberry Yogurt,కొవ్వు రహిత స్ట్రాబెర్రీ పెరుగు,Yogurt,Dairy Eggs,packet,55.0,42.62,115,10
+INSTA_46041,Beef Franks,బీఫ్ ఫ్రాంక్స్,Hot Dogs Bacon Sausage,Meat Seafood,kg,250.0,209.5,88,10
+INSTA_43631,Diet Coke,డైట్ కోక్,Soft Drinks,Beverages,bottle,150.0,113.7,118,10
+INSTA_2314,Whole Milk Ricotta Cheese,మొత్తం మిల్క్ రికోటా చీజ్,Other Creams Cheeses,Dairy Eggs,litre,50.0,42.2,134,10
+INSTA_14999,Grade A Large Brown Eggs,గ్రేడ్ A పెద్ద బ్రౌన్ గుడ్లు,Eggs,Dairy Eggs,piece,140.0,114.1,45,10
+INSTA_27360,Boneless Skinless Chicken Breast Fillets,ఎముకలు లేని స్కిన్‌లెస్ చికెన్ బ్రెస్ట్ ఫిల్లెట్లు,Packaged Poultry,Meat Seafood,kg,190.0,145.54,136,10
+INSTA_45948,Gluten Free 7 Grain Bread,గ్లూటెన్ ఫ్రీ 7 గ్రెయిన్ బ్రెడ్,Bread,Bakery,packet,90.0,69.12,28,5
+INSTA_46149,Zero Calorie Cola,జీరో క్యాలరీ కోలా,Soft Drinks,Beverages,bottle,40.0,30.72,28,5
+INSTA_23543,Organic Extra Large Brown Eggs,సేంద్రీయ అదనపు పెద్ద బ్రౌన్ గుడ్లు,Eggs,Dairy Eggs,piece,150.0,117.75,65,10
+INSTA_23622,Organic Hot House Tomato,ఆర్గానిక్ హాట్ హౌస్ టొమాటో,Fresh Vegetables,Produce,kg,140.0,116.34,81,10
+INSTA_12980,Large Greenhouse Tomato,పెద్ద గ్రీన్హౌస్ టమోటా,Fresh Vegetables,Produce,kg,35.0,27.09,74,10
+INSTA_36724,Organic Sea Salt Roasted Seaweed Snacks,సేంద్రీయ సముద్రపు ఉప్పు కాల్చిన సీవీడ్ స్నాక్స్,Asian Foods,International,packet,160.0,120.48,103,10
+INSTA_40377,Unrefined Virgin Coconut Oil,శుద్ధి చేయని వర్జిన్ కొబ్బరి నూనె,Oils Vinegars,Pantry,kg,110.0,84.37,137,10
+INSTA_22802,Mineral Water,మినరల్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,130.0,108.29,43,10
+INSTA_31562,Sweet Onions,స్వీట్ ఉల్లిపాయలు,Fresh Vegetables,Produce,kg,75.0,61.72,103,10
+INSTA_42460,Plain Mini Bagels,సాదా మినీ బాగెల్స్,Breakfast Bakery,Bakery,packet,40.0,30.8,120,10
+INSTA_13431,Flaky Biscuits,ఫ్లాకీ బిస్కెట్లు,Doughs Gelatins Bake Mixes,Pantry,packet,230.0,185.15,115,10
+INSTA_18987,Hot Dog Buns,హాట్ డాగ్ బన్స్,Buns Rolls,Bakery,packet,40.0,33.32,73,10
+INSTA_19006,Dark Chocolate Pretzels with Sea Salt,సముద్రపు ఉప్పుతో డార్క్ చాక్లెట్ జంతికలు,Chips Pretzels,Snacks,packet,25.0,20.82,103,10
+INSTA_40939,Drinking Water,తాగునీరు,Water Seltzer Sparkling Water,Beverages,litre,50.0,42.3,46,10
+INSTA_48527,Avocado,అవకాడో,Fresh Fruits,Produce,kg,55.0,41.86,51,10
+INSTA_38944,Seven Grain Crispy Tenders,సెవెన్ గ్రెయిన్ క్రిస్పీ టెండర్లు,Frozen Vegan Vegetarian,Frozen,packet,135.0,103.41,56,10
+INSTA_19003,Celery,సెలెరీ,Fresh Vegetables,Produce,kg,100.0,80.4,64,10
+INSTA_40910,Root Beer,రూట్ బీర్,Soft Drinks,Beverages,bottle,40.0,30.92,53,10
+INSTA_45063,Organic Baby Bella Mushrooms,సేంద్రీయ బేబీ బెల్లా పుట్టగొడుగులు,Packaged Vegetables Fruits,Produce,kg,115.0,95.1,87,10
+INSTA_4149,Frozen Organic Blueberries,ఘనీభవించిన సేంద్రీయ బ్లూబెర్రీస్,Fresh Fruits,Produce,kg,140.0,116.48,112,10
+INSTA_11440,Chicken Breast Tenders Breaded,చికెన్ బ్రెస్ట్ టెండర్స్ బ్రెడ్,Frozen Appetizers Sides,Frozen,packet,195.0,162.63,34,10
+INSTA_11461,White Corn Tortillas,వైట్ కార్న్ టోర్టిల్లాలు,Tortillas Flat Bread,Bakery,packet,85.0,69.1,103,10
+INSTA_20754,Mediterranean Mint Gelato,మధ్యధరా మింట్ గెలాటో,Ice Cream Ice,Frozen,packet,70.0,56.0,50,10
+INSTA_33055,Organic Golden Delicious Apple,సేంద్రీయ గోల్డెన్ రుచికరమైన ఆపిల్,Fresh Fruits,Produce,kg,65.0,54.21,24,5
+INSTA_5449,Margherita Pizza,మార్గరీటా పిజ్జా,Frozen Pizza,Frozen,packet,105.0,79.17,124,10
+INSTA_35535,Organic Red Chard Greens,సేంద్రీయ రెడ్ చార్డ్ గ్రీన్స్,Fresh Vegetables,Produce,kg,120.0,92.88,44,10
+INSTA_48171,Shredded Hash Browns,తురిమిన హాష్ బ్రౌన్స్,Frozen Appetizers Sides,Frozen,packet,135.0,105.57,82,10
+INSTA_49533,Cane Sugar,చెరకు చక్కెర,Baking Ingredients,Pantry,kg,110.0,84.26,26,5
+INSTA_9515,Natural Classic Pork Breakfast Sausage,సహజ క్లాసిక్ పోర్క్ బ్రేక్ ఫాస్ట్ సాసేజ్,Frozen Breakfast,Frozen,packet,160.0,125.28,53,10
+INSTA_14633,Veggie Chips,వెజ్జీ చిప్స్,Chips Pretzels,Snacks,piece,105.0,86.62,145,10
+INSTA_36956,Stringless Sugar Snap Peas,స్ట్రింగ్‌లెస్ షుగర్ స్నాప్ బఠానీలు,Packaged Vegetables Fruits,Produce,kg,135.0,107.33,55,10
+INSTA_48523,Birthday Cake Light Ice Cream,పుట్టినరోజు కేక్ లైట్ ఐస్ క్రీమ్,Ice Cream Ice,Frozen,packet,285.0,238.83,58,10
+INSTA_7736,Premium Original Saltine Crackers,ప్రీమియం ఒరిజినల్ సాల్టైన్ క్రాకర్స్,Crackers,Snacks,packet,90.0,67.59,111,10
+INSTA_28373,Original Rotisserie Chicken,ఒరిజినల్ రోటిస్సెరీ చికెన్,Prepared Meals,Deli,packet,205.0,155.59,69,10
+INSTA_32403,Fat Free Skim Milk,కొవ్వు రహిత స్కిమ్ మిల్క్,Milk,Dairy Eggs,litre,130.0,109.85,35,10
+INSTA_35383,Classic White Bread,క్లాసిక్ వైట్ బ్రెడ్,Bread,Bakery,packet,60.0,49.44,44,10
+INSTA_36772,Bunny Pasta with Yummy Cheese Macaroni & Cheese,రుచికరమైన చీజ్ మాకరోనీ & చీజ్‌తో బన్నీ పాస్తా,Instant Foods,Dry Goods Pasta,packet,100.0,80.3,123,10
+INSTA_9755,Original Popcorn,ఒరిజినల్ పాప్‌కార్న్,Popcorn Jerky,Snacks,packet,15.0,11.27,141,10
+INSTA_17652,Air Chilled Breaded Chicken Breast Nuggets,గాలి చల్లబడ్డ బ్రెడ్ చికెన్ బ్రెస్ట్ నగెట్స్,Frozen Appetizers Sides,Frozen,packet,170.0,141.95,75,10
+INSTA_40593,Cream Cheese,క్రీమ్ చీజ్,Other Creams Cheeses,Dairy Eggs,packet,60.0,49.02,107,10
+INSTA_49610,100% Lactose Free Fat Free Milk,100% లాక్టోస్ ఫ్రీ ఫ్యాట్ ఫ్రీ మిల్క్,Soy Lactosefree,Dairy Eggs,litre,125.0,97.0,106,10
+INSTA_16254,ZBar Organic Chocolate Brownie Energy Snack,ZBar ఆర్గానిక్ చాక్లెట్ బ్రౌనీ ఎనర్జీ స్నాక్,Energy Granola Bars,Snacks,packet,50.0,40.2,114,10
+INSTA_27243,Premium Pure Cane Granulated Sugar,ప్రీమియం ప్యూర్ కేన్ గ్రాన్యులేటెడ్ షుగర్,Baking Ingredients,Pantry,kg,80.0,66.4,30,5
+INSTA_31869,Organic Edamame,సేంద్రీయ ఎడమమేమ్,Frozen Produce,Frozen,packet,250.0,194.5,118,10
+INSTA_33043,Crescent Rolls,నెలవంక రోల్స్,Doughs Gelatins Bake Mixes,Pantry,kg,255.0,209.86,53,10
+INSTA_14129,Organic Chicken Bone Broth,ఆర్గానిక్ చికెన్ బోన్ బ్రత్,Soup Broth Bouillon,Canned Goods,can,175.0,148.05,46,10
+INSTA_26384,Large Brown Eggs,పెద్ద బ్రౌన్ గుడ్లు,Eggs,Dairy Eggs,piece,95.0,73.15,40,10
+INSTA_1215,Kidz All Natural Baked Chicken Nuggets,కిడ్జ్ ఆల్ నేచురల్ బేక్డ్ చికెన్ నగ్గెట్స్,Frozen Appetizers Sides,Frozen,packet,225.0,172.12,25,5
+INSTA_7500,Organic Vanilla Extract,సేంద్రీయ వనిల్లా సారం,Baking Ingredients,Pantry,kg,120.0,98.28,69,10
+INSTA_38200,Apple Juice,ఆపిల్ రసం,Refrigerated,Beverages,litre,140.0,113.96,64,10
+INSTA_20574,Roasted Turkey,కాల్చిన టర్కీ,Lunch Meat,Deli,packet,110.0,88.11,81,10
+INSTA_41273,Broccoli Florets,బ్రోకలీ పుష్పాలు,Packaged Vegetables Fruits,Produce,kg,110.0,88.11,61,10
+INSTA_47877,Coke Zero,కోక్ జీరో,Soft Drinks,Beverages,bottle,125.0,100.0,20,5
+INSTA_4138,Arancita Rossa,అరన్సితా రోస్సా,Soft Drinks,Beverages,bottle,45.0,36.32,97,10
+INSTA_5460,Butter,వెన్న,Butter,Dairy Eggs,packet,50.0,37.5,90,10
+INSTA_11576,Corn Chips,మొక్కజొన్న చిప్స్,Chips Pretzels,Snacks,packet,70.0,54.11,113,10
+INSTA_18382,Saltine Crackers,సాల్టైన్ క్రాకర్స్,Crackers,Snacks,packet,25.0,20.85,84,10
+INSTA_30639,Organic Orange Juice,ఆర్గానిక్ ఆరెంజ్ జ్యూస్,Juice Nectars,Beverages,litre,110.0,89.87,87,10
+INSTA_47357,Original Restaurant Style Tortilla Chips,ఒరిజినల్ రెస్టారెంట్ స్టైల్ టోర్టిల్లా చిప్స్,Chips Pretzels,Snacks,packet,95.0,78.38,135,10
+INSTA_8239,Peanut Butter Creamy With Salt,పీనట్ బటర్ క్రీమీ విత్ సాల్ట్,Spreads,Pantry,kg,175.0,132.65,138,10
+INSTA_8955,Basil,తులసి,Fresh Herbs,Produce,kg,85.0,68.17,122,10
+INSTA_13852,Organic Broccoli Crown,సేంద్రీయ బ్రోకలీ క్రౌన్,Fresh Vegetables,Produce,kg,115.0,95.45,140,10
+INSTA_25753,Organic Homestyle Waffles,ఆర్గానిక్ హోమ్‌స్టైల్ వాఫ్ఫల్స్,Frozen Breakfast,Frozen,packet,225.0,174.15,124,10
+INSTA_27307,Cage Free Grade A Large Brown Eggs,కేజ్ ఫ్రీ గ్రేడ్ A పెద్ద బ్రౌన్ గుడ్లు,Eggs,Dairy Eggs,piece,85.0,66.22,109,10
+INSTA_47912,Vanilla Skyr Style Yogurt,వనిల్లా స్కైర్ స్టైల్ పెరుగు,Yogurt,Dairy Eggs,packet,140.0,111.58,117,10
+INSTA_26128,Organic Mango Chunks,సేంద్రీయ మామిడి ముక్కలు,Frozen Produce,Frozen,packet,160.0,124.48,78,10
+INSTA_13083,Lowfat Small Curd Cottage Cheese,లోఫ్యాట్ చిన్న పెరుగు కాటేజ్ చీజ్,Other Creams Cheeses,Dairy Eggs,packet,35.0,29.29,87,10
+INSTA_19068,Boneless And Skinless Chicken Breast,ఎముకలు లేని మరియు చర్మం లేని చికెన్ బ్రెస్ట్,Poultry Counter,Meat Seafood,kg,385.0,288.75,30,5
+INSTA_25544,Fresh Cut Golden Sweet Whole Kernel Corn,ఫ్రెష్ కట్ గోల్డెన్ స్వీట్ హోల్ కెర్నల్ కార్న్,Canned Jarred Vegetables,Canned Goods,can,55.0,45.32,124,10
+INSTA_31651,Extra Fancy Unsalted Mixed Nuts,అదనపు ఫ్యాన్సీ ఉప్పు లేని మిశ్రమ గింజలు,Nuts Seeds Dried Fruit,Snacks,packet,60.0,46.92,62,10
+INSTA_31759,Cherrios Honey Nut,చెర్రియోస్ హనీ నట్,Cereal,Breakfast,box,140.0,118.44,46,10
+INSTA_6948,Organic Original Almond Milk,ఆర్గానిక్ ఒరిజినల్ ఆల్మండ్ మిల్క్,Soy Lactosefree,Dairy Eggs,litre,130.0,105.56,132,10
+INSTA_15392,Organic Mayonnaise,సేంద్రీయ మయోన్నైస్,Condiments,Pantry,kg,115.0,92.12,111,10
+INSTA_45747,Curate Melon Pomelo Sparking Water,క్యూరేట్ మెలోన్ పోమెలో స్పార్కింగ్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,25.0,19.7,58,10
+INSTA_7131,Light Semisoft Cheese,లైట్ సెమిసాఫ్ట్ చీజ్,Packaged Cheese,Dairy Eggs,packet,50.0,41.75,115,10
+INSTA_14852,All Natural Marinara Sauce,అన్నీ సహజమైన మరీనారా సాస్,Pasta Sauce,Dry Goods Pasta,packet,160.0,128.64,104,10
+INSTA_18019,Macaroni & Cheese Dinner Original Flavor,మాకరోనీ & చీజ్ డిన్నర్ ఒరిజినల్ ఫ్లేవర్,Instant Foods,Dry Goods Pasta,packet,90.0,68.85,55,10
+INSTA_45064,Honey Wheat Bread,హనీ వీట్ బ్రెడ్,Bread,Bakery,packet,80.0,66.4,60,10
+INSTA_17341,Presliced Everything Bagels,Presliced ​​ప్రతిదీ బాగెల్స్,Breakfast Bakery,Bakery,packet,30.0,24.42,24,5
+INSTA_27744,Organic Whipping Cream,సేంద్రీయ విప్పింగ్ క్రీమ్,Cream,Dairy Eggs,packet,85.0,66.56,83,10
+INSTA_30305,Fancy Eggplant,ఫ్యాన్సీ వంకాయ,Fresh Vegetables,Produce,piece,40.0,32.56,144,10
+INSTA_37011,Artichokes,ఆర్టిచోక్స్,Fresh Vegetables,Produce,kg,55.0,41.36,102,10
+INSTA_3142,Organic Short Grain Brown Rice,ఆర్గానిక్ షార్ట్ గ్రెయిన్ బ్రౌన్ రైస్,Grains Rice Dried Goods,Dry Goods Pasta,packet,85.0,69.95,53,10
+INSTA_36082,Organic Mango,సేంద్రీయ మామిడిపండు,Fresh Fruits,Produce,kg,55.0,46.03,127,10
+INSTA_42557,Crunchy Almond Butter,క్రంచీ ఆల్మండ్ బటర్,Spreads,Pantry,kg,100.0,81.2,102,10
+INSTA_31981,1% Low Fat Milk,1% తక్కువ కొవ్వు పాలు,Milk,Dairy Eggs,litre,70.0,54.46,58,10
+INSTA_47792,Organic Beans & Rice Cheddar Cheese Burrito,ఆర్గానిక్ బీన్స్ & రైస్ చెడ్డార్ చీజ్ బర్రిటో,Frozen Meals,Frozen,packet,120.0,96.6,75,10
+INSTA_6128,Original Fresh Stack Crackers,అసలైన తాజా స్టాక్ క్రాకర్స్,Crackers,Snacks,packet,55.0,45.54,118,10
+INSTA_6489,Backyard Barbeque Potato Chips,పెరడు బార్బెక్యూ పొటాటో చిప్స్,Chips Pretzels,Snacks,kg,65.0,52.97,55,10
+INSTA_8479,Original Black Box Tablewater Cracker,ఒరిజినల్ బ్లాక్ బాక్స్ టేబుల్ వాటర్ క్రాకర్,Crackers,Snacks,litre,110.0,93.28,78,10
+INSTA_24759,Club Soda,క్లబ్ సోడా,Soft Drinks,Beverages,litre,55.0,41.63,107,10
+INSTA_40348,Large Burrito Flour Tortillas,పెద్ద బర్రిటో పిండి టోర్టిల్లాలు,Tortillas Flat Bread,Bakery,packet,90.0,76.23,147,10
+INSTA_43875,Baby Food Stage 2 Blueberry Pear & Purple Carrot,బేబీ ఫుడ్ స్టేజ్ 2 బ్లూబెర్రీ పియర్ & పర్పుల్ క్యారెట్,Baby Food Formula,Babies,packet,80.0,62.4,100,10
+INSTA_2326,Organic Blueberry Waffles,సేంద్రీయ బ్లూబెర్రీ వాఫ్ఫల్స్,Frozen Breakfast,Frozen,packet,175.0,133.0,40,10
+INSTA_33548,Peach on the Bottom Nonfat Greek Yogurt,దిగువన నాన్‌ఫాట్ గ్రీక్ యోగర్ట్‌పై పీచ్,Yogurt,Dairy Eggs,packet,120.0,92.04,47,10
+INSTA_33846,Roasted Garlic Hummus,కాల్చిన వెల్లుల్లి హమ్ముస్,Fresh Dips Tapenades,Deli,packet,145.0,117.88,23,5
+INSTA_581,Garnet Sweet Potato (Yam),గోమేదికం చిలగడదుంప (యమ్),Fresh Vegetables,Produce,kg,115.0,87.06,77,10
+INSTA_5652,Organic Red Potatoes,సేంద్రీయ ఎర్ర బంగాళాదుంపలు,Fresh Vegetables,Produce,kg,20.0,15.34,97,10
+INSTA_13575,Apples,యాపిల్స్,Fresh Fruits,Produce,kg,115.0,86.94,126,10
+INSTA_14901,Raisins,ఎండుద్రాక్ష,Nuts Seeds Dried Fruit,Snacks,packet,45.0,37.12,75,10
+INSTA_23645,Sour Cream & Onion Potato Chips,సోర్ క్రీం & ఆనియన్ పొటాటో చిప్స్,Chips Pretzels,Snacks,kg,45.0,37.3,89,10
+INSTA_29370,Organic White Cheddar Popcorn,సేంద్రీయ వైట్ చెడ్డార్ పాప్‌కార్న్,Popcorn Jerky,Snacks,packet,15.0,11.54,99,10
+INSTA_32455,Whole Grain Cheddar Baked Snack Crackers,హోల్ గ్రెయిన్ చెడ్దర్ కాల్చిన స్నాక్ క్రాకర్స్,Crackers,Snacks,packet,15.0,11.31,44,10
+INSTA_12099,Honey Greek Yogurt,తేనె గ్రీకు పెరుగు,Yogurt,Dairy Eggs,packet,85.0,66.73,45,10
+INSTA_36929,"Milk, Vitamin D","పాలు, విటమిన్ డి",Milk,Dairy Eggs,litre,25.0,18.95,108,10
+INSTA_2180,Angel Hair Pasta,ఏంజెల్ హెయిర్ పాస్తా,Dry Pasta,Dry Goods Pasta,packet,115.0,94.88,85,10
+INSTA_9741,Cheese Pizza,చీజ్ పిజ్జా,Frozen Pizza,Frozen,packet,250.0,193.25,33,10
+INSTA_18880,Organic Free Range Low Sodium Chicken Broth,సేంద్రీయ ఉచిత శ్రేణి తక్కువ సోడియం చికెన్ ఉడకబెట్టిన పులుసు,Soup Broth Bouillon,Canned Goods,can,75.0,57.45,146,10
+INSTA_41259,Poblano Pepper,పోబ్లానో పెప్పర్,Fresh Vegetables,Produce,kg,30.0,22.53,41,10
+INSTA_41544,Organic Crushed Fire Roasted Tomatoes,ఆర్గానిక్ క్రష్డ్ ఫైర్ రోస్టెడ్ టొమాటోస్,Canned Jarred Vegetables,Canned Goods,can,55.0,45.27,43,10
+INSTA_17224,Oats & Honey Gluten Free Granola,ఓట్స్ & హనీ గ్లూటెన్ ఫ్రీ గ్రానోలా,Energy Granola Bars,Snacks,packet,50.0,38.05,101,10
+INSTA_3583,Unsweetened Coconut Milk Beverage,తియ్యని కొబ్బరి పాల పానీయం,Milk,Dairy Eggs,litre,135.0,102.6,120,10
+INSTA_21417,Organic Creamy Tomato Soup,ఆర్గానిక్ క్రీమీ టొమాటో సూప్,Soup Broth Bouillon,Canned Goods,can,165.0,126.56,97,10
+INSTA_39040,Organic Sliced Crimini Mushrooms,సేంద్రీయ ముక్కలు చేసిన క్రిమినీ పుట్టగొడుగులు,Packaged Vegetables Fruits,Produce,kg,80.0,60.4,115,10
+INSTA_41319,Sea Salt Caramel Gelato,సముద్ర ఉప్పు కారామెల్ జెలాటో,Ice Cream Ice,Frozen,packet,195.0,163.02,116,10
+INSTA_45504,Whole Organic Omega 3 Milk,మొత్తం సేంద్రీయ ఒమేగా 3 పాలు,Milk,Dairy Eggs,litre,65.0,54.6,50,10
+INSTA_46572,Sweet Rolls,స్వీట్ రోల్స్,Buns Rolls,Bakery,packet,60.0,45.48,138,10
+INSTA_4137,Whole Grain Oat Cereal,హోల్ గ్రెయిన్ వోట్ ధాన్యం,Cereal,Breakfast,box,140.0,117.04,116,10
+INSTA_17835,Thin & Light Tortilla Chips,సన్నని & తేలికపాటి టోర్టిల్లా చిప్స్,Chips Pretzels,Snacks,packet,40.0,31.2,70,10
+INSTA_24221,Organic Red Grapes,సేంద్రీయ ఎర్ర ద్రాక్ష,Fresh Fruits,Produce,kg,135.0,109.62,122,10
+INSTA_5240,Spaghetti  No 12,స్పఘెట్టి నం 12,Dry Pasta,Dry Goods Pasta,packet,165.0,140.09,59,10
+INSTA_14778,Organic Chocolate Chip Chewy Granola Bars,ఆర్గానిక్ చాక్లెట్ చిప్ చెవి గ్రానోలా బార్‌లు,Energy Granola Bars,Snacks,packet,25.0,21.2,148,10
+INSTA_35336,Naked Green Machine Boosted Juice Smoothie,నేకెడ్ గ్రీన్ మెషిన్ బూస్ట్ చేసిన జ్యూస్ స్మూతీ,Refrigerated,Beverages,litre,30.0,24.18,46,10
+INSTA_10032,Cola Soft Drink,కోలా సాఫ్ట్ డ్రింక్,Soft Drinks,Beverages,bottle,155.0,122.3,29,5
+INSTA_10621,Organic Purple Kale,ఆర్గానిక్ పర్పుల్ కాలే,Fresh Vegetables,Produce,kg,65.0,53.43,42,10
+INSTA_16262,Everything Bagels,అంతా బాగెల్స్,Breakfast Bakery,Bakery,packet,25.0,19.3,132,10
+INSTA_17429,Jalapeno Hummus,జలపెనో హమ్మస్,Fresh Dips Tapenades,Deli,packet,145.0,117.02,97,10
+INSTA_44514,Yellow Straightneck Squash,ఎల్లో స్ట్రెయిట్‌నెక్ స్క్వాష్,Fresh Vegetables,Produce,kg,70.0,52.64,22,5
+INSTA_38693,Meyer Lemon,మేయర్ నిమ్మకాయ,Fresh Fruits,Produce,kg,75.0,60.53,87,10
+INSTA_10504,Yukon Gold Potatoes 5lb Bag,యుకాన్ గోల్డ్ పొటాటోస్ 5lb బ్యాగ్,Fresh Vegetables,Produce,kg,65.0,54.21,74,10
+INSTA_37119,Uncured Pepperoni,నయం చేయని పెప్పరోని,Lunch Meat,Deli,packet,165.0,135.47,71,10
+INSTA_38650,Organic Red Lentils,సేంద్రీయ రెడ్ లెంటిల్స్,Grains Rice Dried Goods,Dry Goods Pasta,packet,120.0,100.32,86,10
+INSTA_365,Cheerios Cereal,చీరియోస్ తృణధాన్యాలు,Cereal,Breakfast,box,150.0,119.85,79,10
+INSTA_2120,Sauvignon Blanc,సావిగ్నాన్ బ్లాంక్,White Wines,Alcohol,packet,30.0,24.03,111,10
+INSTA_16823,Organic Beef Broth,సేంద్రీయ బీఫ్ ఉడకబెట్టిన పులుసు,Soup Broth Bouillon,Canned Goods,can,75.0,57.45,146,10
+INSTA_19816,Sonoma Traditional Flour Tortillas 10 Count,సోనోమా సాంప్రదాయ పిండి టోర్టిల్లాలు 10 కౌంట్,Tortillas Flat Bread,Bakery,packet,60.0,46.5,145,10
+INSTA_10912,Lowfat Vanilla Yogurt,లోఫ్యాట్ వెనిలా పెరుగు,Yogurt,Dairy Eggs,packet,90.0,73.89,61,10
+INSTA_45763,Mini Seedless Cucumbers,మినీ సీడ్‌లెస్ దోసకాయలు,Fresh Vegetables,Produce,kg,55.0,45.81,143,10
+INSTA_46175,Half Baked® Ice Cream,హాఫ్ బేక్డ్ ® ఐస్ క్రీమ్,Ice Cream Ice,Frozen,packet,165.0,133.32,68,10
+INSTA_34234,Grade AA Large White Eggs,గ్రేడ్ AA పెద్ద తెల్ల గుడ్లు,Eggs,Dairy Eggs,piece,25.0,18.9,96,10
+INSTA_9808,Organic Cottage Cheese,సేంద్రీయ కాటేజ్ చీజ్,Other Creams Cheeses,Dairy Eggs,packet,50.0,41.95,29,5
+INSTA_13819,Roasted Salted Cashews,కాల్చిన సాల్టెడ్ జీడిపప్పు,Nuts Seeds Dried Fruit,Snacks,packet,35.0,28.73,121,10
+INSTA_22888,90% Lean Ground Beef,90% లీన్ గ్రౌండ్ బీఫ్,Meat Counter,Meat Seafood,kg,130.0,101.79,63,10
+INSTA_45681,Americone Dream® Ice Cream,అమెరికా డ్రీమ్ ® ఐస్ క్రీమ్,Ice Cream Ice,Frozen,packet,180.0,138.06,127,10
+INSTA_23516,Organic Unbleached All-Purpose Flour,ఆర్గానిక్ అన్ బ్లీచ్డ్ ఆల్-పర్పస్ ఫ్లోర్,Baking Ingredients,Pantry,kg,175.0,134.22,137,10
+INSTA_25340,Large Yellow Flesh Nectarine,పెద్ద పసుపు మాంసం నెక్టరైన్,Fresh Fruits,Produce,kg,130.0,98.67,69,10
+INSTA_28928,Uncured Black Forest Ham,అన్‌క్యూర్డ్ బ్లాక్ ఫారెస్ట్ హామ్,Lunch Meat,Deli,packet,145.0,118.9,30,5
+INSTA_37141,Dairy Free Coconut Milk Vanilla Yogurt Alternative,పాల రహిత కొబ్బరి పాలు వెనిలా పెరుగు ప్రత్యామ్నాయం,Yogurt,Dairy Eggs,litre,80.0,67.36,32,10
+INSTA_18599,Garlic Couscous,వెల్లుల్లి కౌస్కాస్,Instant Foods,Dry Goods Pasta,packet,105.0,79.17,134,10
+INSTA_3849,Organic Sprouted English Muffin,ఆర్గానిక్ స్ప్రౌటెడ్ ఇంగ్లీష్ మఫిన్,Breakfast Bakery,Bakery,packet,40.0,33.24,131,10
+INSTA_5337,Monterey Jack Cheese,మాంటెరీ జాక్ చీజ్,Packaged Cheese,Dairy Eggs,packet,50.0,42.0,50,10
+INSTA_32566,Dha Omega 3 Vitamin D Milk,ధా ఒమేగా 3 విటమిన్ డి పాలు,Milk,Dairy Eggs,litre,130.0,107.77,69,10
+INSTA_14858,Multigrain Pita Chips,మల్టీగ్రెయిన్ పిటా చిప్స్,Chips Pretzels,Snacks,packet,120.0,101.52,146,10
+INSTA_24235,Honey Wheat Enriched Bread,హనీ వీట్ సుసంపన్నమైన బ్రెడ్,Bread,Bakery,packet,30.0,25.41,137,10
+INSTA_33572,Lactose Free 2% Reduced Fat Milk,లాక్టోస్ ఫ్రీ 2% తగ్గిన కొవ్వు పాలు,Soy Lactosefree,Dairy Eggs,litre,155.0,123.38,26,5
+INSTA_48104,Organic Lite Coconut Milk,సేంద్రీయ లైట్ కొబ్బరి పాలు,Soy Lactosefree,Dairy Eggs,litre,75.0,60.67,109,10
+INSTA_9366,Penne Rigate #41 Pasta,పెన్నే రిగేట్ #41 పాస్తా,Dry Pasta,Dry Goods Pasta,packet,125.0,96.0,88,10
+INSTA_14147,Sweet Cream Salted Butter,స్వీట్ క్రీమ్ సాల్టెడ్ వెన్న,Butter,Dairy Eggs,packet,50.0,37.6,102,10
+INSTA_34530,Organic Chicken Thighs,సేంద్రీయ చికెన్ తొడలు,Packaged Meat,Meat Seafood,kg,350.0,295.05,93,10
+INSTA_25705,Butterhead Lettuce,బటర్ హెడ్ పాలకూర,Fresh Vegetables,Produce,kg,115.0,96.14,36,10
+INSTA_42495,Pink Lady (Cripps) Apple,పింక్ లేడీ (క్రిప్స్) ఆపిల్,Fresh Fruits,Produce,kg,95.0,75.43,44,10
+INSTA_5550,YoBaby Peach Pear Yogurt,YoBaby పీచ్ పియర్ యోగర్ట్,Yogurt,Dairy Eggs,packet,115.0,92.69,116,10
+INSTA_26914,Bean & Cheese Burrito,బీన్ & చీజ్ బురిటో,Frozen Meals,Frozen,packet,165.0,134.47,135,10
+INSTA_36389,Organic Rainbow Chard Vegetable,సేంద్రీయ రెయిన్బో చార్డ్ వెజిటబుల్,Fresh Vegetables,Produce,kg,130.0,100.23,131,10
+INSTA_43867,100% Grated Parmesan Cheese,100% తురిమిన పర్మేసన్ చీజ్,Packaged Cheese,Dairy Eggs,packet,115.0,92.34,123,10
+INSTA_44375,Canned Aranciata Orange,క్యాన్డ్ అరాన్సియాటా ఆరెంజ్,Soft Drinks,Beverages,bottle,155.0,124.62,104,10
+INSTA_26131,Mixed Berries Whole Milk Icelandic Style Skyr Yogurt,మిక్స్డ్ బెర్రీస్ హోల్ మిల్క్ ఐస్లాండిక్ స్టైల్ స్కైర్ యోగర్ట్,Yogurt,Dairy Eggs,litre,120.0,92.4,130,10
+INSTA_42803,Organic Apple Slices,సేంద్రీయ ఆపిల్ ముక్కలు,Fruit Vegetable Snacks,Snacks,kg,70.0,54.32,76,10
+INSTA_4006,Hazelnut Spread With Skim Milk & Cocoa,స్కిమ్ మిల్క్ & కోకోతో హాజెల్ నట్ స్ప్రెడ్,Spreads,Pantry,litre,190.0,160.17,93,10
+INSTA_8087,Florida Orange Juice With Calcium & Vitamin D,కాల్షియం & విటమిన్ డితో ఫ్లోరిడా ఆరెంజ్ జ్యూస్,Refrigerated,Beverages,litre,135.0,104.76,126,10
+INSTA_17862,Minced Garlic,ముక్కలు చేసిన వెల్లుల్లి,Canned Jarred Vegetables,Canned Goods,can,115.0,96.83,32,10
+INSTA_21463,Vanilla Bean Light Ice Cream,వనిల్లా బీన్ లైట్ ఐస్ క్రీమ్,Ice Cream Ice,Frozen,packet,100.0,81.9,39,10
+INSTA_26882,Russet Potatoes,రస్సెట్ బంగాళదుంపలు,Fresh Vegetables,Produce,kg,130.0,100.75,85,10
+INSTA_46842,Plain Pre-Sliced Bagels,సాదా ముందుగా ముక్కలు చేసిన బేగెల్స్,Breakfast Bakery,Bakery,packet,45.0,37.98,94,10
+INSTA_8230,100% Recycled Bathroom Tissue,100% రీసైకిల్ బాత్రూమ్ టిష్యూ,Paper Goods,Household,piece,190.0,146.49,111,10
+INSTA_16589,Plantain Chips,అరటి చిప్స్,Chips Pretzels,Snacks,packet,100.0,78.3,83,10
+INSTA_20919,Baby Spinach Salad,బేబీ స్పినాచ్ సలాడ్,Packaged Vegetables Fruits,Produce,kg,25.0,19.5,120,10
+INSTA_22025,YoBaby Blueberry Apple Yogurt,YoBaby బ్లూబెర్రీ ఆపిల్ పెరుగు,Yogurt,Dairy Eggs,kg,45.0,35.33,135,10
+INSTA_44156,Strawberry on the Bottom Nonfat Greek Yogurt,బాటమ్ నాన్‌ఫ్యాట్ గ్రీక్ యోగర్ట్‌పై స్ట్రాబెర్రీ,Yogurt,Dairy Eggs,packet,120.0,90.96,108,10
+INSTA_48857,Authentic French Brioche,ప్రామాణికమైన ఫ్రెంచ్ బ్రియోచీ,Breakfast Bakery,Bakery,packet,55.0,46.64,108,10
+INSTA_311,Naturals Savory Turkey Breakfast Sausage,నేచురల్స్ రుచికరమైన టర్కీ బ్రేక్ ఫాస్ట్ సాసేజ్,Frozen Breakfast,Frozen,packet,90.0,69.57,93,10
+INSTA_13292,"Juice Beverage, Cold Pressed, Kale Apple Ginger Romaine Spinach Cucumber Celery Parsley Lemon","జ్యూస్ పానీయం, కోల్డ్ ప్రెస్డ్, కాలే ఆపిల్ జింజర్ రొమైన్ బచ్చలికూర దోసకాయ సెలెరీ పార్స్లీ నిమ్మకాయ",Refrigerated,Beverages,litre,100.0,84.9,89,10
+INSTA_16145,Organic Cannellini Beans,సేంద్రీయ కాన్నెల్లిని బీన్స్,Canned Meals Beans,Canned Goods,can,140.0,115.08,32,10
+INSTA_40002,Strawberry Ice Cream,స్ట్రాబెర్రీ ఐస్ క్రీమ్,Ice Cream Ice,Frozen,packet,225.0,172.58,77,10
+INSTA_46692,Multigrain Tortilla Chips,మల్టీగ్రెయిన్ టోర్టిల్లా చిప్స్,Chips Pretzels,Snacks,packet,25.0,20.82,93,10
+INSTA_5959,Four Cheese Thin Crust Pizza,నాలుగు చీజ్ సన్నని క్రస్ట్ పిజ్జా,Frozen Pizza,Frozen,packet,270.0,206.82,86,10
+INSTA_16283,Fresh Asparagus,తాజా ఆస్పరాగస్,Fresh Vegetables,Produce,kg,60.0,47.58,143,10
+INSTA_26172,Light Sour Cream,లైట్ సోర్ క్రీం,Other Creams Cheeses,Dairy Eggs,packet,60.0,48.0,70,10
+INSTA_31805,Gourmet Tomato Medley,గౌర్మెట్ టొమాటో మెడ్లీ,Packaged Produce,Produce,kg,115.0,96.72,91,10
+INSTA_17902,Liquid Egg Whites,ద్రవ గుడ్డులోని తెల్లసొన,Eggs,Dairy Eggs,piece,30.0,23.07,59,10
+INSTA_2962,"Milk, Reduced Fat, 2% Milkfat","పాలు, తగ్గిన కొవ్వు, 2% మిల్క్‌ఫ్యాట్",Milk,Dairy Eggs,litre,90.0,73.53,117,10
+INSTA_13838,Natural Free & Clear Dish Liquid,నేచురల్ ఫ్రీ & క్లియర్ డిష్ లిక్విడ్,Dish Detergents,Household,piece,140.0,105.14,81,10
+INSTA_15359,All Purpose Flour,ఆల్ పర్పస్ పిండి,Baking Ingredients,Pantry,kg,185.0,148.37,92,10
+INSTA_24622,Green Cabbage,గ్రీన్ క్యాబేజీ,Fresh Vegetables,Produce,kg,130.0,110.37,119,10
+INSTA_1468,Organic Peeled & Cooked Beets,సేంద్రీయ ఒలిచిన & వండిన దుంపలు,Packaged Vegetables Fruits,Produce,kg,125.0,102.5,70,10
+INSTA_28785,Organic Tahini,ఆర్గానిక్ తాహిని,Condiments,Pantry,kg,140.0,113.12,128,10
+INSTA_40268,Organic Wheat-Free & Gluten-Free Original Crackers,సేంద్రీయ గోధుమలు లేని & గ్లూటెన్ రహిత ఒరిజినల్ క్రాకర్లు,Crackers,Snacks,packet,110.0,92.18,58,10
+INSTA_5031,Medium Salsa Roja,మీడియం సల్సా రోజా,Fresh Dips Tapenades,Deli,packet,185.0,153.92,142,10
+INSTA_20378,Chicken Broth,చికెన్ ఉడకబెట్టిన పులుసు,Soup Broth Bouillon,Canned Goods,can,125.0,100.38,33,10
+INSTA_23579,Peanut Butter Chocolate Chip Fruit & Nut Food Bar,పీనట్ బటర్ చాక్లెట్ చిప్ ఫ్రూట్ & నట్ ఫుడ్ బార్,Energy Granola Bars,Snacks,packet,35.0,29.71,49,10
+INSTA_33452,Fruit Punch Sports Drink,ఫ్రూట్ పంచ్ స్పోర్ట్స్ డ్రింక్,Energy Sports Drinks,Beverages,bottle,180.0,150.48,136,10
+INSTA_22312,Organic Cherry Tomatoes,సేంద్రీయ చెర్రీ టమోటాలు,Fresh Vegetables,Produce,kg,45.0,34.52,47,10
+INSTA_13712,Cold Brew Coffee Double Espresso with Almond Milk,ఆల్మండ్ మిల్క్‌తో కోల్డ్ బ్రూ కాఫీ డబుల్ ఎస్ప్రెస్సో,Soy Lactosefree,Dairy Eggs,litre,160.0,133.6,85,10
+INSTA_14870,Icelandic Style Fat Free Plain Yogurt,ఐస్లాండిక్ స్టైల్ ఫ్యాట్ ఫ్రీ సాదా పెరుగు,Yogurt,Dairy Eggs,packet,75.0,61.72,113,10
+INSTA_28123,Organic Cut Green Beans,సేంద్రీయ కట్ గ్రీన్ బీన్స్,Frozen Produce,Frozen,packet,165.0,133.65,80,10
+INSTA_28278,Organic Penne Rigate,సేంద్రీయ పెన్నే రిగేట్,Dry Pasta,Dry Goods Pasta,packet,65.0,51.74,136,10
+INSTA_46061,Popcorn,పాప్ కార్న్,Popcorn Jerky,Snacks,packet,95.0,77.23,33,10
+INSTA_20580,Original Real Vegetable Chips,అసలైన రియల్ వెజిటబుల్ చిప్స్,Chips Pretzels,Snacks,packet,75.0,61.05,134,10
+INSTA_25718,Cold Brew Coffee,కోల్డ్ బ్రూ కాఫీ,Coffee,Beverages,bottle,145.0,118.32,96,10
+INSTA_30442,Low Fat Vanilla Yogurt,తక్కువ కొవ్వు వనిల్లా పెరుగు,Yogurt,Dairy Eggs,packet,125.0,98.75,110,10
+INSTA_34862,Tiny Twists Pretzels,చిన్న ట్విస్ట్ జంతికలు,Chips Pretzels,Snacks,packet,30.0,23.64,98,10
+INSTA_3999,Bosc Pear,బాస్క్ పియర్,Fresh Fruits,Produce,kg,95.0,72.11,109,10
+INSTA_14651,Tommy/Kent/Keitt/Haden Mango,టామీ/కెంట్/కీట్/హాడెన్ మామిడి,Fresh Fruits,Produce,kg,60.0,47.88,138,10
+INSTA_46049,Salt & Pepper Krinkle Chips,సాల్ట్ & పెప్పర్ క్రింకిల్ చిప్స్,Chips Pretzels,Snacks,packet,45.0,36.85,149,10
+INSTA_9327,Garlic Powder,వెల్లుల్లి పొడి,Spices Seasonings,Pantry,kg,220.0,169.18,59,10
+INSTA_48595,Organic Wheat Square Crackers,ఆర్గానిక్ వీట్ స్క్వేర్ క్రాకర్స్,Crackers,Snacks,packet,85.0,68.94,111,10
+INSTA_49247,Coconut Yoghurt,కొబ్బరి పెరుగు,Yogurt,Dairy Eggs,packet,60.0,48.66,101,10
+INSTA_9337,Purity Farms Ghee Clarified Butter,స్వచ్ఛత పొలాలు నెయ్యి స్పష్టం చేసిన వెన్న,Butter,Dairy Eggs,packet,40.0,31.16,59,10
+INSTA_12384,Organic Lactose Free 1% Lowfat Milk,ఆర్గానిక్ లాక్టోస్ ఫ్రీ 1% లోఫ్యాట్ పాలు,Soy Lactosefree,Dairy Eggs,litre,110.0,84.15,25,5
+INSTA_13802,Salted Sweet Cream Butter,సాల్టెడ్ స్వీట్ క్రీమ్ వెన్న,Butter,Dairy Eggs,packet,95.0,72.11,119,10
+INSTA_17313,Hass Avocado Variety,అవోకాడో వెరైటీని కలిగి ఉంది,Fresh Fruits,Produce,kg,45.0,34.92,66,10
+INSTA_27690,Apple Cinnamon GoGo Squeez,ఆపిల్ సిన్నమోన్ గోగో స్క్వీజ్,Fruit Vegetable Snacks,Snacks,kg,110.0,83.82,112,10
+INSTA_43014,Sliced Baby Bella Mushrooms,ముక్కలు చేసిన బేబీ బెల్లా పుట్టగొడుగులు,Packaged Vegetables Fruits,Produce,kg,110.0,86.57,37,10
+INSTA_17191,Tangerine,టాన్జేరిన్,Soft Drinks,Beverages,bottle,125.0,102.62,71,10
+INSTA_19389,Shredded Low-Moisture Part-Skim Mozzarella Cheese,తురిమిన తక్కువ తేమ పార్ట్-స్కిమ్ మోజారెల్లా చీజ్,Packaged Cheese,Dairy Eggs,packet,90.0,73.71,69,10
+INSTA_23233,California Sourdough Bread,కాలిఫోర్నియా సోర్డోఫ్ బ్రెడ్,Bread,Bakery,packet,90.0,68.58,142,10
+INSTA_31371,Whole Wheat English Muffins,హోల్ వీట్ ఇంగ్లీష్ మఫిన్లు,Breakfast Bakery,Bakery,packet,65.0,54.92,115,10
+INSTA_34134,Spinach Peas & Pear Stage 2 Baby Food,బచ్చలికూర బఠానీలు & పియర్ స్టేజ్ 2 బేబీ ఫుడ్,Baby Food Formula,Babies,packet,50.0,42.0,100,10
+INSTA_22504,Organic Mountain Forest Amber Honey,ఆర్గానిక్ మౌంటైన్ ఫారెస్ట్ అంబర్ హనీ,Honeys Syrups Nectars,Pantry,kg,220.0,170.5,125,10
+INSTA_34429,Kumato Tomatoes,కుమాటో టొమాటోస్,Fresh Vegetables,Produce,kg,140.0,117.74,111,10
+INSTA_47866,Jalapeno Potato Chips,జలపెనో పొటాటో చిప్స్,Chips Pretzels,Snacks,kg,110.0,83.05,35,10
+INSTA_16617,Organic Muenster Cheese Slices,సేంద్రీయ మున్స్టర్ చీజ్ ముక్కలు,Packaged Cheese,Dairy Eggs,packet,30.0,23.34,48,10
+INSTA_19478,Organic Marinara Pasta Sauce,సేంద్రీయ మరీనారా పాస్తా సాస్,Pasta Sauce,Dry Goods Pasta,packet,125.0,98.75,140,10
+INSTA_33894,Goldfish Cheddar Baked Snack Crackers Multi Packs,గోల్డ్ ఫిష్ చెడ్దార్ కాల్చిన స్నాక్ క్రాకర్స్ మల్టీ ప్యాక్స్,Crackers,Snacks,packet,50.0,38.05,101,10
+INSTA_9623,Sparkling Natural Spring Water,మెరిసే సహజ స్ప్రింగ్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,120.0,94.2,135,10
+INSTA_13424,Almonds,బాదం,Candy Chocolate,Snacks,packet,95.0,77.61,77,10
+INSTA_34137,Chocolate Sea Salt,చాక్లెట్ సముద్ర ఉప్పు,Energy Granola Bars,Snacks,packet,30.0,23.97,99,10
+INSTA_43394,Organic Lactose Free Whole Milk,సేంద్రీయ లాక్టోస్ ఫ్రీ హోల్ మిల్క్,Soy Lactosefree,Dairy Eggs,litre,120.0,90.0,20,5
+INSTA_3481,Pineapple,పైనాపిల్,Fresh Fruits,Produce,kg,75.0,59.25,30,5
+INSTA_48299,Baby Cut Carrots,బేబీ కట్ క్యారెట్లు,Packaged Vegetables Fruits,Produce,kg,75.0,60.15,72,10
+INSTA_1025,Organic Fresh Basil,సేంద్రీయ తాజా తులసి,Fresh Herbs,Produce,kg,95.0,74.29,32,10
+INSTA_2716,Organic Greek Lowfat Yogurt With Strawberries,స్ట్రాబెర్రీలతో సేంద్రీయ గ్రీక్ లోఫ్యాట్ పెరుగు,Yogurt,Dairy Eggs,packet,155.0,124.16,111,10
+INSTA_3873,Mountain Spring Water,మౌంటైన్ స్ప్రింగ్ వాటర్,Water Seltzer Sparkling Water,Beverages,litre,20.0,15.12,76,10
+INSTA_4945,Large Pineapple Chunks,పెద్ద పైనాపిల్ ముక్కలు,Packaged Vegetables Fruits,Produce,kg,65.0,53.62,85,10
+INSTA_20520,Mild Diced Green Chiles,మైల్డ్ డైస్డ్ గ్రీన్ చిల్లీస్,Canned Jarred Vegetables,Canned Goods,can,165.0,128.87,121,10
+INSTA_47029,Organic Greek Nonfat Yogurt With Mixed Berries,మిశ్రమ బెర్రీలతో సేంద్రీయ గ్రీక్ నాన్‌ఫ్యాట్ పెరుగు,Yogurt,Dairy Eggs,packet,55.0,41.47,124,10
+INSTA_4793,Wild Berry Smoothie,వైల్డ్ బెర్రీ స్మూతీ,Yogurt,Dairy Eggs,packet,115.0,93.61,64,10
+INSTA_6615,Mozzarella Cheese,మోజారెల్లా చీజ్,Packaged Cheese,Dairy Eggs,packet,80.0,60.16,92,10
+INSTA_8490,Strawberry Rhubarb Yogurt,స్ట్రాబెర్రీ రబర్బ్ పెరుగు,Yogurt,Dairy Eggs,packet,30.0,23.22,84,10
+INSTA_20632,Mache Rosettes French Salad Mix,మాచే రోసెట్స్ ఫ్రెంచ్ సలాడ్ మిక్స్,Packaged Vegetables Fruits,Produce,kg,100.0,82.1,131,10
+INSTA_21497,White Sandwich Bread,వైట్ శాండ్విచ్ బ్రెడ్,Bread,Bakery,packet,50.0,38.95,79,10
+INSTA_30949,Organic YoKids Smoothie Strawberry Banana Lowfat Yogurt,సేంద్రీయ YoKids స్మూతీ స్ట్రాబెర్రీ అరటి తక్కువ కొవ్వు పెరుగు,Yogurt,Dairy Eggs,kg,155.0,128.81,71,10
+INSTA_34668,Organic Large Grade AA Omega-3 Eggs,ఆర్గానిక్ లార్జ్ గ్రేడ్ AA ఒమేగా-3 గుడ్లు,Eggs,Dairy Eggs,piece,70.0,55.37,41,10
+INSTA_47526,Goat Cheese Log,మేక చీజ్ లాగ్,Packaged Cheese,Dairy Eggs,packet,155.0,127.56,103,10
+INSTA_7035,Peanut Butter Ice Cream Cup,పీనట్ బటర్ ఐస్ క్రీమ్ కప్,Missing,Missing,piece,40.0,31.2,110,10
+INSTA_34024,Classic Soda,క్లాసిక్ సోడా,Soft Drinks,Beverages,litre,100.0,76.2,132,10
+INSTA_38996,Grape Tomatoes,గ్రేప్ టొమాటోస్,Fresh Vegetables,Produce,kg,125.0,103.88,81,10
+INSTA_49605,Classic Hummus Family Size,క్లాసిక్ హమ్మస్ కుటుంబ పరిమాణం,Fresh Dips Tapenades,Deli,packet,130.0,105.82,24,5
+INSTA_10369,Organic Genoa Salami,సేంద్రీయ జెనోవా సలామీ,Lunch Meat,Deli,packet,185.0,139.31,33,10
+INSTA_31720,Organic  Whole Milk,సేంద్రీయ సంపూర్ణ పాలు,Milk,Dairy Eggs,litre,60.0,47.64,124,10
+INSTA_2611,Gluten Free SpongeBob Spinach Littles,గ్లూటెన్ ఫ్రీ స్పాంజ్బాబ్ స్పినాచ్ లిటిల్స్,Baby Food Formula,Babies,packet,30.0,23.97,119,10
+INSTA_3798,Pink Lady Apples,పింక్ లేడీ యాపిల్స్,Fresh Fruits,Produce,kg,75.0,62.17,99,10
+INSTA_5991,Bok Choy,బోక్ చోయ్,Fresh Vegetables,Produce,kg,100.0,83.4,94,10
+INSTA_6532,Organic YoKids Very Berry Smoothies,ఆర్గానిక్ యోకిడ్స్ చాలా బెర్రీ స్మూతీస్,Yogurt,Dairy Eggs,packet,120.0,90.6,85,10
+INSTA_8025,Uncured Beef Hot Dogs,అన్‌క్యూర్డ్ బీఫ్ హాట్ డాగ్‌లు,Hot Dogs Bacon Sausage,Meat Seafood,kg,245.0,203.59,71,10
+INSTA_17807,Gluten Free Blueberry Waffles,గ్లూటెన్ ఫ్రీ బ్లూబెర్రీ వాఫ్ఫల్స్,Frozen Breakfast,Frozen,packet,255.0,203.49,118,10
+INSTA_19125,Extra Ginger Brew Jamaican Style Ginger Beer,అదనపు జింజర్ బ్రూ జమైకన్ స్టైల్ జింజర్ బీర్,Soft Drinks,Beverages,bottle,160.0,134.24,29,5
+INSTA_22260,Organic Rolled Oats,సేంద్రీయ రోల్డ్ వోట్స్,Bulk Grains Rice Dried Goods,Bulk,packet,35.0,29.22,75,10
+INSTA_25837,Mini Babybel Light Semisoft Edam Cheeses,మినీ బేబీబెల్ లైట్ సెమిసాఫ్ట్ ఎడం చీజ్‌లు,Packaged Cheese,Dairy Eggs,packet,125.0,99.62,67,10
+INSTA_39657,Milk Chocolate Almonds,మిల్క్ చాక్లెట్ బాదం,Candy Chocolate,Snacks,litre,45.0,33.88,133,10
+INSTA_1117,Turkey Bacon,టర్కీ బేకన్,Hot Dogs Bacon Sausage,Meat Seafood,kg,405.0,328.45,101,10
+INSTA_3397,Organic Lightly Salted Sea Salt Thin & Crispy Restaurant Style Tortilla Chips,సేంద్రీయ తేలికగా సాల్టెడ్ సీ సాల్ట్ సన్నని & క్రిస్పీ రెస్టారెంట్ స్టైల్ టోర్టిల్లా చిప్స్,Chips Pretzels,Snacks,packet,100.0,83.6,66,10
+INSTA_12312,Lavender Hand Soap,లావెండర్ హ్యాండ్ సోప్,Soap,Personal Care,piece,50.0,40.4,128,10
+INSTA_16290,Sparkling Clementine Juice,మెరిసే క్లెమెంటైన్ జ్యూస్,Soft Drinks,Beverages,litre,100.0,75.8,38,10
+INSTA_33493,Cotton Swabs,పత్తి శుభ్రముపరచు,Eye Ear Care,Personal Care,piece,200.0,162.8,124,10
+INSTA_46650,Special Reserve Extra Sharp Cheddar Cheese,స్పెషల్ రిజర్వ్ ఎక్స్‌ట్రా షార్ప్ చెడ్డార్ చీజ్,Packaged Cheese,Dairy Eggs,packet,125.0,96.75,44,10
+INSTA_46900,Organic Chicken Noodle Soup,ఆర్గానిక్ చికెన్ నూడిల్ సూప్,Soup Broth Bouillon,Canned Goods,can,95.0,75.24,92,10
+INSTA_781,Organic Shredded Mild Cheddar,ఆర్గానిక్ ష్రెడెడ్ మైల్డ్ చెడ్డార్,Packaged Cheese,Dairy Eggs,packet,80.0,60.8,100,10
+INSTA_11123,Vitamin Water Zero Squeezed Lemonade,విటమిన్ వాటర్ జీరో స్క్వీజ్డ్ లెమనేడ్,Energy Sports Drinks,Beverages,litre,60.0,47.82,47,10
+INSTA_37825,Organic Whole Wheat Fusilli,సేంద్రీయ హోల్ వీట్ ఫుసిల్లి,Dry Pasta,Dry Goods Pasta,packet,90.0,68.4,140,10
+INSTA_46226,Thick & Crispy Tortilla Chips,చిక్కటి & క్రిస్పీ టోర్టిల్లా చిప్స్,Chips Pretzels,Snacks,packet,45.0,33.88,23,5
+INSTA_1695,Major Dickason's Blend Ground Coffee Dark Roast,మేజర్ డికాసన్స్ బ్లెండ్ గ్రౌండ్ కాఫీ డార్క్ రోస్ట్,Coffee,Beverages,bottle,110.0,89.76,36,10
+INSTA_3843,Organic Brussels Sprouts,సేంద్రీయ బ్రస్సెల్స్ మొలకలు,Fresh Vegetables,Produce,kg,130.0,101.14,58,10
+INSTA_10814,Applewood Smoked Bacon,యాపిల్‌వుడ్ స్మోక్డ్ బేకన్,Hot Dogs Bacon Sausage,Meat Seafood,kg,320.0,240.96,63,10
+INSTA_29223,Golden Pineapple,గోల్డెన్ పైనాపిల్,Fresh Fruits,Produce,kg,40.0,33.04,26,5
+INSTA_38028,White Sliced Mushrooms,వైట్ స్లైస్డ్ పుట్టగొడుగులు,Packaged Vegetables Fruits,Produce,kg,95.0,72.48,103,10
+INSTA_10603,93% Ground Beef,93% గ్రౌండ్ బీఫ్,Meat Counter,Meat Seafood,kg,450.0,379.8,134,10
+INSTA_15399,"Almondmilk Creamer, Vanilla","ఆల్మాండ్‌మిల్క్ క్రీమర్, వనిల్లా",Soy Lactosefree,Dairy Eggs,litre,95.0,72.67,65,10
+INSTA_25005,Organic Green Lentils,సేంద్రీయ ఆకుపచ్చ కాయధాన్యాలు,Grains Rice Dried Goods,Dry Goods Pasta,packet,95.0,73.34,32,10
+INSTA_21009,"Crispy Wheat, Crackers","క్రిస్పీ వీట్, క్రాకర్స్",Crackers,Snacks,packet,100.0,75.0,60,10
+INSTA_24010,Wheat Gluten Free Waffles,గోధుమ గ్లూటెన్ రహిత వాఫ్ఫల్స్,Frozen Breakfast,Frozen,packet,225.0,173.25,110,10
+INSTA_32360,Creamy Deluxe Shells & Real Aged Cheddar Sauce,క్రీమీ డీలక్స్ షెల్స్ & రియల్ ఏజ్డ్ చెడ్డార్ సాస్,Instant Foods,Dry Goods Pasta,packet,65.0,51.02,45,10
+INSTA_36107,smartwater® Electrolyte Enhanced Water,smartwater® ఎలక్ట్రోలైట్ మెరుగైన నీరు,Water Seltzer Sparkling Water,Beverages,litre,80.0,65.2,115,10
+INSTA_47492,Organic Berry Blend,సేంద్రీయ బెర్రీ మిశ్రమం,Frozen Produce,Frozen,packet,180.0,139.86,97,10
+INSTA_2846,Organic Green Onions,సేంద్రీయ ఆకుపచ్చ ఉల్లిపాయలు,Fresh Vegetables,Produce,kg,85.0,66.98,28,5
+INSTA_4796,Baby Portabella Mushrooms,బేబీ పోర్టబెల్లా పుట్టగొడుగులు,Fresh Vegetables,Produce,kg,115.0,96.94,133,10
+INSTA_8153,Plain Non-Fat Greek Yogurt,సాధారణ కొవ్వు లేని గ్రీకు పెరుగు,Yogurt,Dairy Eggs,packet,120.0,92.28,119,10
+INSTA_9421,Organic Raw Multigreen Kobmbucha,ఆర్గానిక్ రా మల్టీగ్రీన్ కోబ్‌బుచా,Refrigerated,Beverages,bottle,150.0,127.2,78,10
+INSTA_13409,Dubliner Wedge Pre Cut Cheese,డబ్లైనర్ వెడ్జ్ ప్రీ కట్ చీజ్,Specialty Cheeses,Dairy Eggs,packet,140.0,112.42,143,10
+INSTA_19468,Classic Yellow Mustard,క్లాసిక్ పసుపు ఆవాలు,Condiments,Pantry,kg,185.0,151.51,79,10
+INSTA_24097,Rotini Pasta,రోటిని పాస్తా,Dry Pasta,Dry Goods Pasta,packet,40.0,33.32,43,10
+INSTA_24535,Plain Whole Milk Yogurt,ప్లెయిన్ హోల్ మిల్క్ యోగర్ట్,Yogurt,Dairy Eggs,litre,150.0,116.1,144,10
+INSTA_25272,Small Macintosh Apple,చిన్న Macintosh ఆపిల్,Fresh Fruits,Produce,kg,135.0,107.46,106,10
+INSTA_6287,Organic & Raw Strawberry Serenity Kombucha,ఆర్గానిక్ & రా స్ట్రాబెర్రీ సెరినిటీ కొంబుచా,Refrigerated,Beverages,bottle,135.0,103.68,28,5
+INSTA_27020,Mandarins Bag,మాండరిన్స్ బ్యాగ్,Fresh Fruits,Produce,kg,120.0,96.48,134,10
+INSTA_33716,Apple Pie Fruit & Nut Food Bar,ఆపిల్ పై ఫ్రూట్ & నట్ ఫుడ్ బార్,Energy Granola Bars,Snacks,kg,75.0,62.92,119,10
+INSTA_39097,Gluten Free White Sandwich Bread,గ్లూటెన్ ఫ్రీ వైట్ శాండ్‌విచ్ బ్రెడ్,Bread,Bakery,packet,30.0,24.15,35,10
+INSTA_12078,Shredded Mexican Blend Cheese,తురిమిన మెక్సికన్ బ్లెండ్ చీజ్,Packaged Cheese,Dairy Eggs,packet,125.0,100.62,135,10
+INSTA_7156,Traditional Plain Greek Yogurt,సాంప్రదాయ సాదా గ్రీకు పెరుగు,Yogurt,Dairy Eggs,packet,85.0,68.42,55,10
+INSTA_33290,Lemon Verbena Dish Soap,నిమ్మకాయ వెర్బెనా డిష్ సోప్,Dish Detergents,Household,piece,120.0,90.72,86,10
+INSTA_45570,Organic Greek Plain Nonfat Yogurt,సేంద్రీయ గ్రీకు సాదా నాన్‌ఫ్యాట్ పెరుగు,Yogurt,Dairy Eggs,packet,80.0,61.2,35,10
+INSTA_12745,"Yogurt, Lowfat, Strawberry","పెరుగు, లోఫ్యాట్, స్ట్రాబెర్రీ",Yogurt,Dairy Eggs,packet,95.0,71.92,87,10
+INSTA_19863,Classic Potato Chips,క్లాసిక్ పొటాటో చిప్స్,Chips Pretzels,Snacks,kg,20.0,16.24,32,10
+INSTA_23801,Fusilli No. 34,ఫుసిల్లి నం. 34,Dry Pasta,Dry Goods Pasta,packet,130.0,107.51,117,10
+INSTA_36076,Everything Deli Style Pretzel Crisps Crackers,అంతా డెలి స్టైల్ ప్రెట్జెల్ క్రిస్ప్స్ క్రాకర్స్,Chips Pretzels,Snacks,packet,85.0,69.61,109,10
+INSTA_8204,Traditional Favorites Tomato & Basil Pasta Sauce,సాంప్రదాయ ఇష్టమైన టొమాటో & బాసిల్ పాస్తా సాస్,Pasta Sauce,Dry Goods Pasta,packet,160.0,130.56,66,10
+INSTA_10831,Yobaby Organic Plain Yogurt,Yobaby సేంద్రీయ సాదా పెరుగు,Yogurt,Dairy Eggs,packet,120.0,90.96,68,10
+INSTA_13944,Pure Water,స్వచ్ఛమైన నీరు,Water Seltzer Sparkling Water,Beverages,litre,95.0,79.04,42,10
+INSTA_23765,Organic Smoked Turkey Breast,సేంద్రీయ స్మోక్డ్ టర్కీ బ్రెస్ట్,Lunch Meat,Deli,packet,85.0,64.17,145,10
+INSTA_35752,Hardwood SmokedCenter Cut Original Bacon,హార్డ్‌వుడ్ స్మోక్డ్‌సెంటర్ కట్ ఒరిజినల్ బేకన్,Hot Dogs Bacon Sausage,Meat Seafood,kg,165.0,130.02,38,10
+INSTA_38274,Ice Cream Sandwiches Vanilla,ఐస్ క్రీమ్ శాండ్విచ్లు వెనిలా,Ice Cream Ice,Frozen,packet,95.0,76.38,124,10
+INSTA_13988,Snow Peas,మంచు బఠానీలు,Fresh Vegetables,Produce,kg,45.0,37.89,92,10
+INSTA_22142,100% Pure Pumpkin,100% స్వచ్ఛమైన గుమ్మడికాయ,Baking Ingredients,Pantry,kg,215.0,180.17,118,10
+INSTA_43409,Frosted Mini-Wheats Original Cereal,తుషార మినీ-గోధుమలు ఒరిజినల్ తృణధాన్యాలు,Cereal,Breakfast,box,70.0,52.92,116,10
+INSTA_47652,Coconut Almond Minis Frozen Dessert Bars,కొబ్బరి ఆల్మండ్ మినిస్ ఘనీభవించిన డెజర్ట్ బార్‌లు,Ice Cream Ice,Frozen,packet,205.0,160.11,31,10
+INSTA_8467,Cinnamon Raisin Bread,దాల్చిన చెక్క రైసిన్ బ్రెడ్,Bread,Bakery,packet,95.0,78.38,105,10
+INSTA_18434,Organic Whole Crimini Mushrooms,సేంద్రీయ మొత్తం క్రిమినీ పుట్టగొడుగులు,Fresh Vegetables,Produce,kg,85.0,66.39,31,10
+INSTA_30183,Quaker Life Cinnamon Cereal,క్వేకర్ లైఫ్ సిన్నమోన్ సెరియల్,Cereal,Breakfast,box,190.0,156.94,106,10
+INSTA_39921,Lemon Lime Soda,నిమ్మకాయ లైమ్ సోడా,Soft Drinks,Beverages,litre,35.0,29.05,20,5
+INSTA_5451,Organic Zucchini Spirals,సేంద్రీయ గుమ్మడికాయ స్పైరల్స్,Fresh Vegetables,Produce,kg,115.0,96.6,100,10
+INSTA_11352,Organic Mini Sandwich Crackers Peanut Butter,ఆర్గానిక్ మినీ శాండ్‌విచ్ క్రాకర్స్ పీనట్ బటర్,Crackers,Snacks,packet,50.0,40.05,61,10
+INSTA_16249,Lacinato Kale Og,లాసినాటో కాలే ఓగ్,Fresh Vegetables,Produce,kg,100.0,83.1,81,10
+INSTA_21614,Crackers Harvest Whole Wheat,క్రాకర్స్ హోల్ వీట్ హార్వెస్ట్,Crackers,Snacks,packet,35.0,29.68,48,10
+INSTA_38544,Organic Whole Milk Strawberry Beet Berry Yogurt Pouch,ఆర్గానిక్ హోల్ మిల్క్ స్ట్రాబెర్రీ బీట్ బెర్రీ యోగర్ట్ పర్సు,Yogurt,Dairy Eggs,litre,55.0,42.24,148,10
+INSTA_1360,Crunchy Peanut Butter,క్రంచీ పీనట్ బట్టర్,Spreads,Pantry,kg,135.0,106.79,121,10
+INSTA_34551,Organic Cane Sugar,సేంద్రీయ చెరకు చక్కెర,Baking Ingredients,Pantry,kg,90.0,70.29,111,10
+INSTA_34,Peanut Butter Cereal,వేరుశెనగ వెన్న తృణధాన్యాలు,Cereal,Breakfast,box,70.0,58.8,70,10
+INSTA_3339,Organic Russet Potato Bag,సేంద్రీయ రస్సెట్ పొటాటో బ్యాగ్,Packaged Vegetables Fruits,Produce,kg,60.0,46.8,80,10
+INSTA_7806,Soft Pretzel Burger Buns,సాఫ్ట్ ప్రెట్జెల్ బర్గర్ బన్స్,Buns Rolls,Bakery,packet,40.0,31.44,46,10
+INSTA_19156,Fat Free Blueberry Yogurt,కొవ్వు రహిత బ్లూబెర్రీ పెరుగు,Yogurt,Dairy Eggs,packet,135.0,101.39,91,10
+INSTA_23044,Cream Top Smooth & Creamy Vanilla Yogurt,క్రీమ్ టాప్ స్మూత్ & క్రీమీ వెనిలా యోగర్ట్,Yogurt,Dairy Eggs,packet,115.0,95.68,42,10
+INSTA_37718,Blueberry Whole Milk Yogurt Pouch,బ్లూబెర్రీ హోల్ మిల్క్ యోగర్ట్ పర్సు,Yogurt,Dairy Eggs,litre,110.0,84.48,48,10
+INSTA_41593,Blue Cheese Crumbles,బ్లూ చీజ్ కృంగిపోతుంది,Packaged Cheese,Dairy Eggs,packet,60.0,49.14,29,5
+INSTA_6740,Organic Braeburn Apple,సేంద్రీయ బ్రేబర్న్ ఆపిల్,Fresh Fruits,Produce,kg,45.0,37.98,94,10
+INSTA_48812,Variety Pack,వెరైటీ ప్యాక్,Food Storage,Household,piece,115.0,95.56,121,10
+INSTA_45613,Pad Thai,ప్యాడ్ థాయ్,Frozen Meals,Frozen,packet,195.0,163.8,130,10
+INSTA_25952,Original Potato Chips,ఒరిజినల్ పొటాటో చిప్స్,Chips Pretzels,Snacks,kg,115.0,91.43,85,10
+INSTA_25985,Chicken & Apple Smoked Chicken Sausage,చికెన్ & ఆపిల్ స్మోక్డ్ చికెన్ సాసేజ్,Hot Dogs Bacon Sausage,Meat Seafood,kg,155.0,117.34,27,5
+INSTA_31663,Vanilla Blueberry Clusters With Flax Seeds Granola,అవిసె గింజలు గ్రానోలాతో వెనిలా బ్లూబెర్రీ క్లస్టర్లు,Granola,Breakfast,box,170.0,140.76,68,10
+INSTA_45013,Apple Sauce,ఆపిల్ సాస్,Canned Fruit Applesauce,Canned Goods,kg,145.0,122.67,136,10
+INSTA_8710,Dairy Free Coconut Milk Blueberry Yogurt Alternative,డైరీ ఫ్రీ కొబ్బరి పాలు బ్లూబెర్రీ పెరుగు ప్రత్యామ్నాయం,Yogurt,Dairy Eggs,litre,35.0,28.52,85,10
+INSTA_24082,Organic Dark Sweet Cherries,ఆర్గానిక్ డార్క్ స్వీట్ చెర్రీస్,Frozen Produce,Frozen,packet,215.0,175.01,44,10
+INSTA_27985,Smartwater Electrolyte Enhanced Water,స్మార్ట్‌వాటర్ ఎలక్ట్రోలైట్ మెరుగైన నీరు,Water Seltzer Sparkling Water,Beverages,litre,35.0,29.5,63,10
+INSTA_32156,Cranberry Juice Cocktail,క్రాన్బెర్రీ జ్యూస్ కాక్టెయిల్,Juice Nectars,Beverages,litre,65.0,53.43,52,10
+INSTA_36127,Freshly Squeezed Orange Juice,తాజాగా పిండిన ఆరెంజ్ జ్యూస్,Refrigerated,Beverages,litre,165.0,140.09,49,10
+INSTA_38656,Gluten Free Peanut Butter Dark Chocolate Chewy With a Crunch Granola Bars,క్రంచ్ గ్రానోలా బార్‌లతో గ్లూటెన్ ఫ్రీ పీనట్ బటర్ డార్క్ చాక్లెట్ ఛీవీ,Energy Granola Bars,Snacks,packet,45.0,37.21,27,5
+INSTA_47229,Bag of Organic Fuji Apples,ఆర్గానిక్ ఫుజి యాపిల్స్ బ్యాగ్,Packaged Vegetables Fruits,Produce,kg,40.0,32.08,122,10
+INSTA_18352,Flax Plus Organic Pumpkin Flax Granola,ఫ్లాక్స్ ప్లస్ ఆర్గానిక్ గుమ్మడికాయ ఫ్లాక్స్ గ్రానోలా,Granola,Breakfast,box,65.0,53.62,95,10
+INSTA_33065,Cabernet Sauvignon,కాబెర్నెట్ సావిగ్నాన్,Red Wines,Alcohol,packet,95.0,75.62,46,10
+INSTA_33147,Organic Crimini Mushrooms,సేంద్రీయ క్రిమినీ పుట్టగొడుగులు,Fresh Vegetables,Produce,kg,95.0,72.11,49,10
+INSTA_33351,Light Multi-Grain English Muffins,లైట్ మల్టీ-గ్రెయిన్ ఇంగ్లీష్ మఫిన్‌లు,Breakfast Bakery,Bakery,packet,60.0,46.98,113,10
+INSTA_44548,Barbecue Potato Chips,బార్బెక్యూ పొటాటో చిప్స్,Chips Pretzels,Snacks,kg,25.0,18.85,44,10
+INSTA_7916,Grilled Chicken Breast,కాల్చిన చికెన్ బ్రెస్ట్,Prepared Meals,Deli,packet,210.0,163.8,70,10
+INSTA_8736,Synergy Organic & Raw Cosmic Cranberry,సినర్జీ ఆర్గానిక్ & రా కాస్మిక్ క్రాన్‌బెర్రీ,Refrigerated,Beverages,bottle,80.0,66.24,108,10
+INSTA_28836,Grapefruit Juice,ద్రాక్షపండు రసం,Refrigerated,Beverages,litre,95.0,78.75,69,10
+INSTA_29941,Red Plums,రెడ్ ప్లమ్స్,Fresh Fruits,Produce,kg,60.0,45.78,33,10
+INSTA_35199,100% Apple Juice,100% ఆపిల్ జ్యూస్,Juice Nectars,Beverages,litre,70.0,54.18,54,10
+INSTA_43967,Raspberry Lemonade,రాస్ప్బెర్రీ నిమ్మరసం,Refrigerated,Beverages,bottle,95.0,78.75,69,10
+INSTA_26096,"Organic Gala Apples, Bag","ఆర్గానిక్ గాలా యాపిల్స్, బ్యాగ్",Fresh Fruits,Produce,kg,100.0,81.2,52,10
+INSTA_26201,Chicken Taquitos,చికెన్ టాకిటోస్,Frozen Appetizers Sides,Frozen,packet,85.0,63.92,42,10
+INSTA_32139,Hommus Classic Original,హోముస్ క్లాసిక్ ఒరిజినల్,Fresh Dips Tapenades,Deli,packet,150.0,112.5,120,10
+INSTA_40354,California Clementines,కాలిఫోర్నియా క్లెమెంటైన్స్,Fresh Fruits,Produce,kg,95.0,74.1,80,10
+INSTA_43735,Tomato Kumato,టొమాటో కుమాటో,Fresh Vegetables,Produce,kg,85.0,66.56,63,10
+INSTA_13780,Thyme,థైమ్,Fresh Herbs,Produce,kg,115.0,87.63,142,10
+INSTA_14332,Organic Yellow Mustard,సేంద్రీయ పసుపు ఆవాలు,Condiments,Pantry,kg,120.0,97.44,72,10
+INSTA_18564,Diet Ginger Ale All Natural Soda,ఆహారం అల్లం ఆలే ఆల్ నేచురల్ సోడా,Soft Drinks,Beverages,litre,60.0,48.6,70,10
+INSTA_22089,Vitamin D Milk,విటమిన్ డి పాలు,Milk,Dairy Eggs,litre,75.0,60.3,44,10
+INSTA_29615,"Bread, Country Buttermilk","బ్రెడ్, దేశీ మజ్జిగ",Bread,Bakery,litre,35.0,28.45,53,10
+INSTA_29898,Organic Spaghetti Pasta,సేంద్రీయ స్పఘెట్టి పాస్తా,Dry Pasta,Dry Goods Pasta,packet,170.0,135.32,56,10
+INSTA_38185,Hint of Lime Flavored Tortilla Chips,లైమ్ ఫ్లేవర్డ్ టోర్టిల్లా చిప్స్ యొక్క సూచన,Chips Pretzels,Snacks,packet,20.0,16.08,144,10
+INSTA_41276,Energy Drink,ఎనర్జీ డ్రింక్,Energy Sports Drinks,Beverages,bottle,50.0,41.45,29,5
+INSTA_1516,Organic Acai Berry Smoothie Packs,ఆర్గానిక్ ఎకై బెర్రీ స్మూతీ ప్యాక్‌లు,Frozen Produce,Frozen,packet,225.0,171.45,62,10
+INSTA_4462,Pink Lady Apple Kombucha,పింక్ లేడీ ఆపిల్ కొంబుచా,Tea,Beverages,kg,135.0,104.22,132,10
+INSTA_8555,Sweet Potato Tortilla Chips,స్వీట్ పొటాటో టోర్టిల్లా చిప్స్,Chips Pretzels,Snacks,kg,65.0,53.04,46,10
+INSTA_11782,Bing Cherries,బింగ్ చెర్రీస్,Fresh Fruits,Produce,kg,40.0,32.8,100,10
+INSTA_14467,Sweet Baguette,స్వీట్ బాగెట్,Bread,Bakery,packet,70.0,56.21,63,10
+INSTA_24850,Organic Super Fruit Punch Juice Drink,ఆర్గానిక్ సూపర్ ఫ్రూట్ పంచ్ జ్యూస్ డ్రింక్,Juice Nectars,Beverages,litre,75.0,58.73,43,10
+INSTA_39121,Organic Jasmine Rice,ఆర్గానిక్ జాస్మిన్ రైస్,Frozen Meals,Frozen,packet,80.0,67.44,93,10
+INSTA_9390,Frozen Peaches,ఘనీభవించిన పీచెస్,Frozen Produce,Frozen,packet,90.0,70.2,30,5
+INSTA_10151,Bolthouse Baby Carrots,బోల్ట్‌హౌస్ బేబీ క్యారెట్లు,Packaged Vegetables Fruits,Produce,kg,65.0,54.02,101,10
+INSTA_12481,Oreo Chocolate Sandwich Cookies,ఓరియో చాక్లెట్ శాండ్‌విచ్ కుకీలు,Cookies Cakes,Snacks,packet,85.0,68.42,65,10
+INSTA_22556,All Natural Apricot Sparkling Water,అన్ని సహజ ఆప్రికాట్ మెరిసే నీరు,Water Seltzer Sparkling Water,Beverages,litre,145.0,120.35,130,10
+INSTA_23888,Hamburger Buns,హాంబర్గర్ బన్స్,Buns Rolls,Bakery,packet,75.0,62.17,89,10
+INSTA_47966,Old Fashioned Rolled Oats,పాత ఫ్యాషన్ రోల్డ్ ఓట్స్,Hot Cereal Pancake Mixes,Breakfast,box,90.0,69.48,102,10
+INSTA_5438,Prosciutto,ప్రోసియుటో,Lunch Meat,Deli,packet,200.0,164.2,21,5
+INSTA_39041,Original Wheat Thins,ఒరిజినల్ వీట్ థిన్స్,Crackers,Snacks,packet,30.0,24.24,108,10
+INSTA_46206,Red Grapefruit,ఎరుపు ద్రాక్షపండు,Fresh Fruits,Produce,kg,135.0,108.0,120,10
+INSTA_46990,Ground Buffalo,గ్రౌండ్ బఫెలో,Packaged Meat,Meat Seafood,kg,375.0,307.88,141,10

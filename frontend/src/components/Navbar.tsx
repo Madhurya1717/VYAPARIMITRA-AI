@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useRealtime } from '../context/RealtimeContext';
 import { SupportedLanguage, NotificationItem } from '../types';
 import { api } from '../services/api';
 import {
-  Store, Globe, Mic, Bell, LogOut, ChevronDown, Check,
-  Radio, ShieldCheck, Sparkles, AlertCircle
+  Store, Globe, Mic, Bell, ChevronDown, Check,
+  Radio, Sparkles, AlertCircle, User as UserIcon
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -13,6 +14,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenVoiceModal }) => {
   const { business, user, language, setLanguage, logout } = useAuth();
+  const { isConnected } = useRealtime();
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const [notifMenuOpen, setNotifMenuOpen] = useState(false);
   const [notifications, setNotifications] = useState<NotificationItem[]>([]);
@@ -34,59 +36,57 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVoiceModal }) => {
   const languageOptions: { code: SupportedLanguage; label: string; sub: string }[] = [
     { code: 'te-IN', label: 'తెలుగు', sub: 'Telugu (Prisma + Timbre)' },
     { code: 'en-IN', label: 'English', sub: 'Indian English' },
-    { code: 'te-en', label: 'Tenglish', sub: 'Code-Mixed (తెలుగు + Eng)' },
+    { code: 'indic-auto', label: 'Tenglish', sub: 'Code-Mixed (తెలుగు + Eng)' },
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <header className="sticky top-0 z-40 w-full border-b border-[#E5E9E3] bg-[#F8F5ED]/95 backdrop-blur-md">
+      <div className="w-full px-4 sm:px-6 h-14 flex items-center justify-between">
         
         {/* Brand & Store Name */}
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 shadow-md shadow-emerald-500/20">
-              <Mic className="w-5 h-5 font-bold" />
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 md:hidden">
+            <div className="w-8 h-8 rounded-lg bg-[#52745F] flex items-center justify-center text-white shadow-xs">
+              <Mic className="w-4 h-4" />
             </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-base font-bold tracking-tight text-white">VYAPARIMITRA</span>
-                <span className="text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                  AI
-                </span>
-              </div>
-              <p className="text-[10px] text-slate-400 hidden sm:block">
-                Your Business. Your Voice. Your Language.
-              </p>
-            </div>
+            <span className="text-sm font-black text-[#28332C]">VYAPARIMITRA AI</span>
           </div>
 
           {business && (
-            <div className="hidden md:flex items-center gap-2 pl-4 border-l border-slate-800">
-              <Store className="w-4 h-4 text-emerald-400" />
-              <span className="text-xs font-semibold text-slate-300 max-w-[200px] truncate">
+            <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-lg bg-[#EDF5EF] border border-[#E5E9E3]">
+              <Store className="w-3.5 h-3.5 text-[#52745F]" />
+              <span className="text-xs font-bold text-[#28332C] max-w-[220px] truncate">
                 {business.name}
               </span>
+              <span className="text-[10px] text-[#7D887F] hidden lg:inline">| Kirana Store</span>
             </div>
           )}
         </div>
 
         {/* Action Controls & Badges */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           
+          {/* Real-time WebSocket Status Pill */}
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-[#E5E9E3] text-[11px] font-semibold text-[#28332C] shadow-xs">
+            <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-[#3C9970] animate-pulse' : 'bg-[#E3A04C]'}`} />
+            <span className="hidden sm:inline">{isConnected ? 'Live Sync Active' : 'Connecting...'}</span>
+            <span className="sm:hidden">{isConnected ? 'Live' : '...'}</span>
+          </div>
+
           {/* Gnani Engine Live Badge */}
-          <div className="hidden lg:flex items-center gap-2 px-3 py-1 bg-slate-900 rounded-full border border-slate-800 text-[11px] text-slate-300">
-            <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <div className="hidden lg:flex items-center gap-1.5 px-3 py-1 bg-[#EDF5EF] rounded-full border border-[#E5E9E3] text-[11px] text-[#52745F] font-semibold">
+            <Sparkles className="w-3 h-3 text-[#C77B52]" />
             <span>Gnani AI: Prisma & Timbre</span>
           </div>
 
-          {/* Quick Voice Launcher */}
+          {/* Quick Voice Launcher (Terracotta accent) */}
           {onOpenVoiceModal && (
             <button
               onClick={onOpenVoiceModal}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/20 transition-all shadow-sm"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#C77B52] hover:bg-[#B66A42] text-white shadow-xs transition-all active:scale-95"
               title="Launch Voice Assistant"
             >
-              <Mic className="w-3.5 h-3.5 text-emerald-400" />
+              <Mic className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">Voice Assistant</span>
             </button>
           )}
@@ -95,17 +95,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVoiceModal }) => {
           <div className="relative">
             <button
               onClick={() => setLangMenuOpen(!langMenuOpen)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-semibold bg-white hover:bg-[#EDF5EF] text-[#28332C] border border-[#E5E9E3] transition-colors"
             >
-              <Globe className="w-3.5 h-3.5 text-emerald-400" />
-              <span>{languageOptions.find(l => l.code === language)?.label || 'తెలుగు'}</span>
-              <ChevronDown className="w-3 h-3 text-slate-400" />
+              <Globe className="w-3.5 h-3.5 text-[#52745F]" />
+              <span className="uppercase text-[11px] font-bold">{language === 'indic-auto' || (language as string) === 'te-en' ? 'TE/EN' : language.split('-')[0]}</span>
+              <ChevronDown className="w-3 h-3 text-[#7D887F]" />
             </button>
 
             {langMenuOpen && (
-              <div className="absolute right-0 mt-2 w-56 rounded-xl bg-slate-900 border border-slate-800 shadow-2xl py-1 z-50">
-                <div className="px-3 py-2 border-b border-slate-800 text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                  Voice & Display Language
+              <div className="absolute right-0 mt-2 w-56 rounded-xl bg-white border border-[#E5E9E3] shadow-lg py-2 z-50">
+                <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#7D887F]">
+                  Store Language
                 </div>
                 {languageOptions.map((opt) => (
                   <button
@@ -114,52 +114,52 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVoiceModal }) => {
                       setLanguage(opt.code);
                       setLangMenuOpen(false);
                     }}
-                    className={`w-full px-3 py-2 text-left flex items-center justify-between text-xs hover:bg-slate-800 transition-colors ${
-                      language === opt.code ? 'text-emerald-400 font-semibold bg-emerald-500/10' : 'text-slate-300'
+                    className={`w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-[#EDF5EF] transition-colors ${
+                      language === opt.code ? 'text-[#52745F] font-bold bg-[#E4EFE6]' : 'text-[#28332C]'
                     }`}
                   >
                     <div>
-                      <div className="font-medium">{opt.label}</div>
-                      <div className="text-[10px] text-slate-400">{opt.sub}</div>
+                      <div className="font-semibold">{opt.label}</div>
+                      <div className="text-[10px] text-[#7D887F]">{opt.sub}</div>
                     </div>
-                    {language === opt.code && <Check className="w-4 h-4 text-emerald-400" />}
+                    {language === opt.code && <Check className="w-3.5 h-3.5 text-[#52745F]" />}
                   </button>
                 ))}
               </div>
             )}
           </div>
 
-          {/* Notifications Bell */}
+          {/* Notifications Dropdown */}
           <div className="relative">
             <button
               onClick={() => setNotifMenuOpen(!notifMenuOpen)}
-              className="relative p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+              className="relative p-2 rounded-xl bg-white hover:bg-[#EDF5EF] border border-[#E5E9E3] text-[#28332C] transition-colors"
+              title="Notifications"
             >
-              <Bell className="w-4 h-4" />
+              <Bell className="w-4 h-4 text-[#52745F]" />
               {unreadCount > 0 && (
-                <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-slate-950 animate-pulse" />
+                <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#C77B52] text-white text-[9px] font-bold flex items-center justify-center">
+                  {unreadCount}
+                </span>
               )}
             </button>
 
             {notifMenuOpen && (
-              <div className="absolute right-0 mt-2 w-80 rounded-xl bg-slate-900 border border-slate-800 shadow-2xl py-2 z-50">
-                <div className="px-4 py-2 border-b border-slate-800 flex items-center justify-between">
-                  <span className="text-xs font-semibold text-slate-200">Alerts & Notifications</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-mono">
-                    {unreadCount} new
-                  </span>
+              <div className="absolute right-0 mt-2 w-72 rounded-xl bg-white border border-[#E5E9E3] shadow-lg py-2 z-50">
+                <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#7D887F] flex items-center justify-between">
+                  <span>Notifications</span>
+                  <span className="text-[10px] text-[#52745F]">{notifications.length} alerts</span>
                 </div>
-                <div className="max-h-64 overflow-y-auto divide-y divide-slate-800/60">
+                <div className="max-h-64 overflow-y-auto sage-scrollbar divide-y divide-[#E5E9E3]/50">
                   {notifications.length === 0 ? (
-                    <div className="p-4 text-center text-xs text-slate-400">No active alerts</div>
+                    <div className="px-3 py-4 text-center text-xs text-[#7D887F]">
+                      No notifications yet
+                    </div>
                   ) : (
-                    notifications.map(n => (
-                      <div key={n.id} className="p-3 hover:bg-slate-800/50 transition-colors">
-                        <div className="flex items-center gap-1.5 text-xs font-semibold text-amber-300">
-                          <AlertCircle className="w-3.5 h-3.5 text-amber-400" />
-                          <span>{n.title}</span>
-                        </div>
-                        <p className="text-[11px] text-slate-400 mt-1">{n.message}</p>
+                    notifications.map((n) => (
+                      <div key={n.id} className="p-2.5 hover:bg-[#EDF5EF] text-xs">
+                        <div className="font-semibold text-[#28332C]">{n.title}</div>
+                        <div className="text-[11px] text-[#7D887F] mt-0.5">{n.message}</div>
                       </div>
                     ))
                   )}
@@ -168,23 +168,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVoiceModal }) => {
             )}
           </div>
 
-          {/* User & Logout */}
-          <div className="flex items-center gap-2 pl-2 border-l border-slate-800">
-            <div className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-xs font-bold text-slate-200">
-              {user?.full_name ? user.full_name[0] : 'V'}
-            </div>
-            <button
-              onClick={logout}
-              title="Logout"
-              className="p-1.5 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors"
-            >
-              <LogOut className="w-4 h-4" />
-            </button>
-          </div>
-
         </div>
       </div>
     </header>
   );
 };
 
+export default Navbar;

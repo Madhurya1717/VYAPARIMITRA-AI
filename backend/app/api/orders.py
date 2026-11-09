@@ -8,6 +8,7 @@ from sqlalchemy.orm import selectinload
 
 from backend.app.core.database import get_db
 from backend.app.core.security import get_current_user
+from backend.app.core.realtime import realtime_manager
 from backend.app.models.business import User
 from backend.app.models.orders import Customer, Order, OrderItem
 from backend.app.models.inventory import Product
@@ -24,7 +25,11 @@ async def list_orders(
     query = select(Order).filter(Order.business_id == current_user.business_id)
     if status:
         query = query.filter(Order.status == status)
-    query = query.options(selectinload(Order.items).selectinload(OrderItem.product), selectinload(Order.customer)).order_by(Order.created_at.desc())
+    query = query.options(
+        selectinload(Order.items).selectinload(OrderItem.product),
+        selectinload(Order.customer)
+    ).order_by(Order.created_at.desc())
+    
     res = await db.execute(query)
     orders = res.scalars().all()
 
@@ -33,7 +38,7 @@ async def list_orders(
         items = [{
             "id": itm.id,
             "product_id": itm.product_id,
-            "product_name": itm.product.name if itm.product else "Unknown",
+            "product_name": itm.product.name if itm.product else "Kirana Item",
             "quantity": float(itm.quantity),
             "unit_price": float(itm.unit_price),
             "total_price": float(itm.total_price)
@@ -43,7 +48,7 @@ async def list_orders(
             "id": o.id,
             "business_id": o.business_id,
             "customer_id": o.customer_id,
-            "customer_name": o.customer.name if o.customer else None,
+            "customer_name": o.customer.name if o.customer else "Walk-in Customer",
             "customer_phone": o.customer.phone if o.customer else None,
             "order_number": o.order_number,
             "status": o.status,
@@ -66,7 +71,10 @@ async def create_order(
     customer_id = data.customer_id
     if not customer_id and data.customer_phone:
         c_res = await db.execute(
-            select(Customer).filter(Customer.phone == data.customer_phone, Customer.business_id == current_user.business_id)
+            select(Customer).filter(
+                Customer.phone == data.customer_phone,
+                Customer.business_id == current_user.business_id
+            )
         )
         existing_c = c_res.scalar_one_or_none()
         if existing_c:
@@ -87,7 +95,10 @@ async def create_order(
 
     for itm in data.items:
         p_res = await db.execute(
-            select(Product).filter(Product.id == itm.product_id, Product.business_id == current_user.business_id)
+            select(Product).filter(
+                Product.id == itm.product_id,
+                Product.business_id == current_user.business_id
+            )
         )
         product = p_res.scalar_one_or_none()
         if not product:
@@ -120,8 +131,123 @@ async def create_order(
         db.add(oi)
 
     await db.commit()
+    
+    # Reload with relations
+    q = (
+        select(Order)
+        .filter(Order.id == order.id)
+        .options(
+            selectinload(Order.items).selectinload(OrderItem.product),
+            selectinload(Order.customer)
+        )
+    )
+    res = await db.execute(q)
+    refreshed_order = res.scalar_one()
+
+    items = [{
+        "id": itm.id,
+        "product_id": itm.product_id,
+        "product_name": itm.product.name if itm.product else "Kirana Item",
+        "quantity": float(itm.quantity),
+        "unit_price": float(itm.unit_price),
+        "total_price": float(itm.total_price)
+    } for itm in refreshed_order.items]
+
+    # Broadcast real-time order event
+    try:
+        await realtime_manager.broadcast("ORDER_UPDATED", {
+            "order_id": refreshed_order.id,
+            "order_number": refreshed_order.order_number,
+            "status": refreshed_order.status,
+            "total_amount": float(refreshed_order.total_amount),
+            "customer_name": refreshed_order.customer.name if refreshed_order.customer else (data.customer_name or "Walk-in Customer")
+        })
+    except Exception:
+        pass
+
+    return {
+        "id": refreshed_order.id,
+        "business_id": refreshed_order.business_id,
+        "customer_id": refreshed_order.customer_id,
+        "customer_name": refreshed_order.customer.name if refreshed_order.customer else (data.customer_name or "Walk-in Customer"),
+        "customer_phone": refreshed_order.customer.phone if refreshed_order.customer else data.customer_phone,
+        "order_number": refreshed_order.order_number,
+        "status": refreshed_order.status,
+        "payment_status": refreshed_order.payment_status,
+        "total_amount": float(refreshed_order.total_amount),
+        "notes": refreshed_order.notes,
+        "items": items,
+        "created_at": refreshed_order.created_at,
+        "updated_at": refreshed_order.updated_at
+    }
+
+@router.patch("/{order_id}", response_model=OrderResponse)
+async def update_order_status(
+    order_id: str,
+    data: OrderUpdate,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    q = (
+        select(Order)
+        .filter(Order.id == order_id, Order.business_id == current_user.business_id)
+        .options(
+            selectinload(Order.items).selectinload(OrderItem.product),
+            selectinload(Order.customer)
+        )
+    )
+    res = await db.execute(q)
+    order = res.scalar_one_or_none()
+    if not order:
+        raise HTTPException(status_code=404, detail="Order not found")
+
+    if data.status:
+        order.status = data.status
+    if data.payment_status:
+        order.payment_status = data.payment_status
+    if data.notes is not None:
+        order.notes = data.notes
+
+    await db.commit()
     await db.refresh(order)
 
-    # Return refreshed order
-    return await list_orders(status=None, current_user=current_user, db=db)
+    # Re-fetch with relations loaded
+    res_ref = await db.execute(q)
+    order_updated = res_ref.scalar_one()
 
+    items = [{
+        "id": itm.id,
+        "product_id": itm.product_id,
+        "product_name": itm.product.name if itm.product else "Kirana Item",
+        "quantity": float(itm.quantity),
+        "unit_price": float(itm.unit_price),
+        "total_price": float(itm.total_price)
+    } for itm in order_updated.items]
+
+    # Broadcast real-time order status change
+    try:
+        await realtime_manager.broadcast("ORDER_UPDATED", {
+            "order_id": order_updated.id,
+            "order_number": order_updated.order_number,
+            "status": order_updated.status,
+            "total_amount": float(order_updated.total_amount),
+            "customer_name": order_updated.customer.name if order_updated.customer else "Walk-in Customer"
+        })
+    except Exception:
+        pass
+
+    return {
+        "id": order_updated.id,
+        "business_id": order_updated.business_id,
+        "customer_id": order_updated.customer_id,
+        "customer_name": order_updated.customer.name if order_updated.customer else "Walk-in Customer",
+        "customer_phone": order_updated.customer.phone if order_updated.customer else None,
+        "order_number": order_updated.order_number,
+        "status": order_updated.status,
+        "payment_status": order_updated.payment_status,
+        "total_amount": float(order_updated.total_amount),
+        "notes": order_updated.notes,
+        "items": items,
+        "created_at": order_updated.created_at,
+        "updated_at": order_updated.updated_at
+    }

@@ -40,38 +40,79 @@ class ApiClient {
       headers['Content-Type'] = 'application/json';
     }
 
-    const response = await fetch(url, {
-      ...options,
-      headers,
-    });
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 12000);
 
-    if (!response.ok) {
-      let errorMsg = `HTTP Error ${response.status}`;
-      try {
-        const errorJson = await response.json();
-        errorMsg = errorJson.detail || errorJson.message || errorMsg;
-      } catch (e) {
-        // use default error message
+    try {
+      const response = await fetch(url, {
+        ...options,
+        headers,
+        signal: options.signal || controller.signal,
+      });
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        let errorMsg = `HTTP Error ${response.status}`;
+        try {
+          const errorJson = await response.json();
+          errorMsg = errorJson.detail || errorJson.message || errorMsg;
+        } catch (e) {
+          // use default error message
+        }
+        throw new Error(errorMsg);
       }
-      throw new Error(errorMsg);
-    }
 
-    return response.json();
+      return response.json();
+    } catch (e: any) {
+      clearTimeout(timeoutId);
+      if (e.name === 'AbortError') {
+        throw new Error('Request timed out after 12s. Please check connection and retry.');
+      }
+      throw e;
+    }
   }
 
-  // Auth Endpoints
-  async login(phone_or_email: string, password: string) {
+  // Auth Endpoints (Two-Step Login Verification)
+  async loginStep1(phone_or_email: string, password: string) {
+    return this.request<{
+      otp_required: boolean;
+      session_token: string;
+      email_masked: string;
+      expires_in_seconds: number;
+      message: string;
+    }>('/auth/login-json', {
+      method: 'POST',
+      body: JSON.stringify({ phone_or_email, password }),
+    });
+  }
+
+  async verifyOtp(session_token: string, otp: string) {
     const data = await this.request<{
       access_token: string;
       token_type: string;
       user: User;
       business: Business;
-    }>('/auth/login-json', {
+    }>('/auth/verify-otp', {
       method: 'POST',
-      body: JSON.stringify({ phone_or_email, password }),
+      body: JSON.stringify({ session_token, otp }),
     });
     this.setToken(data.access_token);
     return data;
+  }
+
+  async resendOtp(session_token: string) {
+    return this.request<{
+      success: boolean;
+      message: string;
+      expires_in_seconds: number;
+    }>('/auth/resend-otp', {
+      method: 'POST',
+      body: JSON.stringify({ session_token }),
+    });
+  }
+
+  async login(phone_or_email: string, password: string) {
+    return this.loginStep1(phone_or_email, password);
   }
 
   async register(payload: {
@@ -198,9 +239,16 @@ class ApiClient {
     items: Array<{ product_id: string; quantity: number; unit_price?: number }>;
     notes?: string;
   }) {
-    return this.request<Order[]>('/orders', {
+    return this.request<Order>('/orders', {
       method: 'POST',
       body: JSON.stringify(orderData),
+    });
+  }
+
+  async updateOrderStatus(orderId: string, update: { status?: string; payment_status?: string; notes?: string }) {
+    return this.request<Order>(`/orders/${orderId}`, {
+      method: 'PATCH',
+      body: JSON.stringify(update),
     });
   }
 
@@ -218,8 +266,9 @@ class ApiClient {
   }
 
   // Analytics Endpoints
-  async getDashboard() {
-    return this.request<DashboardSummary>('/analytics/dashboard');
+  async getDashboard(range?: string) {
+    const qs = range ? `?range=${encodeURIComponent(range)}` : '';
+    return this.request<DashboardSummary>(`/analytics/dashboard${qs}`);
   }
 
   // Notifications Endpoints
@@ -243,7 +292,8 @@ class ApiClient {
   }): Promise<VoiceProcessResponse> {
     const formData = new FormData();
     if (options.audioBlob) {
-      formData.append('audio_file', options.audioBlob, 'voice_command.wav');
+      const isWav = options.audioBlob.type.includes('wav');
+      formData.append('audio_file', options.audioBlob, isWav ? 'voice_command.wav' : 'voice_command.webm');
     }
     if (options.transcriptionText) {
       formData.append('transcription_text', options.transcriptionText);
@@ -268,6 +318,40 @@ class ApiClient {
 
   async checkHealth() {
     return this.request<any>('/health', {}, );
+  }
+  // Grocery Sales Simulation Endpoints
+  async getSimulationStatus() {
+    return this.request<{
+      is_running: boolean;
+      interval_seconds: number;
+      total_simulated_sales: number;
+      total_simulated_revenue: number;
+      last_transaction: any;
+      active_business_id: string;
+    }>('/demo/simulation/status');
+  }
+
+  async startSimulation(interval_seconds: number = 3) {
+    return this.request<{ success: boolean; message: string; is_running: boolean }>('/demo/simulation/start', {
+      method: 'POST',
+      body: JSON.stringify({ interval_seconds }),
+    });
+  }
+
+  async stopSimulation() {
+    return this.request<{ success: boolean; message: string; is_running: boolean }>('/demo/simulation/stop', {
+      method: 'POST',
+    });
+  }
+
+  async getSimulationTransactions(limit: number = 20) {
+    return this.request<any[]>(`/demo/simulation/transactions?limit=${limit}`);
+  }
+
+  async resetSimulation() {
+    return this.request<{ success: boolean; message: string; deleted_sales_count: number }>('/demo/simulation/reset', {
+      method: 'POST',
+    });
   }
 }
 

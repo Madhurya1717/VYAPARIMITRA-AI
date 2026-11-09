@@ -1,11 +1,14 @@
 import os
-from typing import List, Union
+from typing import List, Union, Optional
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import field_validator
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env"),
+        env_file=(
+            os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env"),
+            ".env"
+        ),
         env_file_encoding="utf-8",
         extra="ignore"
     )
@@ -28,6 +31,14 @@ class Settings(BaseSettings):
     GNANI_STT_DEFAULT_LANG: str = "te-IN"
     GNANI_TTS_DEFAULT_MODEL: str = "timbre-v2.5"
     GNANI_TTS_DEFAULT_VOICE: str = "Nalini"
+
+    # SMTP Email Configuration (Optional - falls back to dev console output)
+    SMTP_HOST: Optional[str] = None
+    SMTP_PORT: int = 587
+    SMTP_USER: Optional[str] = None
+    SMTP_PASSWORD: Optional[str] = None
+    SMTP_FROM_EMAIL: str = "noreply@vyaparimitra.ai"
+    SMTP_TLS: bool = True
 
     # CORS
     CORS_ORIGINS: Union[List[str], str] = [

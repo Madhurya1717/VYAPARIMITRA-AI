@@ -1,6 +1,6 @@
 import uuid
 from datetime import datetime, timezone
-from sqlalchemy import Column, String, DateTime, Numeric, Text, ForeignKey
+from sqlalchemy import Column, String, DateTime, Numeric, Text, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 from backend.app.core.database import Base
 
@@ -20,8 +20,13 @@ class Sale(Base):
     total_amount = Column(Numeric(12, 2), default=0.0, nullable=False)
     payment_method = Column(String(32), default="cash", nullable=False)  # cash, upi, credit
     status = Column(String(32), default="completed", nullable=False)  # completed, cancelled, refunded
+    is_simulation = Column(Boolean, default=False, nullable=False, index=True)
     notes = Column(Text, nullable=True)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+)
 
     business = relationship("Business", back_populates="sales")
     customer = relationship("Customer", back_populates="sales")
@@ -37,8 +42,11 @@ class SaleItem(Base):
     quantity = Column(Numeric(12, 3), nullable=False)
     unit_price = Column(Numeric(10, 2), nullable=False)
     total_price = Column(Numeric(12, 2), nullable=False)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
-
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+)
     sale = relationship("Sale", back_populates="items")
     product = relationship("Product", back_populates="sale_items")
 
@@ -50,7 +58,11 @@ class Invoice(Base):
     invoice_number = Column(String(64), unique=True, nullable=False, index=True)
     pdf_url = Column(String(512), nullable=True)
     qr_payload = Column(Text, nullable=True)  # For UPI payment QR code
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+)
 
     sale = relationship("Sale", back_populates="invoice")
 

@@ -24,7 +24,7 @@ Engineered specifically for the **Great Indian AI Internship Challenge by Gnani.
 
 ### 🎙️ 1. Multilingual Voice AI Operating System
 - **Hands-Free Shop Operation:** Record sales, restock inventory, check current balances, and receive spoken business reports in real time without touching a keyboard.
-- **Natural Language Understanding (NLU):** Handles Telugu numeral words (*పది, ఇరవై, యాభై*), regional measurement units (*కిలో, కేజీ, లీటర్, బస్తా, ప్యాకెట్*), and colloquial code-mixed utterances (*"Today 10 kilos rice sell chesanu"*).
+- **Natural Language Understanding (NLU):** Handles Telugu numeral words (*పది, ఇరవై, యాభై*  ), regional measurement units (*కిలో, కేజీ, లీటర్, బస్తా, ప్యాకెట్*), and colloquial code-mixed utterances (*"Today 10 kilos rice sell chesanu"*).
 - **Two-Way Voice Dialogue:** Transcribes merchant speech using **Gnani Prisma** and responds with natural, respectful spoken audio confirmations synthesized via **Gnani Timbre** (voice: *Nalini*).
 
 ### 📦 2. Real-Time Inventory & Ledger Architecture

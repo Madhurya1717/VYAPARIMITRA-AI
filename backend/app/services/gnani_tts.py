@@ -14,10 +14,13 @@ class GnaniTimbreTTSService:
     """
 
     def __init__(self):
-        self.api_key = settings.GNANI_API_KEY
         self.endpoint = settings.GNANI_TTS_ENDPOINT
         self.default_model = settings.GNANI_TTS_DEFAULT_MODEL
         self.default_voice = settings.GNANI_TTS_DEFAULT_VOICE
+
+    @property
+    def api_key(self) -> str:
+        return settings.GNANI_API_KEY
 
     async def synthesize_speech(
         self,
@@ -77,9 +80,18 @@ class GnaniTimbreTTSService:
                             "voice": target_voice,
                             "error": None
                         }
+                    elif response.status_code in (401, 403):
+                        logger.error(f"Gnani Timbre TTS Authentication failed ({response.status_code}): Invalid or expired API Key.")
+                    elif response.status_code in (408, 504):
+                        logger.error(f"Gnani Timbre TTS Request timeout ({response.status_code}): Server timed out.")
+                    elif response.status_code == 429:
+                        logger.error("Gnani Timbre TTS Rate limit exceeded (429).")
                     else:
                         logger.warning(f"Gnani Timbre returned HTTP {response.status_code}: {response.text}")
-                        # Fall through to synthetic fallback with error notation
+            except httpx.TimeoutException as e:
+                logger.error(f"Gnani Timbre TTS request timed out: {str(e)}")
+            except httpx.ConnectError as e:
+                logger.error(f"Gnani Timbre TTS network connection error to {self.endpoint}: {str(e)}")
             except Exception as e:
                 logger.error(f"Failed to communicate with Gnani Timbre API: {str(e)}")
 

@@ -13,38 +13,42 @@ export const WaveformVisualizer: React.FC<WaveformProps> = ({
   isSpeaking,
   audioLevel = 0.3,
 }) => {
-  // 16 animated waveform bars
-  const bars = Array.from({ length: 16 });
+  const bars = Array.from({ length: 18 });
 
   return (
-    <div className="flex items-center justify-center gap-1.5 h-16 w-full px-4 py-2 bg-slate-900/60 rounded-xl border border-slate-800/80">
+    <div className="flex items-center justify-center gap-1.5 h-14 w-full px-4 py-2 bg-white rounded-xl border border-[#E5E9E3] shadow-xs">
       {bars.map((_, idx) => {
-        let heightPercent = 15;
-        let colorClass = 'bg-slate-700';
+        let heightPercent = 14;
+        let colorClass = 'bg-[#789B82]/30';
 
         if (isRecording) {
-          // Dynamic heights based on index and audio level
-          const offset = Math.sin((idx / 15) * Math.PI) * (audioLevel * 75 + 15);
+          const offset = Math.sin((idx / 17) * Math.PI) * (audioLevel * 85 + 15);
           heightPercent = Math.min(100, Math.max(12, offset));
-          colorClass = idx % 2 === 0 ? 'bg-emerald-400' : 'bg-teal-400';
+          colorClass = idx % 2 === 0 ? 'bg-[#C77B52]' : 'bg-[#52745F]';
         } else if (isProcessing) {
-          // Pulsing wave pattern
-          const animDelay = (idx * 0.08).toFixed(2);
+          const animDelay = (idx * 0.07).toFixed(2);
           return (
             <div
               key={idx}
-              className="w-1.5 bg-amber-400 rounded-full transition-all duration-300 animate-pulse"
+              className="w-1.5 rounded-full transition-all duration-300 animate-pulse bg-[#52745F]"
               style={{
-                height: `${25 + Math.sin(idx) * 20}%`,
+                height: `${25 + Math.sin(idx * 0.8) * 35}%`,
                 animationDelay: `${animDelay}s`,
               }}
             />
           );
         } else if (isSpeaking) {
-          // Smooth sine wave
-          const phase = Math.sin((idx / 15) * Math.PI * 2);
-          heightPercent = 35 + phase * 25;
-          colorClass = 'bg-cyan-400';
+          const animDelay = (idx * 0.05).toFixed(2);
+          return (
+            <div
+              key={idx}
+              className="w-1.5 rounded-full transition-all duration-150 animate-pulse bg-[#3C9970]"
+              style={{
+                height: `${40 + Math.sin(idx * 0.9) * 40}%`,
+                animationDelay: `${animDelay}s`,
+              }}
+            />
+          );
         }
 
         return (
@@ -61,3 +65,4 @@ export const WaveformVisualizer: React.FC<WaveformProps> = ({
   );
 };
 
+export default WaveformVisualizer;

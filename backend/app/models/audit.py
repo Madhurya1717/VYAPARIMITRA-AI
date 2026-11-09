@@ -16,8 +16,11 @@ class Notification(Base):
     message = Column(Text, nullable=False)
     type = Column(String(32), default="info", nullable=False)  # info, warning, alert, success
     is_read = Column(Boolean, default=False, nullable=False)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
-
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+)
     business = relationship("Business", back_populates="notifications")
 
 class AuditLog(Base):
@@ -31,7 +34,11 @@ class AuditLog(Base):
     entity_id = Column(String(36), nullable=True)
     changes = Column(Text, nullable=True)  # JSON diff
     ip_address = Column(String(45), nullable=True)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
+    created_at = Column(
+    DateTime,
+    default=lambda: datetime.now(timezone.utc).replace(tzinfo=None),
+    nullable=False
+)
 
     business = relationship("Business", back_populates="audit_logs")
 

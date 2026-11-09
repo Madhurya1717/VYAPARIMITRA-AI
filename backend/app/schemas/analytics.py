@@ -33,6 +33,8 @@ class CategoryBreakdownItem(BaseModel):
 class DashboardSummaryResponse(BaseModel):
     today_sales: float
     today_orders: int
+    average_order_value: float = 0.0
+    pending_orders_count: int = 0
     monthly_revenue: float = 0.0
     monthly_orders: int = 0
     total_revenue: float

@@ -7,6 +7,7 @@ from sqlalchemy.future import select
 
 from backend.app.core.database import get_db
 from backend.app.core.security import get_current_user
+from backend.app.core.realtime import realtime_manager
 from backend.app.models.business import User
 from backend.app.models.inventory import Category, Product
 from backend.app.schemas.product import (
@@ -21,8 +22,19 @@ router = APIRouter(prefix="/products", tags=["Inventory & Products"])
 @router.get("", response_model=List[ProductResponse])
 async def list_products(
     category_id: Optional[str] = None,
+    category_name: Optional[str] = None,
     search: Optional[str] = None,
     low_stock_only: bool = False,
+    out_of_stock_only: bool = False,
+    in_stock_only: bool = False,
+    min_price: Optional[float] = None,
+    max_price: Optional[float] = None,
+    min_stock: Optional[float] = None,
+    max_stock: Optional[float] = None,
+    unit: Optional[str] = None,
+    sort_by: Optional[str] = None,
+    limit: Optional[int] = None,
+    offset: Optional[int] = None,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db)
 ):
@@ -30,10 +42,42 @@ async def list_products(
         db=db,
         business_id=current_user.business_id,
         category_id=category_id,
+        category_name=category_name,
         search=search,
-        low_stock_only=low_stock_only
+        low_stock_only=low_stock_only,
+        out_of_stock_only=out_of_stock_only,
+        in_stock_only=in_stock_only,
+        min_price=min_price,
+        max_price=max_price,
+        min_stock=min_stock,
+        max_stock=max_stock,
+        unit=unit,
+        sort_by=sort_by,
+        limit=limit,
+        offset=offset
     )
     return products
+
+@router.get("/summary")
+async def get_inventory_summary(
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Authoritative store inventory valuation and stock health summary.
+    """
+    return await inventory_service.query_inventory(db, current_user.business_id, limit=0)
+
+@router.get("/search")
+async def search_inventory(
+    query: str = Query(..., min_length=1),
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Authoritative product finder for merchant inventory and catalogue.
+    """
+    return await inventory_service.find_products(db, current_user.business_id, query)
 
 @router.post("", response_model=ProductResponse)
 async def create_product(
@@ -124,6 +168,19 @@ async def adjust_stock(
     )
     if not success:
         raise HTTPException(status_code=400, detail=err)
+    
+    # Broadcast real-time inventory update
+    try:
+        await realtime_manager.broadcast("INVENTORY_UPDATED", {
+            "product_id": prod.id,
+            "product_name": prod.name,
+            "new_stock": float(prod.current_stock),
+            "unit": prod.unit,
+            "type": data.type
+        })
+    except Exception:
+        pass
+
     return {
         "success": True,
         "product_id": prod.id,

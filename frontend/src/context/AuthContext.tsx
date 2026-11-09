@@ -9,10 +9,13 @@ interface AuthContextType {
   isLoading: boolean;
   language: SupportedLanguage;
   setLanguage: (lang: SupportedLanguage) => void;
-  login: (phone_or_email: string, pass: string) => Promise<void>;
+  login: (phone_or_email: string, pass: string) => Promise<any>;
+  loginStep1: (phone_or_email: string, pass: string) => Promise<any>;
+  verifyOtp: (session_token: string, otp: string) => Promise<void>;
+  resendOtp: (session_token: string) => Promise<any>;
   register: (payload: any) => Promise<void>;
   logout: () => void;
-  quickDemoLogin: () => Promise<void>;
+  quickDemoLogin: () => Promise<any>;
   refreshProfile: () => Promise<void>;
 }
 
@@ -22,11 +25,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [user, setUser] = useState<User | null>(null);
   const [business, setBusiness] = useState<Business | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [language, setLanguageState] = useState<SupportedLanguage>('te-IN');
+  const [language, setLanguageState] = useState<SupportedLanguage>('indic-auto');
 
   const setLanguage = (lang: SupportedLanguage) => {
-    setLanguageState(lang);
-    localStorage.setItem('vyapari_lang', lang);
+    const validLang = (lang as string) === 'te-en' ? 'indic-auto' : lang;
+    setLanguageState(validLang);
+    localStorage.setItem('vyapari_lang', validLang);
   };
 
   const refreshProfile = async () => {
@@ -36,7 +40,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setUser(data.user);
         setBusiness(data.business);
         if (data.business.preferred_language) {
-          setLanguageState(data.business.preferred_language as SupportedLanguage);
+          const pref = data.business.preferred_language as SupportedLanguage;
+          setLanguageState((pref as string) === 'te-en' ? 'indic-auto' : pref);
         }
       }
     } catch (e) {
@@ -52,15 +57,24 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     const savedLang = localStorage.getItem('vyapari_lang') as SupportedLanguage;
     if (savedLang) {
-      setLanguageState(savedLang);
+      setLanguageState((savedLang as string) === 'te-en' ? 'indic-auto' : savedLang);
     }
     refreshProfile();
   }, []);
 
-  const login = async (phone_or_email: string, pass: string) => {
+  const loginStep1 = async (phone_or_email: string, pass: string) => {
     setIsLoading(true);
     try {
-      const res = await api.login(phone_or_email, pass);
+      return await api.loginStep1(phone_or_email, pass);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const verifyOtp = async (session_token: string, otp: string) => {
+    setIsLoading(true);
+    try {
+      const res = await api.verifyOtp(session_token, otp);
       setUser(res.user);
       setBusiness(res.business);
       if (res.business.preferred_language) {
@@ -69,6 +83,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const resendOtp = async (session_token: string) => {
+    return await api.resendOtp(session_token);
+  };
+
+  const login = async (phone_or_email: string, pass: string) => {
+    return await loginStep1(phone_or_email, pass);
   };
 
   const register = async (payload: any) => {
@@ -86,7 +108,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const quickDemoLogin = async () => {
-    await login('demo@vyaparimitra.ai', 'Vyapari@123');
+    return await loginStep1('demo@vyaparimitra.ai', 'Vyapari@123');
   };
 
   const logout = () => {
@@ -105,6 +127,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         language,
         setLanguage,
         login,
+        loginStep1,
+        verifyOtp,
+        resendOtp,
         register,
         logout,
         quickDemoLogin,
